@@ -1,0 +1,63 @@
+﻿<!--
+Copyright (C) 2014 Five9, Inc. All rights reserved.
+
+www.five9.com/legal#terms
+
+Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+ OR CONDITIONS OF ANY KIND, either express or implied.
+-->
+<Window x:Class="CallingListSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="457" Width="573">
+    <Grid>
+        <GroupBox Header="Admin Credentials" Height="133" HorizontalAlignment="Stretch" Name="gbxCredentials" VerticalAlignment="Top" Margin="5">
+            <Grid>
+                <Label Content="Username:" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label1" VerticalAlignment="Top" />
+                <TextBox Height="23" HorizontalAlignment="Stretch" Margin="78,8,15,0" Name="tbxUsername" VerticalAlignment="Top" />
+                <Label Content="Password:" Height="28" HorizontalAlignment="Left" Margin="6,40,0,0" Name="label2" VerticalAlignment="Top" />
+                <PasswordBox Height="23" HorizontalAlignment="Left" Margin="78,40,0,0" Name="pbxPassword" VerticalAlignment="Top" Width="436" />
+                <Label Content="Base64 Credentials:" Height="28" HorizontalAlignment="Left" Margin="6,74,0,0" Name="label3" VerticalAlignment="Top" />
+                <TextBox Height="23" HorizontalAlignment="Stretch" Margin="124,76,111,0" Name="tbxBase64Credentials" VerticalAlignment="Top" IsReadOnly="True" IsEnabled="False" />
+                <Button Content="Connect" Height="23" HorizontalAlignment="Left" Margin="439,74,0,0" Name="btnConnect" VerticalAlignment="Top" Width="75" Click="btnConnect_Click" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="List Info" Height="67" HorizontalAlignment="Stretch" Margin="5,144,5,0" Name="gbxFields" VerticalAlignment="Top">
+            <Grid>
+                <Label Content="List Name:" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label7" VerticalAlignment="Top" />
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="77,11,0,0" Name="cbxListName" VerticalAlignment="Top" Width="326" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="List Actions" Height="189" HorizontalAlignment="Stretch" Margin="10,217,0,0" Name="gbxActions" VerticalAlignment="Top">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" Content="addRecordToList" Height="23" Name="btnAddRecordToList" Click="btnAddRecordToList_Click" />
+                <Button Grid.Row="0" Grid.Column="1" Content="deleteRecordFromList" Height="23" Name="btnDeleteRecordFromList" Click="btnDeleteRecordFromList_Click" />
+
+                <Button Grid.Row="1" Grid.Column="0" Content="addToList" Height="23" Name="btnAddToList" Click="btnAddToList_Click" />
+                <Button Grid.Row="1" Grid.Column="1" Content="deleteFromList" Height="23" Name="btnDeleteFromList" Click="btnDeleteFromList_Click" />
+
+                <Button Grid.Row="2" Grid.Column="0" Content="addToListCsv" Height="23" Name="btnAddToListCSV" Click="btnAddToListCSV_Click" />
+                <Button Grid.Row="2" Grid.Column="1" Content="deleteFromListCsv" Height="23" Name="btnDeleteFromListCsv" Click="btnDeleteFromListCsv_Click" />
+
+                <Button Grid.Row="3" Grid.Column="0" Content="addToListFtp" Height="23" Name="btnAddToListFTP" Click="btnAddToListFTP_Click" />
+                <Button Grid.Row="3" Grid.Column="1" Content="deleteFromListFtp" Height="23" Name="btnDeleteFromListFtp" Click="btnDeleteFromListFtp_Click" />
+
+                <Button Grid.Row="4" Grid.Column="0" Content="asyncAddRecordsToList" Height="23" Name="btnAsyncAddRecordsToList" Click="btnAsyncAddRecordsToList_Click" />
+                <Button Grid.Row="4" Grid.Column="1" Content="asyncDeleteRecordsFromList" Height="23" Name="btnAsyncDeleteRecordsFromList" Click="btnAsyncDeleteRecordsFromList_Click" />
+
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
