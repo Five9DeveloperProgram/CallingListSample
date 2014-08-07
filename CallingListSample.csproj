@@ -583,7 +583,7 @@
     <None Include="Service References\Five9Admin\swaref.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Five9Admin\WsAdminServiceV2.wsdl" />
+    <None Include="Service References\Five9Admin\WsAdminService.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

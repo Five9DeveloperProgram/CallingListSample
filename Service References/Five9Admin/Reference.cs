@@ -16,7 +16,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class DNISAlreadyAssignedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -76,7 +76,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addDNISToCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -94,7 +94,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addDNISToCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -140,7 +140,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class DNISNotFoundException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string dnisField;
@@ -186,7 +186,53 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
+    public partial class CommonCampaignException : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string campaignNameField;
+        
+        private string messageField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string campaignName {
+            get {
+                return this.campaignNameField;
+            }
+            set {
+                this.campaignNameField = value;
+                this.RaisePropertyChanged("campaignName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string message {
+            get {
+                return this.messageField;
+            }
+            set {
+                this.messageField = value;
+                this.RaisePropertyChanged("message");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ServerException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -218,7 +264,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class MissedArgumentException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -250,7 +296,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class IncorrectArgumentException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -282,7 +328,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class CampaignNotFoundException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -328,7 +374,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class WrongCampaignTypeException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private campaignType actualTypeField;
@@ -414,7 +460,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum campaignType {
         
         /// <remarks/>
@@ -432,7 +478,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class AdminSessionClosedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -464,7 +510,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class InvalidAccountException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -496,7 +542,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class UserAlreadyLoggedInException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -528,7 +574,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ConcurrentModificationException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -560,7 +606,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class AccessDisallowedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -592,7 +638,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class OperationsLimitExceededException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private long limitField;
@@ -652,7 +698,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ServiceUnavailableException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -684,131 +730,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
-    public partial class WrongCampaignStateException : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private campaignState actualStateField;
-        
-        private bool actualStateFieldSpecified;
-        
-        private string campaignNameField;
-        
-        private campaignState desiredStateField;
-        
-        private bool desiredStateFieldSpecified;
-        
-        private string messageField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public campaignState actualState {
-            get {
-                return this.actualStateField;
-            }
-            set {
-                this.actualStateField = value;
-                this.RaisePropertyChanged("actualState");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool actualStateSpecified {
-            get {
-                return this.actualStateFieldSpecified;
-            }
-            set {
-                this.actualStateFieldSpecified = value;
-                this.RaisePropertyChanged("actualStateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string campaignName {
-            get {
-                return this.campaignNameField;
-            }
-            set {
-                this.campaignNameField = value;
-                this.RaisePropertyChanged("campaignName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public campaignState desiredState {
-            get {
-                return this.desiredStateField;
-            }
-            set {
-                this.desiredStateField = value;
-                this.RaisePropertyChanged("desiredState");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool desiredStateSpecified {
-            get {
-                return this.desiredStateFieldSpecified;
-            }
-            set {
-                this.desiredStateFieldSpecified = value;
-                this.RaisePropertyChanged("desiredStateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string message {
-            get {
-                return this.messageField;
-            }
-            set {
-                this.messageField = value;
-                this.RaisePropertyChanged("message");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
-    public enum campaignState {
-        
-        /// <remarks/>
-        NOT_RUNNING,
-        
-        /// <remarks/>
-        STARTING,
-        
-        /// <remarks/>
-        RUNNING,
-        
-        /// <remarks/>
-        STOPPING,
-        
-        /// <remarks/>
-        RESETTING,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class WrongDialingModeException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -854,7 +776,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class DispositionNotAllowedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string dispositionNameField;
@@ -900,7 +822,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class DispositionAlreadyAssignedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -960,7 +882,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class DispositionNotFoundException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string dispositionNameField;
@@ -1006,7 +928,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ListNotFoundException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNameField;
@@ -1052,7 +974,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ListAlreadyAssignedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -1112,7 +1034,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ExecutionRestrictionException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -1144,7 +1066,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class TooManyItemsException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -1176,7 +1098,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class TtsGenerationFailedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -1222,7 +1144,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class PromptAlreadyExistsException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -1268,7 +1190,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class WavFileUploadFailedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -1314,7 +1236,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class InvalidImportDataException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -1346,7 +1268,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class CrmFieldNotFoundException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string fieldNameField;
@@ -1392,7 +1314,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class InternalImportException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -1424,7 +1346,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ImportCancelledException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -1456,7 +1378,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class AddRecordToListException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -1488,7 +1410,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class SkillNotFoundException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -1534,7 +1456,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class SkillAlreadyAssignedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -1580,7 +1502,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ImportRecordsCountLimitExceededException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int limitField;
@@ -1640,7 +1562,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ScheduleOperationFailedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -1712,7 +1634,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum operationType {
         
         /// <remarks/>
@@ -1730,7 +1652,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ImportInProgressException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -1762,7 +1684,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ScheduleNotFoundException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -1808,7 +1730,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ObjectNotFoundException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private long idField;
@@ -1908,7 +1830,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum wsObjectType {
         
         /// <remarks/>
@@ -1962,7 +1884,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ObjectAlreadyExistsException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private long idField;
@@ -2064,7 +1986,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class UserHasNoRequiredRolesException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -2122,7 +2044,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum userRoleType {
         
         /// <remarks/>
@@ -2143,7 +2065,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class CampaignAlreadyExistsException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -2189,7 +2111,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class IvrScriptNotFoundException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string ivrScriptNameField;
@@ -2235,7 +2157,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ReasonCodeNotFoundException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -2281,7 +2203,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class DialProfileNotFoundException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -2327,7 +2249,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ObjectsCountLimitExceededException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private long idField;
@@ -2443,7 +2365,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class DispositionAlreadyExistsException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string dispositionNameField;
@@ -2489,7 +2411,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class PromptNotFoundException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -2535,7 +2457,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ListAlreadyExistsException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNameField;
@@ -2581,7 +2503,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ReasonCodeCountLimitExceededException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -2627,7 +2549,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class SkillAlreadyExistsException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -2673,7 +2595,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class UserNotFoundException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -2719,7 +2641,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class MissedOsLoginException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private object[] agentNamesField;
@@ -2765,7 +2687,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class TooManyExtensionsException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -2797,7 +2719,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ExtensionAlreadyInUseException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string extField;
@@ -2843,7 +2765,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class InvalidUserDataException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -2875,7 +2797,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class TooManyUsersException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -2907,7 +2829,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class UserAlreadyExistsException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -2953,7 +2875,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class NICELicencesExceededException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private niceLicenseType featureLicenseTypeField;
@@ -3025,7 +2947,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum niceLicenseType {
         
         /// <remarks/>
@@ -3043,7 +2965,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ObjectInUseException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private long idField;
@@ -3145,7 +3067,131 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
+    public partial class WrongCampaignStateException : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private campaignState actualStateField;
+        
+        private bool actualStateFieldSpecified;
+        
+        private string campaignNameField;
+        
+        private campaignState desiredStateField;
+        
+        private bool desiredStateFieldSpecified;
+        
+        private string messageField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public campaignState actualState {
+            get {
+                return this.actualStateField;
+            }
+            set {
+                this.actualStateField = value;
+                this.RaisePropertyChanged("actualState");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool actualStateSpecified {
+            get {
+                return this.actualStateFieldSpecified;
+            }
+            set {
+                this.actualStateFieldSpecified = value;
+                this.RaisePropertyChanged("actualStateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string campaignName {
+            get {
+                return this.campaignNameField;
+            }
+            set {
+                this.campaignNameField = value;
+                this.RaisePropertyChanged("campaignName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public campaignState desiredState {
+            get {
+                return this.desiredStateField;
+            }
+            set {
+                this.desiredStateField = value;
+                this.RaisePropertyChanged("desiredState");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool desiredStateSpecified {
+            get {
+                return this.desiredStateFieldSpecified;
+            }
+            set {
+                this.desiredStateFieldSpecified = value;
+                this.RaisePropertyChanged("desiredStateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string message {
+            get {
+                return this.messageField;
+            }
+            set {
+                this.messageField = value;
+                this.RaisePropertyChanged("message");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
+    public enum campaignState {
+        
+        /// <remarks/>
+        NOT_RUNNING,
+        
+        /// <remarks/>
+        STARTING,
+        
+        /// <remarks/>
+        RUNNING,
+        
+        /// <remarks/>
+        STOPPING,
+        
+        /// <remarks/>
+        RESETTING,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ListCantBeRemovedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNameField;
@@ -3191,7 +3237,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class PromptCantBeDeletedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -3237,7 +3283,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class SkillCantBeDeletedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -3283,7 +3329,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class UserCantBeDeletedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -3329,7 +3375,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class CampaignStateUpdateException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -3389,7 +3435,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class LogoutReasonCodeNotFoundException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -3435,7 +3481,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class NotReadyReasonCodeNotFoundException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -3481,7 +3527,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class InvalidRegexpPatternException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -3527,7 +3573,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class SessionClosedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -3559,7 +3605,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ResultIsNotReadyException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -3591,7 +3637,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class UnknownIdentifierException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -3623,7 +3669,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class FinderException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -3655,7 +3701,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ListIsNotAssignedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -3715,7 +3761,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class WrongPromptTypeException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private promptType actualTypeField;
@@ -3815,7 +3861,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum promptType {
         
         /// <remarks/>
@@ -3830,7 +3876,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class CantModifyObjectException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -3862,7 +3908,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class DNISIsNotAssignedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -3922,7 +3968,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class DispositionIsNotAssignedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -3982,7 +4028,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class SkillIsNotAssignedException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -4042,7 +4088,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class InvalidDateRangeException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private System.DateTime endField;
@@ -4130,7 +4176,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ReportNotFoundException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string folderField;
@@ -4190,7 +4236,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ParseException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int errorOffsetField;
@@ -4236,7 +4282,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class UserAlreadyHasSkillException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -4296,7 +4342,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class UserDoesntHaveSkillException : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string messageField;
@@ -4352,13 +4398,14 @@ namespace CallingListSample.Five9Admin {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://service.admin.ws.five9.com/v2/", ConfigurationName="Five9Admin.WsAdminV2")]
-    public interface WsAdminV2 {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://service.admin.ws.five9.com/", ConfigurationName="Five9Admin.WsAdmin")]
+    public interface WsAdmin {
         
         // CODEGEN: Generating message contract since the operation addDNISToCampaign is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.DNISAlreadyAssignedException), Action="", Name="DNISAlreadyAssignedFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.DNISNotFoundException), Action="", Name="DNISNotFoundFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.CommonCampaignException), Action="", Name="CommonCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServerException), Action="", Name="ServerFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.MissedArgumentException), Action="", Name="MissedArgumentFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.IncorrectArgumentException), Action="", Name="IncorrectArgumentFault")]
@@ -4371,12 +4418,12 @@ namespace CallingListSample.Five9Admin {
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.AccessDisallowedException), Action="", Name="AccessDisallowedFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.OperationsLimitExceededException), Action="", Name="OperationsLimitExceededFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServiceUnavailableException), Action="", Name="ServiceUnavailableFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.WrongCampaignStateException), Action="", Name="WrongCampaignStateFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         CallingListSample.Five9Admin.addDNISToCampaignResponse1 addDNISToCampaign(CallingListSample.Five9Admin.addDNISToCampaignRequest request);
         
         // CODEGEN: Generating message contract since the operation addDispositionsToCampaign is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.CommonCampaignException), Action="", Name="CommonCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServerException), Action="", Name="ServerFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.WrongDialingModeException), Action="", Name="AllowedOnlyForPreviewCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.MissedArgumentException), Action="", Name="MissedArgumentFault")]
@@ -4398,6 +4445,7 @@ namespace CallingListSample.Five9Admin {
         
         // CODEGEN: Generating message contract since the operation addListsToCampaign is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.CommonCampaignException), Action="", Name="CommonCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServerException), Action="", Name="ServerFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.MissedArgumentException), Action="", Name="MissedArgumentFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.IncorrectArgumentException), Action="", Name="IncorrectArgumentFault")]
@@ -4521,6 +4569,7 @@ namespace CallingListSample.Five9Admin {
         // CODEGEN: Generating message contract since the operation addSkillsToCampaign is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.SkillNotFoundException), Action="", Name="SkillNotFoundFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.CommonCampaignException), Action="", Name="CommonCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServerException), Action="", Name="ServerFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.MissedArgumentException), Action="", Name="MissedArgumentFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.IncorrectArgumentException), Action="", Name="IncorrectArgumentFault")]
@@ -4692,6 +4741,7 @@ namespace CallingListSample.Five9Admin {
         // CODEGEN: Generating message contract since the operation createAutodialCampaign is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.SkillNotFoundException), Action="", Name="SkillNotFoundFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.CommonCampaignException), Action="", Name="CommonCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServerException), Action="", Name="ServerFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.MissedArgumentException), Action="", Name="MissedArgumentFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.IncorrectArgumentException), Action="", Name="IncorrectArgumentFault")]
@@ -4812,6 +4862,7 @@ namespace CallingListSample.Five9Admin {
         
         // CODEGEN: Generating message contract since the operation createInboundCampaign is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.CommonCampaignException), Action="", Name="CommonCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServerException), Action="", Name="ServerFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.MissedArgumentException), Action="", Name="MissedArgumentFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.IncorrectArgumentException), Action="", Name="IncorrectArgumentFault")]
@@ -4849,6 +4900,7 @@ namespace CallingListSample.Five9Admin {
         
         // CODEGEN: Generating message contract since the operation createOutboundCampaign is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.CommonCampaignException), Action="", Name="CommonCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServerException), Action="", Name="ServerFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.MissedArgumentException), Action="", Name="MissedArgumentFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.IncorrectArgumentException), Action="", Name="IncorrectArgumentFault")]
@@ -6210,6 +6262,7 @@ namespace CallingListSample.Five9Admin {
         // CODEGEN: Generating message contract since the operation modifyAutodialCampaign is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.SkillNotFoundException), Action="", Name="SkillNotFoundFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.CommonCampaignException), Action="", Name="CommonCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServerException), Action="", Name="ServerFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.MissedArgumentException), Action="", Name="MissedArgumentFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.IncorrectArgumentException), Action="", Name="IncorrectArgumentFault")]
@@ -6263,6 +6316,7 @@ namespace CallingListSample.Five9Admin {
         
         // CODEGEN: Generating message contract since the operation modifyCampaignLists is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.CommonCampaignException), Action="", Name="CommonCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServerException), Action="", Name="ServerFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.MissedArgumentException), Action="", Name="MissedArgumentFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.IncorrectArgumentException), Action="", Name="IncorrectArgumentFault")]
@@ -6393,6 +6447,7 @@ namespace CallingListSample.Five9Admin {
         
         // CODEGEN: Generating message contract since the operation modifyInboundCampaign is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.CommonCampaignException), Action="", Name="CommonCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServerException), Action="", Name="ServerFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.MissedArgumentException), Action="", Name="MissedArgumentFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.IncorrectArgumentException), Action="", Name="IncorrectArgumentFault")]
@@ -6415,6 +6470,7 @@ namespace CallingListSample.Five9Admin {
         
         // CODEGEN: Generating message contract since the operation modifyOutboundCampaign is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.CommonCampaignException), Action="", Name="CommonCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServerException), Action="", Name="ServerFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.MissedArgumentException), Action="", Name="MissedArgumentFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.IncorrectArgumentException), Action="", Name="IncorrectArgumentFault")]
@@ -6655,6 +6711,7 @@ namespace CallingListSample.Five9Admin {
         // CODEGEN: Generating message contract since the operation removeDNISFromCampaign is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.DNISNotFoundException), Action="", Name="DNISNotFoundFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.CommonCampaignException), Action="", Name="CommonCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServerException), Action="", Name="ServerFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.MissedArgumentException), Action="", Name="MissedArgumentFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.IncorrectArgumentException), Action="", Name="IncorrectArgumentFault")]
@@ -6668,7 +6725,6 @@ namespace CallingListSample.Five9Admin {
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.AccessDisallowedException), Action="", Name="AccessDisallowedFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.OperationsLimitExceededException), Action="", Name="OperationsLimitExceededFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServiceUnavailableException), Action="", Name="ServiceUnavailableFault")]
-        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.WrongCampaignStateException), Action="", Name="WrongCampaignStateFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         CallingListSample.Five9Admin.removeDNISFromCampaignResponse1 removeDNISFromCampaign(CallingListSample.Five9Admin.removeDNISFromCampaignRequest request);
         
@@ -6691,6 +6747,7 @@ namespace CallingListSample.Five9Admin {
         // CODEGEN: Generating message contract since the operation removeDispositionsFromCampaign is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.DispositionIsNotAssignedException), Action="", Name="DispositionIsNotAssisgnedFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.CommonCampaignException), Action="", Name="CommonCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServerException), Action="", Name="ServerFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.MissedArgumentException), Action="", Name="MissedArgumentFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.IncorrectArgumentException), Action="", Name="IncorrectArgumentFault")]
@@ -6708,6 +6765,7 @@ namespace CallingListSample.Five9Admin {
         
         // CODEGEN: Generating message contract since the operation removeListsFromCampaign is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.CommonCampaignException), Action="", Name="CommonCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServerException), Action="", Name="ServerFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.MissedArgumentException), Action="", Name="MissedArgumentFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.IncorrectArgumentException), Action="", Name="IncorrectArgumentFault")]
@@ -6742,6 +6800,7 @@ namespace CallingListSample.Five9Admin {
         // CODEGEN: Generating message contract since the operation removeSkillsFromCampaign is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.SkillNotFoundException), Action="", Name="SkillNotFoundFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.CommonCampaignException), Action="", Name="CommonCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServerException), Action="", Name="ServerFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.MissedArgumentException), Action="", Name="MissedArgumentFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.IncorrectArgumentException), Action="", Name="IncorrectArgumentFault")]
@@ -6759,6 +6818,7 @@ namespace CallingListSample.Five9Admin {
         
         // CODEGEN: Generating message contract since the operation renameCampaign is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.CommonCampaignException), Action="", Name="CommonCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServerException), Action="", Name="ServerFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.MissedArgumentException), Action="", Name="MissedArgumentFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.IncorrectArgumentException), Action="", Name="IncorrectArgumentFault")]
@@ -6863,6 +6923,7 @@ namespace CallingListSample.Five9Admin {
         
         // CODEGEN: Generating message contract since the operation setDefaultIVRSchedule is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.CommonCampaignException), Action="", Name="CommonCampaignFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.ServerException), Action="", Name="ServerFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.MissedArgumentException), Action="", Name="MissedArgumentFault")]
         [System.ServiceModel.FaultContractAttribute(typeof(CallingListSample.Five9Admin.IncorrectArgumentException), Action="", Name="IncorrectArgumentFault")]
@@ -7159,7 +7220,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addDNISToCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addDNISToCampaign addDNISToCampaign;
         
         public addDNISToCampaignRequest() {
@@ -7176,7 +7237,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addDNISToCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addDNISToCampaignResponse addDNISToCampaignResponse;
         
         public addDNISToCampaignResponse1() {
@@ -7192,7 +7253,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addDispositionsToCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -7266,7 +7327,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addDispositionsToCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -7285,7 +7346,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addDispositionsToCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addDispositionsToCampaign addDispositionsToCampaign;
         
         public addDispositionsToCampaignRequest() {
@@ -7302,7 +7363,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addDispositionsToCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addDispositionsToCampaignResponse addDispositionsToCampaignResponse;
         
         public addDispositionsToCampaignResponse1() {
@@ -7318,7 +7379,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addListsToCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -7364,7 +7425,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class listState : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -7494,7 +7555,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addListsToCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -7513,7 +7574,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addListsToCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addListsToCampaign addListsToCampaign;
         
         public addListsToCampaignRequest() {
@@ -7530,7 +7591,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addListsToCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addListsToCampaignResponse addListsToCampaignResponse;
         
         public addListsToCampaignResponse1() {
@@ -7546,7 +7607,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addNumbersToDncResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int returnField;
@@ -7579,7 +7640,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addNumbersToDncRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("numbers", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public string[] addNumbersToDnc;
         
@@ -7597,7 +7658,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addNumbersToDncResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addNumbersToDncResponse addNumbersToDncResponse;
         
         public addNumbersToDncResponse1() {
@@ -7613,7 +7674,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addPromptTTS : object, System.ComponentModel.INotifyPropertyChanged {
         
         private promptInfo promptField;
@@ -7659,7 +7720,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class promptInfo : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string descriptionField;
@@ -7733,7 +7794,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ttsInfo : object, System.ComponentModel.INotifyPropertyChanged {
         
         private language languageField;
@@ -7847,7 +7908,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum language {
         
         /// <remarks/>
@@ -7857,7 +7918,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum sayAs {
         
         /// <remarks/>
@@ -7921,7 +7982,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum sayAsFormat {
         
         /// <remarks/>
@@ -7999,7 +8060,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addPromptTTSResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -8018,7 +8079,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addPromptTTSRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addPromptTTS addPromptTTS;
         
         public addPromptTTSRequest() {
@@ -8035,7 +8096,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addPromptTTSResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addPromptTTSResponse addPromptTTSResponse;
         
         public addPromptTTSResponse1() {
@@ -8051,7 +8112,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addPromptWav : object, System.ComponentModel.INotifyPropertyChanged {
         
         private promptInfo promptField;
@@ -8097,7 +8158,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addPromptWavResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -8116,7 +8177,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addPromptWavRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addPromptWav addPromptWav;
         
         public addPromptWavRequest() {
@@ -8133,7 +8194,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addPromptWavResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addPromptWavResponse addPromptWavResponse;
         
         public addPromptWavResponse1() {
@@ -8149,7 +8210,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addPromptWavInline : object, System.ComponentModel.INotifyPropertyChanged {
         
         private promptInfo promptField;
@@ -8195,7 +8256,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addPromptWavInlineResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -8214,7 +8275,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addPromptWavInlineRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addPromptWavInline addPromptWavInline;
         
         public addPromptWavInlineRequest() {
@@ -8231,7 +8292,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addPromptWavInlineResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addPromptWavInlineResponse addPromptWavInlineResponse;
         
         public addPromptWavInlineResponse1() {
@@ -8247,7 +8308,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addRecordToList : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNameField;
@@ -8308,7 +8369,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class listUpdateSettings : basicImportSettings {
         
         private int callNowColumnNumberField;
@@ -8525,7 +8586,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum callNowMode {
         
         /// <remarks/>
@@ -8544,7 +8605,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum crmAddMode {
         
         /// <remarks/>
@@ -8557,7 +8618,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum crmUpdateMode {
         
         /// <remarks/>
@@ -8576,7 +8637,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum listAddMode {
         
         /// <remarks/>
@@ -8599,7 +8660,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class basicImportSettings : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool allowDataCleanupField;
@@ -8729,7 +8790,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class fieldEntry : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int columnNumberField;
@@ -8789,7 +8850,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class dispositionsUpdateSettings : basicImportSettings {
         
         private string commonDispositionValueField;
@@ -8880,7 +8941,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum dispositionsUpdateMode {
         
         /// <remarks/>
@@ -8895,7 +8956,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class crmDeleteSettings : basicImportSettings {
         
         private crmDeleteMode crmDeleteModeField;
@@ -8930,7 +8991,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum crmDeleteMode {
         
         /// <remarks/>
@@ -8948,7 +9009,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class crmUpdateSettings : basicImportSettings {
         
         private crmAddMode crmAddModeField;
@@ -9013,7 +9074,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class listDeleteSettings : basicImportSettings {
         
         private listDeleteMode listDeleteModeField;
@@ -9048,7 +9109,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum listDeleteMode {
         
         /// <remarks/>
@@ -9066,7 +9127,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addRecordToListResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private listImportResult returnField;
@@ -9098,7 +9159,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class listImportResult : basicImportResult {
         
         private long callNowQueuedField;
@@ -9194,7 +9255,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class basicImportResult : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string failureMessageField;
@@ -9297,7 +9358,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class importTrouble : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string[] keyField;
@@ -9383,7 +9444,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum importTroubleKind {
         
         /// <remarks/>
@@ -9413,7 +9474,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://service.admin.ws.five9.com/")]
     public partial class basicImportResultEntry : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string keyField;
@@ -9473,7 +9534,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class dispositionsImportResult : basicImportResult {
         
         private long dispRecordsUpdatedField;
@@ -9496,7 +9557,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class crmImportResult : basicImportResult {
         
         private long crmRecordsDeletedField;
@@ -9548,7 +9609,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addRecordToListRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addRecordToList addRecordToList;
         
         public addRecordToListRequest() {
@@ -9565,7 +9626,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addRecordToListResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addRecordToListResponse addRecordToListResponse;
         
         public addRecordToListResponse1() {
@@ -9581,7 +9642,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addRecordToListSimple : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNameField;
@@ -9642,7 +9703,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class listUpdateSimpleSettings : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool callAsapField;
@@ -9758,7 +9819,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addRecordToListSimpleResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -9777,7 +9838,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addRecordToListSimpleRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addRecordToListSimple addRecordToListSimple;
         
         public addRecordToListSimpleRequest() {
@@ -9794,7 +9855,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addRecordToListSimpleResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addRecordToListSimpleResponse addRecordToListSimpleResponse;
         
         public addRecordToListSimpleResponse1() {
@@ -9810,7 +9871,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addSkillsToCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -9856,7 +9917,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addSkillsToCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -9875,7 +9936,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addSkillsToCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addSkillsToCampaign addSkillsToCampaign;
         
         public addSkillsToCampaignRequest() {
@@ -9892,7 +9953,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addSkillsToCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addSkillsToCampaignResponse addSkillsToCampaignResponse;
         
         public addSkillsToCampaignResponse1() {
@@ -9908,7 +9969,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addToList : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNameField;
@@ -9970,7 +10031,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addToListResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier returnField;
@@ -10002,7 +10063,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class importIdentifier : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string identifierField;
@@ -10035,7 +10096,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addToListRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addToList addToList;
         
         public addToListRequest() {
@@ -10052,7 +10113,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addToListResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addToListResponse addToListResponse;
         
         public addToListResponse1() {
@@ -10068,7 +10129,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addToListCsv : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNameField;
@@ -10128,7 +10189,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addToListCsvResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier returnField;
@@ -10161,7 +10222,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addToListCsvRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addToListCsv addToListCsv;
         
         public addToListCsvRequest() {
@@ -10178,7 +10239,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addToListCsvResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addToListCsvResponse addToListCsvResponse;
         
         public addToListCsvResponse1() {
@@ -10194,7 +10255,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addToListFtp : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNameField;
@@ -10254,7 +10315,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ftpImportSettings : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string hostnameField;
@@ -10328,7 +10389,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class addToListFtpResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -10347,7 +10408,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addToListFtpRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addToListFtp addToListFtp;
         
         public addToListFtpRequest() {
@@ -10364,7 +10425,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class addToListFtpResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.addToListFtpResponse addToListFtpResponse;
         
         public addToListFtpResponse1() {
@@ -10380,7 +10441,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class asyncAddRecordsToList : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNameField;
@@ -10442,7 +10503,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class asyncAddRecordsToListResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier returnField;
@@ -10475,7 +10536,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class asyncAddRecordsToListRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.asyncAddRecordsToList asyncAddRecordsToList;
         
         public asyncAddRecordsToListRequest() {
@@ -10492,7 +10553,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class asyncAddRecordsToListResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.asyncAddRecordsToListResponse asyncAddRecordsToListResponse;
         
         public asyncAddRecordsToListResponse1() {
@@ -10508,7 +10569,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class asyncDeleteRecordsFromList : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNameField;
@@ -10570,7 +10631,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class asyncDeleteRecordsFromListResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier returnField;
@@ -10603,7 +10664,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class asyncDeleteRecordsFromListRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.asyncDeleteRecordsFromList asyncDeleteRecordsFromList;
         
         public asyncDeleteRecordsFromListRequest() {
@@ -10620,7 +10681,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class asyncDeleteRecordsFromListResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.asyncDeleteRecordsFromListResponse asyncDeleteRecordsFromListResponse;
         
         public asyncDeleteRecordsFromListResponse1() {
@@ -10636,7 +10697,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class asyncUpdateCrmRecords : object, System.ComponentModel.INotifyPropertyChanged {
         
         private crmUpdateSettings crmUpdateSettingsField;
@@ -10684,7 +10745,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class asyncUpdateCrmRecordsResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier returnField;
@@ -10717,7 +10778,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class asyncUpdateCrmRecordsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.asyncUpdateCrmRecords asyncUpdateCrmRecords;
         
         public asyncUpdateCrmRecordsRequest() {
@@ -10734,7 +10795,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class asyncUpdateCrmRecordsResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.asyncUpdateCrmRecordsResponse asyncUpdateCrmRecordsResponse;
         
         public asyncUpdateCrmRecordsResponse1() {
@@ -10751,7 +10812,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class checkDncForNumbersRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("numbers", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public string[] checkDncForNumbers;
         
@@ -10769,7 +10830,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class checkDncForNumbersResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="checkDncForNumbersResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="checkDncForNumbersResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public string[] checkDncForNumbersResponse1;
         
@@ -10786,7 +10847,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class closeSession : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -10804,7 +10865,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class closeSessionResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -10823,7 +10884,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class closeSessionRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.closeSession closeSession;
         
         public closeSessionRequest() {
@@ -10840,7 +10901,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class closeSessionResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.closeSessionResponse closeSessionResponse;
         
         public closeSessionResponse1() {
@@ -10856,7 +10917,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createAgentGroup : object, System.ComponentModel.INotifyPropertyChanged {
         
         private agentGroup groupField;
@@ -10888,7 +10949,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class agentGroup : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string[] agentsField;
@@ -10976,7 +11037,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createAgentGroupResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private agentGroup returnField;
@@ -11009,7 +11070,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createAgentGroupRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createAgentGroup createAgentGroup;
         
         public createAgentGroupRequest() {
@@ -11026,7 +11087,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createAgentGroupResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createAgentGroupResponse createAgentGroupResponse;
         
         public createAgentGroupResponse1() {
@@ -11042,7 +11103,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createAutodialCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private autodialCampaign campaignField;
@@ -11074,7 +11135,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class autodialCampaign : baseOutboundCampaign {
         
         private agentAvailability agentAvailabilityField;
@@ -11193,7 +11254,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum agentAvailability {
         
         /// <remarks/>
@@ -11211,7 +11272,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ivrScriptSchedule : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool chatEnabledField;
@@ -11327,7 +11388,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class scriptParameterValue : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string nameField;
@@ -11375,7 +11436,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public abstract partial class baseOutboundCampaign : generalCampaign {
         
         private int analyzeLevelField;
@@ -11566,7 +11627,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class timer : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int daysField;
@@ -11638,7 +11699,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum listDialingMode {
         
         /// <remarks/>
@@ -11657,7 +11718,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class generalCampaign : campaign {
         
         private bool autoRecordField;
@@ -11806,7 +11867,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class campaignCallWrapup : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool agentNotReadyField;
@@ -11927,7 +11988,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class campaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string descriptionField;
@@ -12097,7 +12158,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum campaignMode {
         
         /// <remarks/>
@@ -12112,7 +12173,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class inboundCampaign : generalCampaign {
         
         private ivrScriptSchedule defaultIvrScheduleField;
@@ -12163,7 +12224,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class outboundCampaign : baseOutboundCampaign {
         
         private campaignDialingAction actionOnAnswerMachineField;
@@ -12508,7 +12569,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class campaignDialingAction : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string actionArgumentField;
@@ -12580,7 +12641,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum campaignDialingActionType {
         
         /// <remarks/>
@@ -12596,7 +12657,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum callAnalysisMode {
         
         /// <remarks/>
@@ -12612,7 +12673,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum campaignDialingMode {
         
         /// <remarks/>
@@ -12631,7 +12692,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum distributionAlgorithm {
         
         /// <remarks/>
@@ -12653,7 +12714,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum distributionTimeFrame {
         
         /// <remarks/>
@@ -12680,7 +12741,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createAutodialCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -12699,7 +12760,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createAutodialCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createAutodialCampaign createAutodialCampaign;
         
         public createAutodialCampaignRequest() {
@@ -12716,7 +12777,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createAutodialCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createAutodialCampaignResponse createAutodialCampaignResponse;
         
         public createAutodialCampaignResponse1() {
@@ -12732,7 +12793,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createCallVariable : object, System.ComponentModel.INotifyPropertyChanged {
         
         private callVariable variableField;
@@ -12764,7 +12825,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class callVariable : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool applyToAllDispositionsField;
@@ -12950,7 +13011,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class callVariableRestriction : object, System.ComponentModel.INotifyPropertyChanged {
         
         private cavRestrictionType typeField;
@@ -13008,7 +13069,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum cavRestrictionType {
         
         /// <remarks/>
@@ -13051,7 +13112,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum callVariableType {
         
         /// <remarks/>
@@ -13096,7 +13157,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createCallVariableResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -13115,7 +13176,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createCallVariableRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createCallVariable createCallVariable;
         
         public createCallVariableRequest() {
@@ -13132,7 +13193,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createCallVariableResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createCallVariableResponse createCallVariableResponse;
         
         public createCallVariableResponse1() {
@@ -13148,7 +13209,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createCallVariablesGroup : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string nameField;
@@ -13194,7 +13255,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createCallVariablesGroupResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -13213,7 +13274,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createCallVariablesGroupRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createCallVariablesGroup createCallVariablesGroup;
         
         public createCallVariablesGroupRequest() {
@@ -13230,7 +13291,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createCallVariablesGroupResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createCallVariablesGroupResponse createCallVariablesGroupResponse;
         
         public createCallVariablesGroupResponse1() {
@@ -13246,7 +13307,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createCampaignProfile : object, System.ComponentModel.INotifyPropertyChanged {
         
         private campaignProfileInfo campaignProfileField;
@@ -13278,7 +13339,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class campaignProfileInfo : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string aNIField;
@@ -13464,7 +13525,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class campaignDialingSchedule : object, System.ComponentModel.INotifyPropertyChanged {
         
         private dialSortOrder dialASAPSortOrderField;
@@ -13620,7 +13681,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum dialSortOrder {
         
         /// <remarks/>
@@ -13636,7 +13697,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum timePeriod {
         
         /// <remarks/>
@@ -13655,7 +13716,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum campaignDialingOrder {
         
         /// <remarks/>
@@ -13682,7 +13743,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class campaignNumberSchedule : object, System.ComponentModel.INotifyPropertyChanged {
         
         private campaignDialNumber numberField;
@@ -13754,7 +13815,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum campaignDialNumber {
         
         /// <remarks/>
@@ -13772,7 +13833,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createCampaignProfileResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private campaignProfileInfo returnField;
@@ -13805,7 +13866,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createCampaignProfileRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createCampaignProfile createCampaignProfile;
         
         public createCampaignProfileRequest() {
@@ -13822,7 +13883,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createCampaignProfileResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createCampaignProfileResponse createCampaignProfileResponse;
         
         public createCampaignProfileResponse1() {
@@ -13838,20 +13899,20 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createContactField : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private contactField arg0Field;
+        private contactField fieldField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public contactField arg0 {
+        public contactField field {
             get {
-                return this.arg0Field;
+                return this.fieldField;
             }
             set {
-                this.arg0Field = value;
-                this.RaisePropertyChanged("arg0");
+                this.fieldField = value;
+                this.RaisePropertyChanged("field");
             }
         }
         
@@ -13870,7 +13931,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class contactField : object, System.ComponentModel.INotifyPropertyChanged {
         
         private contactFieldDisplay displayAsField;
@@ -14026,7 +14087,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum contactFieldDisplay {
         
         /// <remarks/>
@@ -14042,7 +14103,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum contactFieldMapping {
         
         /// <remarks/>
@@ -14096,12 +14157,8 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class contactFieldRestriction : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private bool isEnabledField;
-        
-        private bool isEnabledFieldSpecified;
         
         private contactFieldRestrictionType typeField;
         
@@ -14111,30 +14168,6 @@ namespace CallingListSample.Five9Admin {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool isEnabled {
-            get {
-                return this.isEnabledField;
-            }
-            set {
-                this.isEnabledField = value;
-                this.RaisePropertyChanged("isEnabled");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool isEnabledSpecified {
-            get {
-                return this.isEnabledFieldSpecified;
-            }
-            set {
-                this.isEnabledFieldSpecified = value;
-                this.RaisePropertyChanged("isEnabledSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public contactFieldRestrictionType type {
             get {
                 return this.typeField;
@@ -14158,7 +14191,7 @@ namespace CallingListSample.Five9Admin {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public string value {
             get {
                 return this.valueField;
@@ -14182,7 +14215,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum contactFieldRestrictionType {
         
         /// <remarks/>
@@ -14225,7 +14258,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum contactFieldType {
         
         /// <remarks/>
@@ -14270,7 +14303,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createContactFieldResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -14289,7 +14322,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createContactFieldRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createContactField createContactField;
         
         public createContactFieldRequest() {
@@ -14306,7 +14339,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createContactFieldResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createContactFieldResponse createContactFieldResponse;
         
         public createContactFieldResponse1() {
@@ -14322,7 +14355,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createDisposition : object, System.ComponentModel.INotifyPropertyChanged {
         
         private disposition dispositionField;
@@ -14354,7 +14387,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class disposition : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool agentMustCompleteWorksheetField;
@@ -14608,7 +14641,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum customDispositionType {
         
         /// <remarks/>
@@ -14638,7 +14671,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class dispositionTypeParams : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool allowChangeTimerField;
@@ -14754,7 +14787,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createDispositionResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -14773,7 +14806,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createDispositionRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createDisposition createDisposition;
         
         public createDispositionRequest() {
@@ -14790,7 +14823,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createDispositionResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createDispositionResponse createDispositionResponse;
         
         public createDispositionResponse1() {
@@ -14806,7 +14839,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createIVRScript : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string nameField;
@@ -14838,7 +14871,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createIVRScriptResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private ivrScriptDef returnField;
@@ -14870,7 +14903,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class ivrScriptDef : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string descriptionField;
@@ -14931,7 +14964,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createIVRScriptRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createIVRScript createIVRScript;
         
         public createIVRScriptRequest() {
@@ -14948,7 +14981,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createIVRScriptResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createIVRScriptResponse createIVRScriptResponse;
         
         public createIVRScriptResponse1() {
@@ -14964,7 +14997,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createInboundCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private inboundCampaign campaignField;
@@ -14996,7 +15029,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createInboundCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -15015,7 +15048,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createInboundCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createInboundCampaign createInboundCampaign;
         
         public createInboundCampaignRequest() {
@@ -15032,7 +15065,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createInboundCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createInboundCampaignResponse createInboundCampaignResponse;
         
         public createInboundCampaignResponse1() {
@@ -15048,7 +15081,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createList : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNameField;
@@ -15080,7 +15113,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createListResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -15099,7 +15132,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createListRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createList createList;
         
         public createListRequest() {
@@ -15116,7 +15149,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createListResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createListResponse createListResponse;
         
         public createListResponse1() {
@@ -15132,7 +15165,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createOutboundCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private outboundCampaign campaignField;
@@ -15164,7 +15197,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createOutboundCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -15183,7 +15216,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createOutboundCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createOutboundCampaign createOutboundCampaign;
         
         public createOutboundCampaignRequest() {
@@ -15200,7 +15233,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createOutboundCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createOutboundCampaignResponse createOutboundCampaignResponse;
         
         public createOutboundCampaignResponse1() {
@@ -15216,7 +15249,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createReasonCode : object, System.ComponentModel.INotifyPropertyChanged {
         
         private reasonCode reasonCodeField;
@@ -15248,7 +15281,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class reasonCode : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool enabledField;
@@ -15390,7 +15423,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum reasonCodeType {
         
         /// <remarks/>
@@ -15405,7 +15438,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createReasonCodeResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -15424,7 +15457,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createReasonCodeRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createReasonCode createReasonCode;
         
         public createReasonCodeRequest() {
@@ -15441,7 +15474,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createReasonCodeResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createReasonCodeResponse createReasonCodeResponse;
         
         public createReasonCodeResponse1() {
@@ -15457,7 +15490,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createSkill : object, System.ComponentModel.INotifyPropertyChanged {
         
         private skillInfo skillInfoField;
@@ -15489,7 +15522,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class skillInfo : object, System.ComponentModel.INotifyPropertyChanged {
         
         private skill skillField;
@@ -15535,7 +15568,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class skill : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string descriptionField;
@@ -15651,7 +15684,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class userSkill : object, System.ComponentModel.INotifyPropertyChanged {
         
         private long idField;
@@ -15739,7 +15772,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createSkillResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private skillInfo returnField;
@@ -15772,7 +15805,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createSkillRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createSkill createSkill;
         
         public createSkillRequest() {
@@ -15789,7 +15822,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createSkillResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createSkillResponse createSkillResponse;
         
         public createSkillResponse1() {
@@ -15805,7 +15838,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createUser : object, System.ComponentModel.INotifyPropertyChanged {
         
         private userInfo userInfoField;
@@ -15837,7 +15870,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class userInfo : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string[] agentGroupsField;
@@ -15925,7 +15958,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class cannedReport : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int indexField;
@@ -15985,7 +16018,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class userGeneralInfo : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool activeField;
@@ -16311,7 +16344,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class userRoles : object, System.ComponentModel.INotifyPropertyChanged {
         
         private adminPermission[] adminField;
@@ -16388,7 +16421,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class adminPermission : object, System.ComponentModel.INotifyPropertyChanged {
         
         private adminPermissionType typeField;
@@ -16446,7 +16479,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum adminPermissionType {
         
         /// <remarks/>
@@ -16527,7 +16560,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class agentRole : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool alwaysRecordedField;
@@ -16601,7 +16634,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class agentPermission : object, System.ComponentModel.INotifyPropertyChanged {
         
         private agentPermissionType typeField;
@@ -16659,7 +16692,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum agentPermissionType {
         
         /// <remarks/>
@@ -16741,9 +16774,6 @@ namespace CallingListSample.Five9Admin {
         ScreenRecording,
         
         /// <remarks/>
-        ProcessEMail,
-        
-        /// <remarks/>
         RecycleDispositionAllowed,
         
         /// <remarks/>
@@ -16785,7 +16815,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class reportingPermission : object, System.ComponentModel.INotifyPropertyChanged {
         
         private reportingPermissionType typeField;
@@ -16843,7 +16873,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum reportingPermissionType {
         
         /// <remarks/>
@@ -16879,7 +16909,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class supervisorPermission : object, System.ComponentModel.INotifyPropertyChanged {
         
         private supervisorPermissionType typeField;
@@ -16937,7 +16967,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum supervisorPermissionType {
         
         /// <remarks/>
@@ -17018,7 +17048,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createUserResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private userInfo returnField;
@@ -17051,7 +17081,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createUserRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createUser createUser;
         
         public createUserRequest() {
@@ -17068,7 +17098,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createUserResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createUserResponse createUserResponse;
         
         public createUserResponse1() {
@@ -17084,7 +17114,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createUserProfile : object, System.ComponentModel.INotifyPropertyChanged {
         
         private userProfile userProfileField;
@@ -17116,7 +17146,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class userProfile : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string descriptionField;
@@ -17232,7 +17262,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createUserProfileResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private userProfile returnField;
@@ -17265,7 +17295,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createUserProfileRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createUserProfile createUserProfile;
         
         public createUserProfileRequest() {
@@ -17282,7 +17312,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createUserProfileResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createUserProfileResponse createUserProfileResponse;
         
         public createUserProfileResponse1() {
@@ -17298,7 +17328,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createWebConnector : object, System.ComponentModel.INotifyPropertyChanged {
         
         private webConnector connectorField;
@@ -17330,7 +17360,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class webConnector : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool addWorksheetField;
@@ -17668,7 +17698,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum webConnectorAgentAppType {
         
         /// <remarks/>
@@ -17683,7 +17713,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class keyValuePair : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string keyField;
@@ -17727,7 +17757,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum webConnectorCTIWebServicesType {
         
         /// <remarks/>
@@ -17740,7 +17770,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum webConnectorTriggerType {
         
         /// <remarks/>
@@ -17773,7 +17803,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class createWebConnectorResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -17792,7 +17822,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createWebConnectorRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createWebConnector createWebConnector;
         
         public createWebConnectorRequest() {
@@ -17809,7 +17839,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class createWebConnectorResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.createWebConnectorResponse createWebConnectorResponse;
         
         public createWebConnectorResponse1() {
@@ -17825,7 +17855,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteAgentGroup : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string groupNameField;
@@ -17857,7 +17887,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteAgentGroupResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -17876,7 +17906,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteAgentGroupRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteAgentGroup deleteAgentGroup;
         
         public deleteAgentGroupRequest() {
@@ -17893,7 +17923,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteAgentGroupResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteAgentGroupResponse deleteAgentGroupResponse;
         
         public deleteAgentGroupResponse1() {
@@ -17909,7 +17939,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteAllFromList : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNameField;
@@ -17955,7 +17985,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteAllFromListResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier returnField;
@@ -17988,7 +18018,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteAllFromListRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteAllFromList deleteAllFromList;
         
         public deleteAllFromListRequest() {
@@ -18005,7 +18035,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteAllFromListResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteAllFromListResponse deleteAllFromListResponse;
         
         public deleteAllFromListResponse1() {
@@ -18021,7 +18051,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteCallVariable : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string nameField;
@@ -18067,7 +18097,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteCallVariableResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -18086,7 +18116,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteCallVariableRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteCallVariable deleteCallVariable;
         
         public deleteCallVariableRequest() {
@@ -18103,7 +18133,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteCallVariableResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteCallVariableResponse deleteCallVariableResponse;
         
         public deleteCallVariableResponse1() {
@@ -18119,7 +18149,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteCallVariablesGroup : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string nameField;
@@ -18151,7 +18181,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteCallVariablesGroupResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -18170,7 +18200,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteCallVariablesGroupRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteCallVariablesGroup deleteCallVariablesGroup;
         
         public deleteCallVariablesGroupRequest() {
@@ -18187,7 +18217,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteCallVariablesGroupResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteCallVariablesGroupResponse deleteCallVariablesGroupResponse;
         
         public deleteCallVariablesGroupResponse1() {
@@ -18203,7 +18233,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -18235,7 +18265,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -18254,7 +18284,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteCampaign deleteCampaign;
         
         public deleteCampaignRequest() {
@@ -18271,7 +18301,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteCampaignResponse deleteCampaignResponse;
         
         public deleteCampaignResponse1() {
@@ -18287,7 +18317,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteCampaignProfile : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string profileNameField;
@@ -18319,7 +18349,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteCampaignProfileResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -18338,7 +18368,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteCampaignProfileRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteCampaignProfile deleteCampaignProfile;
         
         public deleteCampaignProfileRequest() {
@@ -18355,7 +18385,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteCampaignProfileResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteCampaignProfileResponse deleteCampaignProfileResponse;
         
         public deleteCampaignProfileResponse1() {
@@ -18371,7 +18401,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteContactField : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string fieldNameField;
@@ -18403,7 +18433,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteContactFieldResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -18422,7 +18452,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteContactFieldRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteContactField deleteContactField;
         
         public deleteContactFieldRequest() {
@@ -18439,7 +18469,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteContactFieldResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteContactFieldResponse deleteContactFieldResponse;
         
         public deleteContactFieldResponse1() {
@@ -18455,7 +18485,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteFromContacts : object, System.ComponentModel.INotifyPropertyChanged {
         
         private crmDeleteSettings crmDeleteSettingsField;
@@ -18503,7 +18533,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteFromContactsResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier returnField;
@@ -18536,7 +18566,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteFromContactsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteFromContacts deleteFromContacts;
         
         public deleteFromContactsRequest() {
@@ -18553,7 +18583,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteFromContactsResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteFromContactsResponse deleteFromContactsResponse;
         
         public deleteFromContactsResponse1() {
@@ -18569,7 +18599,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteFromContactsCsv : object, System.ComponentModel.INotifyPropertyChanged {
         
         private crmDeleteSettings crmDeleteSettingsField;
@@ -18615,7 +18645,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteFromContactsCsvResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier returnField;
@@ -18648,7 +18678,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteFromContactsCsvRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteFromContactsCsv deleteFromContactsCsv;
         
         public deleteFromContactsCsvRequest() {
@@ -18665,7 +18695,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteFromContactsCsvResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteFromContactsCsvResponse deleteFromContactsCsvResponse;
         
         public deleteFromContactsCsvResponse1() {
@@ -18681,7 +18711,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteFromContactsFtp : object, System.ComponentModel.INotifyPropertyChanged {
         
         private crmDeleteSettings deleteSettingsField;
@@ -18727,7 +18757,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteFromContactsFtpResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -18746,7 +18776,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteFromContactsFtpRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteFromContactsFtp deleteFromContactsFtp;
         
         public deleteFromContactsFtpRequest() {
@@ -18763,7 +18793,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteFromContactsFtpResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteFromContactsFtpResponse deleteFromContactsFtpResponse;
         
         public deleteFromContactsFtpResponse1() {
@@ -18779,7 +18809,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteFromList : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNameField;
@@ -18841,7 +18871,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteFromListResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier returnField;
@@ -18874,7 +18904,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteFromListRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteFromList deleteFromList;
         
         public deleteFromListRequest() {
@@ -18891,7 +18921,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteFromListResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteFromListResponse deleteFromListResponse;
         
         public deleteFromListResponse1() {
@@ -18907,7 +18937,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteFromListCsv : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNameField;
@@ -18967,7 +18997,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteFromListCsvResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier returnField;
@@ -19000,7 +19030,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteFromListCsvRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteFromListCsv deleteFromListCsv;
         
         public deleteFromListCsvRequest() {
@@ -19017,7 +19047,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteFromListCsvResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteFromListCsvResponse deleteFromListCsvResponse;
         
         public deleteFromListCsvResponse1() {
@@ -19033,7 +19063,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteFromListFtp : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNameField;
@@ -19093,7 +19123,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteFromListFtpResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -19112,7 +19142,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteFromListFtpRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteFromListFtp deleteFromListFtp;
         
         public deleteFromListFtpRequest() {
@@ -19129,7 +19159,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteFromListFtpResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteFromListFtpResponse deleteFromListFtpResponse;
         
         public deleteFromListFtpResponse1() {
@@ -19145,7 +19175,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteIVRScript : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string nameField;
@@ -19177,7 +19207,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteIVRScriptResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -19196,7 +19226,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteIVRScriptRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteIVRScript deleteIVRScript;
         
         public deleteIVRScriptRequest() {
@@ -19213,7 +19243,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteIVRScriptResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteIVRScriptResponse deleteIVRScriptResponse;
         
         public deleteIVRScriptResponse1() {
@@ -19229,7 +19259,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteList : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNameField;
@@ -19261,7 +19291,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteListResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -19280,7 +19310,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteListRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteList deleteList;
         
         public deleteListRequest() {
@@ -19297,7 +19327,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteListResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteListResponse deleteListResponse;
         
         public deleteListResponse1() {
@@ -19313,7 +19343,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deletePrompt : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string promptNameField;
@@ -19345,7 +19375,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deletePromptResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -19364,7 +19394,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deletePromptRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deletePrompt deletePrompt;
         
         public deletePromptRequest() {
@@ -19381,7 +19411,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deletePromptResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deletePromptResponse deletePromptResponse;
         
         public deletePromptResponse1() {
@@ -19397,7 +19427,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteReasonCode : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string reasonCodeNameField;
@@ -19429,7 +19459,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteReasonCodeResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -19448,7 +19478,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteReasonCodeRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteReasonCode deleteReasonCode;
         
         public deleteReasonCodeRequest() {
@@ -19465,7 +19495,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteReasonCodeResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteReasonCodeResponse deleteReasonCodeResponse;
         
         public deleteReasonCodeResponse1() {
@@ -19481,7 +19511,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteReasonCodeByType : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string reasonCodeNameField;
@@ -19541,7 +19571,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteReasonCodeByTypeResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -19560,7 +19590,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteReasonCodeByTypeRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteReasonCodeByType deleteReasonCodeByType;
         
         public deleteReasonCodeByTypeRequest() {
@@ -19577,7 +19607,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteReasonCodeByTypeResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteReasonCodeByTypeResponse deleteReasonCodeByTypeResponse;
         
         public deleteReasonCodeByTypeResponse1() {
@@ -19593,7 +19623,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteRecordFromList : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNameField;
@@ -19654,7 +19684,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteRecordFromListResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private listImportResult returnField;
@@ -19687,7 +19717,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteRecordFromListRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteRecordFromList deleteRecordFromList;
         
         public deleteRecordFromListRequest() {
@@ -19704,7 +19734,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteRecordFromListResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteRecordFromListResponse deleteRecordFromListResponse;
         
         public deleteRecordFromListResponse1() {
@@ -19720,7 +19750,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteSkill : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string skillNameField;
@@ -19752,7 +19782,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteSkillResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -19771,7 +19801,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteSkillRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteSkill deleteSkill;
         
         public deleteSkillRequest() {
@@ -19788,7 +19818,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteSkillResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteSkillResponse deleteSkillResponse;
         
         public deleteSkillResponse1() {
@@ -19804,7 +19834,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteUser : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string userNameField;
@@ -19836,7 +19866,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteUserResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -19855,7 +19885,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteUserRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteUser deleteUser;
         
         public deleteUserRequest() {
@@ -19872,7 +19902,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteUserResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteUserResponse deleteUserResponse;
         
         public deleteUserResponse1() {
@@ -19888,7 +19918,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteUserProfile : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string userProfileNameField;
@@ -19920,7 +19950,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteUserProfileResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -19939,7 +19969,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteUserProfileRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteUserProfile deleteUserProfile;
         
         public deleteUserProfileRequest() {
@@ -19956,7 +19986,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteUserProfileResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteUserProfileResponse deleteUserProfileResponse;
         
         public deleteUserProfileResponse1() {
@@ -19972,7 +20002,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteWebConnector : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string nameField;
@@ -20004,7 +20034,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class deleteWebConnectorResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -20023,7 +20053,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteWebConnectorRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteWebConnector deleteWebConnector;
         
         public deleteWebConnectorRequest() {
@@ -20040,7 +20070,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class deleteWebConnectorResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.deleteWebConnectorResponse deleteWebConnectorResponse;
         
         public deleteWebConnectorResponse1() {
@@ -20056,7 +20086,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class forceStopCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -20088,7 +20118,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class forceStopCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -20107,7 +20137,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class forceStopCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.forceStopCampaign forceStopCampaign;
         
         public forceStopCampaignRequest() {
@@ -20124,7 +20154,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class forceStopCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.forceStopCampaignResponse forceStopCampaignResponse;
         
         public forceStopCampaignResponse1() {
@@ -20140,7 +20170,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getAgentAuditReport : object, System.ComponentModel.INotifyPropertyChanged {
         
         private reportTimeCriteria timeField;
@@ -20186,7 +20216,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class reportTimeCriteria : object, System.ComponentModel.INotifyPropertyChanged {
         
         private System.DateTime endField;
@@ -20260,7 +20290,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class agentAuditReportCriteria : object, System.ComponentModel.INotifyPropertyChanged {
         
         private System.Nullable<agentState>[] agentStatesField;
@@ -20332,7 +20362,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum agentState {
         
         /// <remarks/>
@@ -20374,7 +20404,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getAgentAuditReportResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private reportRowData returnField;
@@ -20406,7 +20436,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class reportRowData : object, System.ComponentModel.INotifyPropertyChanged {
         
         private record headerField;
@@ -20452,7 +20482,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class record : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string[] valuesField;
@@ -20486,7 +20516,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getAgentAuditReportRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getAgentAuditReport getAgentAuditReport;
         
         public getAgentAuditReportRequest() {
@@ -20503,7 +20533,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getAgentAuditReportResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getAgentAuditReportResponse getAgentAuditReportResponse;
         
         public getAgentAuditReportResponse1() {
@@ -20519,7 +20549,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getAgentAuditReportCsv : object, System.ComponentModel.INotifyPropertyChanged {
         
         private reportTimeCriteria timeField;
@@ -20565,7 +20595,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getAgentAuditReportCsvResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string returnField;
@@ -20598,7 +20628,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getAgentAuditReportCsvRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getAgentAuditReportCsv getAgentAuditReportCsv;
         
         public getAgentAuditReportCsvRequest() {
@@ -20615,7 +20645,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getAgentAuditReportCsvResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getAgentAuditReportCsvResponse getAgentAuditReportCsvResponse;
         
         public getAgentAuditReportCsvResponse1() {
@@ -20631,7 +20661,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getAgentGroup : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string groupNameField;
@@ -20663,7 +20693,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getAgentGroupResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private agentGroup returnField;
@@ -20696,7 +20726,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getAgentGroupRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getAgentGroup getAgentGroup;
         
         public getAgentGroupRequest() {
@@ -20713,7 +20743,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getAgentGroupResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getAgentGroupResponse getAgentGroupResponse;
         
         public getAgentGroupResponse1() {
@@ -20729,7 +20759,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getAgentGroups : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string groupNamePatternField;
@@ -20762,7 +20792,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getAgentGroupsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getAgentGroups getAgentGroups;
         
         public getAgentGroupsRequest() {
@@ -20779,7 +20809,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getAgentGroupsResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getAgentGroupsResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getAgentGroupsResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.agentGroup[] getAgentGroupsResponse1;
         
@@ -20796,7 +20826,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getAutodialCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -20828,7 +20858,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getAutodialCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private autodialCampaign returnField;
@@ -20861,7 +20891,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getAutodialCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getAutodialCampaign getAutodialCampaign;
         
         public getAutodialCampaignRequest() {
@@ -20878,7 +20908,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getAutodialCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getAutodialCampaignResponse getAutodialCampaignResponse;
         
         public getAutodialCampaignResponse1() {
@@ -20894,7 +20924,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getCallCountersState : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -20912,7 +20942,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class limitTimeoutState : object, System.ComponentModel.INotifyPropertyChanged {
         
         private callCounterState[] callCounterStatesField;
@@ -20958,7 +20988,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class callCounterState : object, System.ComponentModel.INotifyPropertyChanged {
         
         private long limitField;
@@ -21030,7 +21060,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum apiOperationType {
         
         /// <remarks/>
@@ -21073,7 +21103,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCallCountersStateRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getCallCountersState getCallCountersState;
         
         public getCallCountersStateRequest() {
@@ -21090,7 +21120,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCallCountersStateResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCallCountersStateResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCallCountersStateResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.limitTimeoutState[] getCallCountersStateResponse1;
         
@@ -21107,7 +21137,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getCallLogReport : object, System.ComponentModel.INotifyPropertyChanged {
         
         private reportTimeCriteria timeField;
@@ -21153,7 +21183,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class callLogReportCriteria : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string aNIField;
@@ -21281,7 +21311,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum callType {
         
         /// <remarks/>
@@ -21320,7 +21350,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getCallLogReportResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private reportRowData returnField;
@@ -21353,7 +21383,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCallLogReportRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getCallLogReport getCallLogReport;
         
         public getCallLogReportRequest() {
@@ -21370,7 +21400,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCallLogReportResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getCallLogReportResponse getCallLogReportResponse;
         
         public getCallLogReportResponse1() {
@@ -21386,7 +21416,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getCallLogReportCsv : object, System.ComponentModel.INotifyPropertyChanged {
         
         private reportTimeCriteria timeField;
@@ -21432,7 +21462,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getCallLogReportCsvResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string returnField;
@@ -21465,7 +21495,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCallLogReportCsvRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getCallLogReportCsv getCallLogReportCsv;
         
         public getCallLogReportCsvRequest() {
@@ -21482,7 +21512,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCallLogReportCsvResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getCallLogReportCsvResponse getCallLogReportCsvResponse;
         
         public getCallLogReportCsvResponse1() {
@@ -21498,7 +21528,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getCallVariableGroups : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string namePatternField;
@@ -21530,7 +21560,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class callVariablesGroup : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string descriptionField;
@@ -21591,7 +21621,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCallVariableGroupsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getCallVariableGroups getCallVariableGroups;
         
         public getCallVariableGroupsRequest() {
@@ -21608,7 +21638,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCallVariableGroupsResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCallVariableGroupsResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCallVariableGroupsResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.callVariablesGroup[] getCallVariableGroupsResponse1;
         
@@ -21625,7 +21655,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getCallVariables : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string namePatternField;
@@ -21672,7 +21702,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCallVariablesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getCallVariables getCallVariables;
         
         public getCallVariablesRequest() {
@@ -21689,7 +21719,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCallVariablesResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCallVariablesResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCallVariablesResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.callVariable[] getCallVariablesResponse1;
         
@@ -21706,7 +21736,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getCampaignDNISList : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -21739,7 +21769,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCampaignDNISListRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getCampaignDNISList getCampaignDNISList;
         
         public getCampaignDNISListRequest() {
@@ -21756,7 +21786,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCampaignDNISListResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCampaignDNISListResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCampaignDNISListResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public string[] getCampaignDNISListResponse1;
         
@@ -21773,7 +21803,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getCampaignProfileDispositions : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string profileNameField;
@@ -21805,7 +21835,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class dispositionCount : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int countField;
@@ -21866,7 +21896,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCampaignProfileDispositionsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getCampaignProfileDispositions getCampaignProfileDispositions;
         
         public getCampaignProfileDispositionsRequest() {
@@ -21883,7 +21913,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCampaignProfileDispositionsResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCampaignProfileDispositionsResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCampaignProfileDispositionsResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.dispositionCount[] getCampaignProfileDispositionsResponse1;
         
@@ -21900,7 +21930,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getCampaignProfileFilter : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string profileNameField;
@@ -21932,7 +21962,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getCampaignProfileFilterResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private campaignProfileFilter returnField;
@@ -21964,7 +21994,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class campaignProfileFilter : object, System.ComponentModel.INotifyPropertyChanged {
         
         private campaignFilterCriterion[] crmCriteriaField;
@@ -22024,7 +22054,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class campaignFilterCriterion : object, System.ComponentModel.INotifyPropertyChanged {
         
         private compareOperatorType compareOperatorField;
@@ -22096,7 +22126,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum compareOperatorType {
         
         /// <remarks/>
@@ -22144,7 +22174,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class crmCriteriaGrouping : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string expressionField;
@@ -22202,7 +22232,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum crmCriteriaGroupingType {
         
         /// <remarks/>
@@ -22220,7 +22250,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class orderByField : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool descendingField;
@@ -22309,7 +22339,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCampaignProfileFilterRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getCampaignProfileFilter getCampaignProfileFilter;
         
         public getCampaignProfileFilterRequest() {
@@ -22326,7 +22356,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCampaignProfileFilterResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getCampaignProfileFilterResponse getCampaignProfileFilterResponse;
         
         public getCampaignProfileFilterResponse1() {
@@ -22342,7 +22372,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getCampaignProfiles : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string namePatternField;
@@ -22375,7 +22405,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCampaignProfilesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getCampaignProfiles getCampaignProfiles;
         
         public getCampaignProfilesRequest() {
@@ -22392,7 +22422,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCampaignProfilesResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCampaignProfilesResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCampaignProfilesResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.campaignProfileInfo[] getCampaignProfilesResponse1;
         
@@ -22409,7 +22439,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getCampaignState : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -22469,7 +22499,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getCampaignStateResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private campaignState returnField;
@@ -22516,7 +22546,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCampaignStateRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getCampaignState getCampaignState;
         
         public getCampaignStateRequest() {
@@ -22533,7 +22563,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCampaignStateResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getCampaignStateResponse getCampaignStateResponse;
         
         public getCampaignStateResponse1() {
@@ -22549,7 +22579,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getCampaigns : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNamePatternField;
@@ -22610,7 +22640,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCampaignsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getCampaigns getCampaigns;
         
         public getCampaignsRequest() {
@@ -22627,7 +22657,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCampaignsResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCampaignsResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCampaignsResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.campaign[] getCampaignsResponse1;
         
@@ -22644,20 +22674,20 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getContactFields : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string arg0Field;
+        private string namePatternField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string arg0 {
+        public string namePattern {
             get {
-                return this.arg0Field;
+                return this.namePatternField;
             }
             set {
-                this.arg0Field = value;
-                this.RaisePropertyChanged("arg0");
+                this.namePatternField = value;
+                this.RaisePropertyChanged("namePattern");
             }
         }
         
@@ -22677,7 +22707,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getContactFieldsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getContactFields getContactFields;
         
         public getContactFieldsRequest() {
@@ -22694,7 +22724,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getContactFieldsResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getContactFieldsResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getContactFieldsResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.contactField[] getContactFieldsResponse1;
         
@@ -22711,7 +22741,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getContactRecords : object, System.ComponentModel.INotifyPropertyChanged {
         
         private crmLookupCriteria lookupCriteriaField;
@@ -22743,7 +22773,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class crmLookupCriteria : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string contactIdFieldField;
@@ -22789,7 +22819,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class crmFieldCriterion : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string fieldField;
@@ -22835,7 +22865,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getContactRecordsResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private contactsLookupResult returnField;
@@ -22867,7 +22897,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class contactsLookupResult : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string[] fieldsField;
@@ -22914,7 +22944,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getContactRecordsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getContactRecords getContactRecords;
         
         public getContactRecordsRequest() {
@@ -22931,7 +22961,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getContactRecordsResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getContactRecordsResponse getContactRecordsResponse;
         
         public getContactRecordsResponse1() {
@@ -22947,7 +22977,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getCrmImportResult : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier identifierField;
@@ -22979,7 +23009,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getCrmImportResultResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private crmImportResult returnField;
@@ -23012,7 +23042,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCrmImportResultRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getCrmImportResult getCrmImportResult;
         
         public getCrmImportResultRequest() {
@@ -23029,7 +23059,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCrmImportResultResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getCrmImportResultResponse getCrmImportResultResponse;
         
         public getCrmImportResultResponse1() {
@@ -23045,7 +23075,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getDNISList : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool selectUnassignedField;
@@ -23092,7 +23122,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getDNISListRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getDNISList getDNISList;
         
         public getDNISListRequest() {
@@ -23109,7 +23139,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getDNISListResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getDNISListResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getDNISListResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public string[] getDNISListResponse1;
         
@@ -23126,7 +23156,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getDialingRules : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string namePatternField;
@@ -23158,7 +23188,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class dialingRule : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool applyToManualCallsField;
@@ -23302,7 +23332,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class dateRange : object, System.ComponentModel.INotifyPropertyChanged {
         
         private System.Nullable<dayOfWeek>[] daysOfWeekField;
@@ -23388,7 +23418,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum dayOfWeek {
         
         /// <remarks/>
@@ -23416,7 +23446,7 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public enum stateProvince {
         
         /// <remarks/>
@@ -23608,7 +23638,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class timeRange : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int startHourField;
@@ -23683,7 +23713,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getDialingRulesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getDialingRules getDialingRules;
         
         public getDialingRulesRequest() {
@@ -23700,7 +23730,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getDialingRulesResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getDialingRulesResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getDialingRulesResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.dialingRule[] getDialingRulesResponse1;
         
@@ -23717,7 +23747,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getDisposition : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string dispositionNameField;
@@ -23749,7 +23779,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getDispositionResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private disposition returnField;
@@ -23782,7 +23812,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getDispositionRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getDisposition getDisposition;
         
         public getDispositionRequest() {
@@ -23799,7 +23829,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getDispositionResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getDispositionResponse getDispositionResponse;
         
         public getDispositionResponse1() {
@@ -23815,7 +23845,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getDispositions : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string dispositionNamePatternField;
@@ -23848,7 +23878,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getDispositionsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getDispositions getDispositions;
         
         public getDispositionsRequest() {
@@ -23865,7 +23895,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getDispositionsResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getDispositionsResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getDispositionsResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.disposition[] getDispositionsResponse1;
         
@@ -23882,7 +23912,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getDispositionsImportResult : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier identifierField;
@@ -23914,7 +23944,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getDispositionsImportResultResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private dispositionsImportResult returnField;
@@ -23947,7 +23977,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getDispositionsImportResultRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getDispositionsImportResult getDispositionsImportResult;
         
         public getDispositionsImportResultRequest() {
@@ -23964,7 +23994,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getDispositionsImportResultResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getDispositionsImportResultResponse getDispositionsImportResultResponse;
         
         public getDispositionsImportResultResponse1() {
@@ -23980,7 +24010,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getIVRScripts : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string namePatternField;
@@ -24013,7 +24043,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getIVRScriptsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getIVRScripts getIVRScripts;
         
         public getIVRScriptsRequest() {
@@ -24030,7 +24060,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getIVRScriptsResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getIVRScriptsResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getIVRScriptsResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.ivrScriptDef[] getIVRScriptsResponse1;
         
@@ -24047,7 +24077,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getInboundCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -24079,7 +24109,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getInboundCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private inboundCampaign returnField;
@@ -24112,7 +24142,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getInboundCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getInboundCampaign getInboundCampaign;
         
         public getInboundCampaignRequest() {
@@ -24129,7 +24159,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getInboundCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getInboundCampaignResponse getInboundCampaignResponse;
         
         public getInboundCampaignResponse1() {
@@ -24145,7 +24175,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getListImportResult : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier identifierField;
@@ -24177,7 +24207,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getListImportResultResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private listImportResult returnField;
@@ -24210,7 +24240,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getListImportResultRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getListImportResult getListImportResult;
         
         public getListImportResultRequest() {
@@ -24227,7 +24257,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getListImportResultResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getListImportResultResponse getListImportResultResponse;
         
         public getListImportResultResponse1() {
@@ -24243,7 +24273,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getListsForCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -24276,7 +24306,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getListsForCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getListsForCampaign getListsForCampaign;
         
         public getListsForCampaignRequest() {
@@ -24293,7 +24323,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getListsForCampaignResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getListsForCampaignResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getListsForCampaignResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.listState[] getListsForCampaignResponse1;
         
@@ -24310,7 +24340,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getListsInfo : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string listNamePatternField;
@@ -24342,7 +24372,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class listInfo : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string nameField;
@@ -24389,7 +24419,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getListsInfoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getListsInfo getListsInfo;
         
         public getListsInfoRequest() {
@@ -24406,7 +24436,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getListsInfoResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getListsInfoResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getListsInfoResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.listInfo[] getListsInfoResponse1;
         
@@ -24423,7 +24453,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getOutboundCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -24455,7 +24485,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getOutboundCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private outboundCampaign returnField;
@@ -24488,7 +24518,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getOutboundCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getOutboundCampaign getOutboundCampaign;
         
         public getOutboundCampaignRequest() {
@@ -24505,7 +24535,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getOutboundCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getOutboundCampaignResponse getOutboundCampaignResponse;
         
         public getOutboundCampaignResponse1() {
@@ -24521,7 +24551,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getPrompt : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string promptNameField;
@@ -24553,7 +24583,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getPromptResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private promptInfo returnField;
@@ -24586,7 +24616,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getPromptRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getPrompt getPrompt;
         
         public getPromptRequest() {
@@ -24603,7 +24633,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getPromptResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getPromptResponse getPromptResponse;
         
         public getPromptResponse1() {
@@ -24619,7 +24649,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getReasonCode : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string reasonCodeNameField;
@@ -24651,7 +24681,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getReasonCodeResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private reasonCode returnField;
@@ -24684,7 +24714,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getReasonCodeRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getReasonCode getReasonCode;
         
         public getReasonCodeRequest() {
@@ -24701,7 +24731,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getReasonCodeResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getReasonCodeResponse getReasonCodeResponse;
         
         public getReasonCodeResponse1() {
@@ -24717,7 +24747,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getReasonCodeByType : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string reasonCodeNameField;
@@ -24777,7 +24807,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getReasonCodeByTypeResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private reasonCode returnField;
@@ -24810,7 +24840,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getReasonCodeByTypeRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getReasonCodeByType getReasonCodeByType;
         
         public getReasonCodeByTypeRequest() {
@@ -24827,7 +24857,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getReasonCodeByTypeResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getReasonCodeByTypeResponse getReasonCodeByTypeResponse;
         
         public getReasonCodeByTypeResponse1() {
@@ -24843,7 +24873,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getReportResult : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string identifierField;
@@ -24875,7 +24905,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getReportResultResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private reportRowData returnField;
@@ -24908,7 +24938,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getReportResultRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getReportResult getReportResult;
         
         public getReportResultRequest() {
@@ -24925,7 +24955,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getReportResultResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getReportResultResponse getReportResultResponse;
         
         public getReportResultResponse1() {
@@ -24941,7 +24971,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getReportResultCsv : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string identifierField;
@@ -24973,7 +25003,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getReportResultCsvResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string returnField;
@@ -25006,7 +25036,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getReportResultCsvRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getReportResultCsv getReportResultCsv;
         
         public getReportResultCsvRequest() {
@@ -25023,7 +25053,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getReportResultCsvResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getReportResultCsvResponse getReportResultCsvResponse;
         
         public getReportResultCsvResponse1() {
@@ -25039,7 +25069,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getSkill : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string skillNameField;
@@ -25071,7 +25101,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getSkillResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private skill returnField;
@@ -25104,7 +25134,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getSkillRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getSkill getSkill;
         
         public getSkillRequest() {
@@ -25121,7 +25151,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getSkillResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getSkillResponse getSkillResponse;
         
         public getSkillResponse1() {
@@ -25137,7 +25167,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getSkillInfo : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string skillNameField;
@@ -25169,7 +25199,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getSkillInfoResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private skillInfo returnField;
@@ -25202,7 +25232,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getSkillInfoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getSkillInfo getSkillInfo;
         
         public getSkillInfoRequest() {
@@ -25219,7 +25249,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getSkillInfoResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getSkillInfoResponse getSkillInfoResponse;
         
         public getSkillInfoResponse1() {
@@ -25235,7 +25265,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getSkillVoicemailGreeting : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string skillNameField;
@@ -25267,7 +25297,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getSkillVoicemailGreetingResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private byte[] returnField;
@@ -25300,7 +25330,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getSkillVoicemailGreetingRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getSkillVoicemailGreeting getSkillVoicemailGreeting;
         
         public getSkillVoicemailGreetingRequest() {
@@ -25317,7 +25347,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getSkillVoicemailGreetingResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getSkillVoicemailGreetingResponse getSkillVoicemailGreetingResponse;
         
         public getSkillVoicemailGreetingResponse1() {
@@ -25333,7 +25363,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getSkills : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string skillNamePatternField;
@@ -25366,7 +25396,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getSkillsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getSkills getSkills;
         
         public getSkillsRequest() {
@@ -25383,7 +25413,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getSkillsResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getSkillsResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getSkillsResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.skill[] getSkillsResponse1;
         
@@ -25400,7 +25430,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getSkillsInfo : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string skillNamePatternField;
@@ -25433,7 +25463,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getSkillsInfoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getSkillsInfo getSkillsInfo;
         
         public getSkillsInfoRequest() {
@@ -25450,7 +25480,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getSkillsInfoResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getSkillsInfoResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getSkillsInfoResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.skillInfo[] getSkillsInfoResponse1;
         
@@ -25467,7 +25497,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getUserGeneralInfo : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string userNameField;
@@ -25499,7 +25529,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getUserGeneralInfoResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private userGeneralInfo returnField;
@@ -25532,7 +25562,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getUserGeneralInfoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getUserGeneralInfo getUserGeneralInfo;
         
         public getUserGeneralInfoRequest() {
@@ -25549,7 +25579,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getUserGeneralInfoResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getUserGeneralInfoResponse getUserGeneralInfoResponse;
         
         public getUserGeneralInfoResponse1() {
@@ -25565,7 +25595,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getUserInfo : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string userNameField;
@@ -25597,7 +25627,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getUserInfoResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private userInfo returnField;
@@ -25630,7 +25660,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getUserInfoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getUserInfo getUserInfo;
         
         public getUserInfoRequest() {
@@ -25647,7 +25677,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getUserInfoResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getUserInfoResponse getUserInfoResponse;
         
         public getUserInfoResponse1() {
@@ -25663,7 +25693,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getUserProfile : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string userProfileNameField;
@@ -25695,7 +25725,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getUserProfileResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private userProfile returnField;
@@ -25728,7 +25758,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getUserProfileRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getUserProfile getUserProfile;
         
         public getUserProfileRequest() {
@@ -25745,7 +25775,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getUserProfileResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getUserProfileResponse getUserProfileResponse;
         
         public getUserProfileResponse1() {
@@ -25761,7 +25791,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getUserProfiles : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string userProfileNamePaternField;
@@ -25794,7 +25824,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getUserProfilesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getUserProfiles getUserProfiles;
         
         public getUserProfilesRequest() {
@@ -25811,7 +25841,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getUserProfilesResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUserProfilesResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUserProfilesResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.userProfile[] getUserProfilesResponse1;
         
@@ -25828,7 +25858,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getUserVoicemailGreeting : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string userNameField;
@@ -25860,7 +25890,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getUserVoicemailGreetingResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private byte[] returnField;
@@ -25893,7 +25923,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getUserVoicemailGreetingRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getUserVoicemailGreeting getUserVoicemailGreeting;
         
         public getUserVoicemailGreetingRequest() {
@@ -25910,7 +25940,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getUserVoicemailGreetingResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getUserVoicemailGreetingResponse getUserVoicemailGreetingResponse;
         
         public getUserVoicemailGreetingResponse1() {
@@ -25926,7 +25956,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getUsersGeneralInfo : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string userNamePatternField;
@@ -25959,7 +25989,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getUsersGeneralInfoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getUsersGeneralInfo getUsersGeneralInfo;
         
         public getUsersGeneralInfoRequest() {
@@ -25976,7 +26006,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getUsersGeneralInfoResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUsersGeneralInfoResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUsersGeneralInfoResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.userGeneralInfo[] getUsersGeneralInfoResponse1;
         
@@ -25993,7 +26023,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getUsersInfo : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string userNamePatternField;
@@ -26026,7 +26056,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getUsersInfoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getUsersInfo getUsersInfo;
         
         public getUsersInfoRequest() {
@@ -26043,7 +26073,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getUsersInfoResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUsersInfoResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUsersInfoResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.userInfo[] getUsersInfoResponse1;
         
@@ -26060,7 +26090,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getVCCConfiguration : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -26078,7 +26108,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getVCCConfigurationResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private vccConfiguration returnField;
@@ -26110,7 +26140,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class vccConfiguration : object, System.ComponentModel.INotifyPropertyChanged {
         
         private agentProductivity agentProductivityField;
@@ -26121,7 +26151,7 @@ namespace CallingListSample.Five9Admin {
         
         private miscVccOptions miscOptionsField;
         
-        private passwordPolicyEntryValue[] passwordPoliciesField;
+        private passwordPolicies passwordPoliciesField;
         
         private remoteHostLoginSettings recordingsServerField;
         
@@ -26178,9 +26208,8 @@ namespace CallingListSample.Five9Admin {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("entryValues", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public passwordPolicyEntryValue[] passwordPolicies {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public passwordPolicies passwordPolicies {
             get {
                 return this.passwordPoliciesField;
             }
@@ -26241,7 +26270,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class agentProductivity : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int longACWTimeField;
@@ -26427,7 +26456,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class emailNotifications : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string emailAddressField;
@@ -26515,7 +26544,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class keyPerfomanceIndicators : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int minTimeOfResponseField;
@@ -26589,7 +26618,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class miscVccOptions : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string defaultCampaignField;
@@ -26789,62 +26818,230 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
-    public partial class passwordPolicyEntryValue : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
+    public partial class passwordPolicies : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private passwordPolicyEntries entryField;
+        private int adminLoginAttemptsField;
         
-        private bool entryFieldSpecified;
+        private bool adminLoginAttemptsFieldSpecified;
         
-        private int valueField;
+        private int enforcePasswordHistoryField;
         
-        private bool valueFieldSpecified;
+        private bool enforcePasswordHistoryFieldSpecified;
+        
+        private int loginAttemptsField;
+        
+        private bool loginAttemptsFieldSpecified;
+        
+        private int minCapitalCharactersField;
+        
+        private bool minCapitalCharactersFieldSpecified;
+        
+        private int minNumberCharactersField;
+        
+        private bool minNumberCharactersFieldSpecified;
+        
+        private int minPasswordLengthField;
+        
+        private bool minPasswordLengthFieldSpecified;
+        
+        private int minSpecialCharactersField;
+        
+        private bool minSpecialCharactersFieldSpecified;
+        
+        private int passwordExpiresField;
+        
+        private bool passwordExpiresFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public passwordPolicyEntries entry {
+        public int adminLoginAttempts {
             get {
-                return this.entryField;
+                return this.adminLoginAttemptsField;
             }
             set {
-                this.entryField = value;
-                this.RaisePropertyChanged("entry");
+                this.adminLoginAttemptsField = value;
+                this.RaisePropertyChanged("adminLoginAttempts");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool entrySpecified {
+        public bool adminLoginAttemptsSpecified {
             get {
-                return this.entryFieldSpecified;
+                return this.adminLoginAttemptsFieldSpecified;
             }
             set {
-                this.entryFieldSpecified = value;
-                this.RaisePropertyChanged("entrySpecified");
+                this.adminLoginAttemptsFieldSpecified = value;
+                this.RaisePropertyChanged("adminLoginAttemptsSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int value {
+        public int enforcePasswordHistory {
             get {
-                return this.valueField;
+                return this.enforcePasswordHistoryField;
             }
             set {
-                this.valueField = value;
-                this.RaisePropertyChanged("value");
+                this.enforcePasswordHistoryField = value;
+                this.RaisePropertyChanged("enforcePasswordHistory");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool valueSpecified {
+        public bool enforcePasswordHistorySpecified {
             get {
-                return this.valueFieldSpecified;
+                return this.enforcePasswordHistoryFieldSpecified;
             }
             set {
-                this.valueFieldSpecified = value;
-                this.RaisePropertyChanged("valueSpecified");
+                this.enforcePasswordHistoryFieldSpecified = value;
+                this.RaisePropertyChanged("enforcePasswordHistorySpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int loginAttempts {
+            get {
+                return this.loginAttemptsField;
+            }
+            set {
+                this.loginAttemptsField = value;
+                this.RaisePropertyChanged("loginAttempts");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool loginAttemptsSpecified {
+            get {
+                return this.loginAttemptsFieldSpecified;
+            }
+            set {
+                this.loginAttemptsFieldSpecified = value;
+                this.RaisePropertyChanged("loginAttemptsSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int minCapitalCharacters {
+            get {
+                return this.minCapitalCharactersField;
+            }
+            set {
+                this.minCapitalCharactersField = value;
+                this.RaisePropertyChanged("minCapitalCharacters");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool minCapitalCharactersSpecified {
+            get {
+                return this.minCapitalCharactersFieldSpecified;
+            }
+            set {
+                this.minCapitalCharactersFieldSpecified = value;
+                this.RaisePropertyChanged("minCapitalCharactersSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int minNumberCharacters {
+            get {
+                return this.minNumberCharactersField;
+            }
+            set {
+                this.minNumberCharactersField = value;
+                this.RaisePropertyChanged("minNumberCharacters");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool minNumberCharactersSpecified {
+            get {
+                return this.minNumberCharactersFieldSpecified;
+            }
+            set {
+                this.minNumberCharactersFieldSpecified = value;
+                this.RaisePropertyChanged("minNumberCharactersSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int minPasswordLength {
+            get {
+                return this.minPasswordLengthField;
+            }
+            set {
+                this.minPasswordLengthField = value;
+                this.RaisePropertyChanged("minPasswordLength");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool minPasswordLengthSpecified {
+            get {
+                return this.minPasswordLengthFieldSpecified;
+            }
+            set {
+                this.minPasswordLengthFieldSpecified = value;
+                this.RaisePropertyChanged("minPasswordLengthSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int minSpecialCharacters {
+            get {
+                return this.minSpecialCharactersField;
+            }
+            set {
+                this.minSpecialCharactersField = value;
+                this.RaisePropertyChanged("minSpecialCharacters");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool minSpecialCharactersSpecified {
+            get {
+                return this.minSpecialCharactersFieldSpecified;
+            }
+            set {
+                this.minSpecialCharactersFieldSpecified = value;
+                this.RaisePropertyChanged("minSpecialCharactersSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public int passwordExpires {
+            get {
+                return this.passwordExpiresField;
+            }
+            set {
+                this.passwordExpiresField = value;
+                this.RaisePropertyChanged("passwordExpires");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool passwordExpiresSpecified {
+            get {
+                return this.passwordExpiresFieldSpecified;
+            }
+            set {
+                this.passwordExpiresFieldSpecified = value;
+                this.RaisePropertyChanged("passwordExpiresSpecified");
             }
         }
         
@@ -26861,46 +27058,9 @@ namespace CallingListSample.Five9Admin {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
-    public enum passwordPolicyEntries {
-        
-        /// <remarks/>
-        MIN_LENGTH,
-        
-        /// <remarks/>
-        SPECIAL_SMBL,
-        
-        /// <remarks/>
-        CAPITAL_SMBL,
-        
-        /// <remarks/>
-        DIGIT,
-        
-        /// <remarks/>
-        LOCKOUT,
-        
-        /// <remarks/>
-        ADMINLOCKOUT,
-        
-        /// <remarks/>
-        REUSELIFE,
-        
-        /// <remarks/>
-        TIMELIFE,
-        
-        /// <remarks/>
-        QUESTCANTCONTAINPWD,
-        
-        /// <remarks/>
-        CANRESETPASSWORD,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18408")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class remoteHostLoginSettings : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string hostNameField;
@@ -26960,7 +27120,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class sForceEmailAccount : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string consumerKeyField;
@@ -27063,7 +27223,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getVCCConfigurationRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getVCCConfiguration getVCCConfiguration;
         
         public getVCCConfigurationRequest() {
@@ -27080,7 +27240,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getVCCConfigurationResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getVCCConfigurationResponse getVCCConfigurationResponse;
         
         public getVCCConfigurationResponse1() {
@@ -27096,7 +27256,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class getWebConnectors : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string namePatternField;
@@ -27129,7 +27289,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getWebConnectorsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.getWebConnectors getWebConnectors;
         
         public getWebConnectorsRequest() {
@@ -27146,7 +27306,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getWebConnectorsResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getWebConnectorsResponse", Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getWebConnectorsResponse", Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public CallingListSample.Five9Admin.webConnector[] getWebConnectorsResponse1;
         
@@ -27163,7 +27323,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class isImportRunning : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier identifierField;
@@ -27223,7 +27383,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class isImportRunningResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool returnField;
@@ -27256,7 +27416,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class isImportRunningRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.isImportRunning isImportRunning;
         
         public isImportRunningRequest() {
@@ -27273,7 +27433,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class isImportRunningResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.isImportRunningResponse isImportRunningResponse;
         
         public isImportRunningResponse1() {
@@ -27289,7 +27449,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class isReportRunning : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string identifierField;
@@ -27335,7 +27495,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class isReportRunningResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool returnField;
@@ -27368,7 +27528,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class isReportRunningRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.isReportRunning isReportRunning;
         
         public isReportRunningRequest() {
@@ -27385,7 +27545,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class isReportRunningResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.isReportRunningResponse isReportRunningResponse;
         
         public isReportRunningResponse1() {
@@ -27401,7 +27561,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyAgentGroup : object, System.ComponentModel.INotifyPropertyChanged {
         
         private agentGroup groupField;
@@ -27461,7 +27621,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyAgentGroupResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -27480,7 +27640,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyAgentGroupRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyAgentGroup modifyAgentGroup;
         
         public modifyAgentGroupRequest() {
@@ -27497,7 +27657,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyAgentGroupResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyAgentGroupResponse modifyAgentGroupResponse;
         
         public modifyAgentGroupResponse1() {
@@ -27513,7 +27673,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyAutodialCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private autodialCampaign campaignField;
@@ -27545,7 +27705,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyAutodialCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -27564,7 +27724,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyAutodialCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyAutodialCampaign modifyAutodialCampaign;
         
         public modifyAutodialCampaignRequest() {
@@ -27581,7 +27741,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyAutodialCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyAutodialCampaignResponse modifyAutodialCampaignResponse;
         
         public modifyAutodialCampaignResponse1() {
@@ -27597,7 +27757,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyCallVariable : object, System.ComponentModel.INotifyPropertyChanged {
         
         private callVariable variableField;
@@ -27629,7 +27789,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyCallVariableResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -27648,7 +27808,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyCallVariableRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyCallVariable modifyCallVariable;
         
         public modifyCallVariableRequest() {
@@ -27665,7 +27825,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyCallVariableResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyCallVariableResponse modifyCallVariableResponse;
         
         public modifyCallVariableResponse1() {
@@ -27681,7 +27841,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyCallVariablesGroup : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string nameField;
@@ -27727,7 +27887,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyCallVariablesGroupResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -27746,7 +27906,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyCallVariablesGroupRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyCallVariablesGroup modifyCallVariablesGroup;
         
         public modifyCallVariablesGroupRequest() {
@@ -27763,7 +27923,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyCallVariablesGroupResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyCallVariablesGroupResponse modifyCallVariablesGroupResponse;
         
         public modifyCallVariablesGroupResponse1() {
@@ -27779,7 +27939,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyCampaignLists : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -27825,7 +27985,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyCampaignListsResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -27844,7 +28004,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyCampaignListsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyCampaignLists modifyCampaignLists;
         
         public modifyCampaignListsRequest() {
@@ -27861,7 +28021,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyCampaignListsResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyCampaignListsResponse modifyCampaignListsResponse;
         
         public modifyCampaignListsResponse1() {
@@ -27877,7 +28037,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyCampaignProfile : object, System.ComponentModel.INotifyPropertyChanged {
         
         private campaignProfileInfo campaignProfileField;
@@ -27909,7 +28069,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyCampaignProfileResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -27928,7 +28088,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyCampaignProfileRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyCampaignProfile modifyCampaignProfile;
         
         public modifyCampaignProfileRequest() {
@@ -27945,7 +28105,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyCampaignProfileResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyCampaignProfileResponse modifyCampaignProfileResponse;
         
         public modifyCampaignProfileResponse1() {
@@ -27961,7 +28121,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyCampaignProfileCrmCriteria : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string profileNameField;
@@ -28035,7 +28195,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyCampaignProfileCrmCriteriaResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -28054,7 +28214,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyCampaignProfileCrmCriteriaRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyCampaignProfileCrmCriteria modifyCampaignProfileCrmCriteria;
         
         public modifyCampaignProfileCrmCriteriaRequest() {
@@ -28071,7 +28231,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyCampaignProfileCrmCriteriaResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyCampaignProfileCrmCriteriaResponse modifyCampaignProfileCrmCriteriaResponse;
         
         public modifyCampaignProfileCrmCriteriaResponse1() {
@@ -28087,7 +28247,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyCampaignProfileDispositions : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string profileNameField;
@@ -28147,7 +28307,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyCampaignProfileDispositionsResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -28166,7 +28326,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyCampaignProfileDispositionsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyCampaignProfileDispositions modifyCampaignProfileDispositions;
         
         public modifyCampaignProfileDispositionsRequest() {
@@ -28183,7 +28343,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyCampaignProfileDispositionsResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyCampaignProfileDispositionsResponse modifyCampaignProfileDispositionsResponse;
         
         public modifyCampaignProfileDispositionsResponse1() {
@@ -28199,7 +28359,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyCampaignProfileFilterOrder : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignProfileField;
@@ -28259,7 +28419,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyCampaignProfileFilterOrderResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -28278,7 +28438,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyCampaignProfileFilterOrderRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyCampaignProfileFilterOrder modifyCampaignProfileFilterOrder;
         
         public modifyCampaignProfileFilterOrderRequest() {
@@ -28295,7 +28455,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyCampaignProfileFilterOrderResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyCampaignProfileFilterOrderResponse modifyCampaignProfileFilterOrderResponse;
         
         public modifyCampaignProfileFilterOrderResponse1() {
@@ -28311,20 +28471,20 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyContactField : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private contactField arg0Field;
+        private contactField fieldField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public contactField arg0 {
+        public contactField field {
             get {
-                return this.arg0Field;
+                return this.fieldField;
             }
             set {
-                this.arg0Field = value;
-                this.RaisePropertyChanged("arg0");
+                this.fieldField = value;
+                this.RaisePropertyChanged("field");
             }
         }
         
@@ -28343,7 +28503,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyContactFieldResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -28362,7 +28522,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyContactFieldRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyContactField modifyContactField;
         
         public modifyContactFieldRequest() {
@@ -28379,7 +28539,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyContactFieldResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyContactFieldResponse modifyContactFieldResponse;
         
         public modifyContactFieldResponse1() {
@@ -28395,7 +28555,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyDisposition : object, System.ComponentModel.INotifyPropertyChanged {
         
         private disposition dispositionField;
@@ -28427,7 +28587,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyDispositionResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -28446,7 +28606,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyDispositionRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyDisposition modifyDisposition;
         
         public modifyDispositionRequest() {
@@ -28463,7 +28623,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyDispositionResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyDispositionResponse modifyDispositionResponse;
         
         public modifyDispositionResponse1() {
@@ -28479,7 +28639,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyIVRScript : object, System.ComponentModel.INotifyPropertyChanged {
         
         private ivrScriptDef scriptDefField;
@@ -28511,7 +28671,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyIVRScriptResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -28530,7 +28690,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyIVRScriptRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyIVRScript modifyIVRScript;
         
         public modifyIVRScriptRequest() {
@@ -28547,7 +28707,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyIVRScriptResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyIVRScriptResponse modifyIVRScriptResponse;
         
         public modifyIVRScriptResponse1() {
@@ -28563,7 +28723,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyInboundCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private inboundCampaign campaignField;
@@ -28595,7 +28755,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyInboundCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -28614,7 +28774,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyInboundCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyInboundCampaign modifyInboundCampaign;
         
         public modifyInboundCampaignRequest() {
@@ -28631,7 +28791,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyInboundCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyInboundCampaignResponse modifyInboundCampaignResponse;
         
         public modifyInboundCampaignResponse1() {
@@ -28647,7 +28807,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyOutboundCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private outboundCampaign campaignField;
@@ -28679,7 +28839,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyOutboundCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -28698,7 +28858,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyOutboundCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyOutboundCampaign modifyOutboundCampaign;
         
         public modifyOutboundCampaignRequest() {
@@ -28715,7 +28875,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyOutboundCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyOutboundCampaignResponse modifyOutboundCampaignResponse;
         
         public modifyOutboundCampaignResponse1() {
@@ -28731,7 +28891,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyPromptTTS : object, System.ComponentModel.INotifyPropertyChanged {
         
         private promptInfo promptField;
@@ -28777,7 +28937,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyPromptTTSResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -28796,7 +28956,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyPromptTTSRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyPromptTTS modifyPromptTTS;
         
         public modifyPromptTTSRequest() {
@@ -28813,7 +28973,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyPromptTTSResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyPromptTTSResponse modifyPromptTTSResponse;
         
         public modifyPromptTTSResponse1() {
@@ -28829,7 +28989,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyPromptWav : object, System.ComponentModel.INotifyPropertyChanged {
         
         private promptInfo promptField;
@@ -28875,7 +29035,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyPromptWavResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -28894,7 +29054,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyPromptWavRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyPromptWav modifyPromptWav;
         
         public modifyPromptWavRequest() {
@@ -28911,7 +29071,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyPromptWavResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyPromptWavResponse modifyPromptWavResponse;
         
         public modifyPromptWavResponse1() {
@@ -28927,7 +29087,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyPromptWavInline : object, System.ComponentModel.INotifyPropertyChanged {
         
         private promptInfo promptField;
@@ -28973,7 +29133,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyPromptWavInlineResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -28992,7 +29152,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyPromptWavInlineRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyPromptWavInline modifyPromptWavInline;
         
         public modifyPromptWavInlineRequest() {
@@ -29009,7 +29169,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyPromptWavInlineResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyPromptWavInlineResponse modifyPromptWavInlineResponse;
         
         public modifyPromptWavInlineResponse1() {
@@ -29025,7 +29185,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyReasonCode : object, System.ComponentModel.INotifyPropertyChanged {
         
         private reasonCode reasonCodeField;
@@ -29057,7 +29217,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyReasonCodeResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -29076,7 +29236,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyReasonCodeRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyReasonCode modifyReasonCode;
         
         public modifyReasonCodeRequest() {
@@ -29093,7 +29253,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyReasonCodeResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyReasonCodeResponse modifyReasonCodeResponse;
         
         public modifyReasonCodeResponse1() {
@@ -29109,7 +29269,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifySkill : object, System.ComponentModel.INotifyPropertyChanged {
         
         private skill skillField;
@@ -29141,7 +29301,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifySkillResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private skillInfo returnField;
@@ -29174,7 +29334,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifySkillRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifySkill modifySkill;
         
         public modifySkillRequest() {
@@ -29191,7 +29351,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifySkillResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifySkillResponse modifySkillResponse;
         
         public modifySkillResponse1() {
@@ -29207,7 +29367,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyUser : object, System.ComponentModel.INotifyPropertyChanged {
         
         private userGeneralInfo userGeneralInfoField;
@@ -29267,7 +29427,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyUserResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private userInfo returnField;
@@ -29300,7 +29460,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyUserRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyUser modifyUser;
         
         public modifyUserRequest() {
@@ -29317,7 +29477,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyUserResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyUserResponse modifyUserResponse;
         
         public modifyUserResponse1() {
@@ -29333,7 +29493,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyUserCannedReports : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string userNameField;
@@ -29393,7 +29553,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyUserCannedReportsResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private userInfo returnField;
@@ -29426,7 +29586,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyUserCannedReportsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyUserCannedReports modifyUserCannedReports;
         
         public modifyUserCannedReportsRequest() {
@@ -29443,7 +29603,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyUserCannedReportsResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyUserCannedReportsResponse modifyUserCannedReportsResponse;
         
         public modifyUserCannedReportsResponse1() {
@@ -29459,7 +29619,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyUserProfile : object, System.ComponentModel.INotifyPropertyChanged {
         
         private userProfile userProfileField;
@@ -29491,7 +29651,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyUserProfileResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -29510,7 +29670,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyUserProfileRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyUserProfile modifyUserProfile;
         
         public modifyUserProfileRequest() {
@@ -29527,7 +29687,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyUserProfileResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyUserProfileResponse modifyUserProfileResponse;
         
         public modifyUserProfileResponse1() {
@@ -29543,7 +29703,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyUserProfileSkills : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string userProfileNameField;
@@ -29603,7 +29763,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyUserProfileSkillsResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -29622,7 +29782,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyUserProfileSkillsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyUserProfileSkills modifyUserProfileSkills;
         
         public modifyUserProfileSkillsRequest() {
@@ -29639,7 +29799,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyUserProfileSkillsResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyUserProfileSkillsResponse modifyUserProfileSkillsResponse;
         
         public modifyUserProfileSkillsResponse1() {
@@ -29655,7 +29815,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyUserProfileUserList : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string userProfileNameField;
@@ -29715,7 +29875,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyUserProfileUserListResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -29734,7 +29894,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyUserProfileUserListRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyUserProfileUserList modifyUserProfileUserList;
         
         public modifyUserProfileUserListRequest() {
@@ -29751,7 +29911,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyUserProfileUserListResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyUserProfileUserListResponse modifyUserProfileUserListResponse;
         
         public modifyUserProfileUserListResponse1() {
@@ -29767,7 +29927,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyVCCConfiguration : object, System.ComponentModel.INotifyPropertyChanged {
         
         private vccConfiguration configurationField;
@@ -29799,7 +29959,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyVCCConfigurationResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -29818,7 +29978,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyVCCConfigurationRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyVCCConfiguration modifyVCCConfiguration;
         
         public modifyVCCConfigurationRequest() {
@@ -29835,7 +29995,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyVCCConfigurationResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyVCCConfigurationResponse modifyVCCConfigurationResponse;
         
         public modifyVCCConfigurationResponse1() {
@@ -29851,7 +30011,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyWebConnector : object, System.ComponentModel.INotifyPropertyChanged {
         
         private webConnector connectorField;
@@ -29883,7 +30043,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class modifyWebConnectorResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -29902,7 +30062,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyWebConnectorRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyWebConnector modifyWebConnector;
         
         public modifyWebConnectorRequest() {
@@ -29919,7 +30079,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class modifyWebConnectorResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.modifyWebConnectorResponse modifyWebConnectorResponse;
         
         public modifyWebConnectorResponse1() {
@@ -29935,7 +30095,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class removeDNISFromCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -29981,7 +30141,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class removeDNISFromCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -30000,7 +30160,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class removeDNISFromCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.removeDNISFromCampaign removeDNISFromCampaign;
         
         public removeDNISFromCampaignRequest() {
@@ -30017,7 +30177,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class removeDNISFromCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.removeDNISFromCampaignResponse removeDNISFromCampaignResponse;
         
         public removeDNISFromCampaignResponse1() {
@@ -30033,7 +30193,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class removeDisposition : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string dispositionNameField;
@@ -30065,7 +30225,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class removeDispositionResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -30084,7 +30244,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class removeDispositionRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.removeDisposition removeDisposition;
         
         public removeDispositionRequest() {
@@ -30101,7 +30261,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class removeDispositionResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.removeDispositionResponse removeDispositionResponse;
         
         public removeDispositionResponse1() {
@@ -30117,7 +30277,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class removeDispositionsFromCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -30163,7 +30323,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class removeDispositionsFromCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -30182,7 +30342,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class removeDispositionsFromCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.removeDispositionsFromCampaign removeDispositionsFromCampaign;
         
         public removeDispositionsFromCampaignRequest() {
@@ -30199,7 +30359,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class removeDispositionsFromCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.removeDispositionsFromCampaignResponse removeDispositionsFromCampaignResponse;
         
         public removeDispositionsFromCampaignResponse1() {
@@ -30215,7 +30375,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class removeListsFromCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -30261,7 +30421,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class removeListsFromCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -30280,7 +30440,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class removeListsFromCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.removeListsFromCampaign removeListsFromCampaign;
         
         public removeListsFromCampaignRequest() {
@@ -30297,7 +30457,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class removeListsFromCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.removeListsFromCampaignResponse removeListsFromCampaignResponse;
         
         public removeListsFromCampaignResponse1() {
@@ -30313,7 +30473,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class removeNumbersFromDncResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int returnField;
@@ -30346,7 +30506,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class removeNumbersFromDncRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute("numbers", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
         public string[] removeNumbersFromDnc;
         
@@ -30364,7 +30524,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class removeNumbersFromDncResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.removeNumbersFromDncResponse removeNumbersFromDncResponse;
         
         public removeNumbersFromDncResponse1() {
@@ -30380,7 +30540,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class removeSkillsFromCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -30426,7 +30586,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class removeSkillsFromCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -30445,7 +30605,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class removeSkillsFromCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.removeSkillsFromCampaign removeSkillsFromCampaign;
         
         public removeSkillsFromCampaignRequest() {
@@ -30462,7 +30622,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class removeSkillsFromCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.removeSkillsFromCampaignResponse removeSkillsFromCampaignResponse;
         
         public removeSkillsFromCampaignResponse1() {
@@ -30478,7 +30638,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class renameCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -30524,7 +30684,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class renameCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -30543,7 +30703,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class renameCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.renameCampaign renameCampaign;
         
         public renameCampaignRequest() {
@@ -30560,7 +30720,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class renameCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.renameCampaignResponse renameCampaignResponse;
         
         public renameCampaignResponse1() {
@@ -30576,7 +30736,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class renameDisposition : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string dispositionNameField;
@@ -30622,7 +30782,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class renameDispositionResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -30641,7 +30801,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class renameDispositionRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.renameDisposition renameDisposition;
         
         public renameDispositionRequest() {
@@ -30658,7 +30818,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class renameDispositionResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.renameDispositionResponse renameDispositionResponse;
         
         public renameDispositionResponse1() {
@@ -30674,7 +30834,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class resetCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -30706,7 +30866,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class resetCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -30725,7 +30885,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class resetCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.resetCampaign resetCampaign;
         
         public resetCampaignRequest() {
@@ -30742,7 +30902,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class resetCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.resetCampaignResponse resetCampaignResponse;
         
         public resetCampaignResponse1() {
@@ -30758,7 +30918,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class resetCampaignDispositions : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -30860,7 +31020,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class resetCampaignDispositionsResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -30879,7 +31039,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class resetCampaignDispositionsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.resetCampaignDispositions resetCampaignDispositions;
         
         public resetCampaignDispositionsRequest() {
@@ -30896,7 +31056,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class resetCampaignDispositionsResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.resetCampaignDispositionsResponse resetCampaignDispositionsResponse;
         
         public resetCampaignDispositionsResponse1() {
@@ -30912,7 +31072,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class resetListPosition : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -30944,7 +31104,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class resetListPositionResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -30963,7 +31123,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class resetListPositionRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.resetListPosition resetListPosition;
         
         public resetListPositionRequest() {
@@ -30980,7 +31140,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class resetListPositionResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.resetListPositionResponse resetListPositionResponse;
         
         public resetListPositionResponse1() {
@@ -30996,7 +31156,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class runReport : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string folderNameField;
@@ -31056,7 +31216,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class customReportCriteria : object, System.ComponentModel.INotifyPropertyChanged {
         
         private reportObjectList[] reportObjectsField;
@@ -31102,7 +31262,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class reportObjectList : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string[] objectNamesField;
@@ -31162,7 +31322,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class runReportResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string returnField;
@@ -31195,7 +31355,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class runReportRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.runReport runReport;
         
         public runReportRequest() {
@@ -31212,7 +31372,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class runReportResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.runReportResponse runReportResponse;
         
         public runReportResponse1() {
@@ -31228,7 +31388,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class setDefaultIVRSchedule : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -31236,6 +31396,14 @@ namespace CallingListSample.Five9Admin {
         private string scriptNameField;
         
         private scriptParameterValue[] paramsField;
+        
+        private bool isVisualModeEnabledField;
+        
+        private bool isVisualModeEnabledFieldSpecified;
+        
+        private bool isChatEnabledField;
+        
+        private bool isChatEnabledFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -31273,6 +31441,54 @@ namespace CallingListSample.Five9Admin {
             }
         }
         
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public bool isVisualModeEnabled {
+            get {
+                return this.isVisualModeEnabledField;
+            }
+            set {
+                this.isVisualModeEnabledField = value;
+                this.RaisePropertyChanged("isVisualModeEnabled");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool isVisualModeEnabledSpecified {
+            get {
+                return this.isVisualModeEnabledFieldSpecified;
+            }
+            set {
+                this.isVisualModeEnabledFieldSpecified = value;
+                this.RaisePropertyChanged("isVisualModeEnabledSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public bool isChatEnabled {
+            get {
+                return this.isChatEnabledField;
+            }
+            set {
+                this.isChatEnabledField = value;
+                this.RaisePropertyChanged("isChatEnabled");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool isChatEnabledSpecified {
+            get {
+                return this.isChatEnabledFieldSpecified;
+            }
+            set {
+                this.isChatEnabledFieldSpecified = value;
+                this.RaisePropertyChanged("isChatEnabledSpecified");
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -31288,7 +31504,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class setDefaultIVRScheduleResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -31307,7 +31523,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class setDefaultIVRScheduleRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.setDefaultIVRSchedule setDefaultIVRSchedule;
         
         public setDefaultIVRScheduleRequest() {
@@ -31324,7 +31540,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class setDefaultIVRScheduleResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.setDefaultIVRScheduleResponse setDefaultIVRScheduleResponse;
         
         public setDefaultIVRScheduleResponse1() {
@@ -31340,7 +31556,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class setDialingRules : object, System.ComponentModel.INotifyPropertyChanged {
         
         private dialingRule[] setRulesField;
@@ -31386,7 +31602,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class setDialingRulesResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -31405,7 +31621,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class setDialingRulesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.setDialingRules setDialingRules;
         
         public setDialingRulesRequest() {
@@ -31422,7 +31638,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class setDialingRulesResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.setDialingRulesResponse setDialingRulesResponse;
         
         public setDialingRulesResponse1() {
@@ -31438,7 +31654,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class setSkillVoicemailGreeting : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string skillNameField;
@@ -31484,7 +31700,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class setSkillVoicemailGreetingResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -31503,7 +31719,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class setSkillVoicemailGreetingRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.setSkillVoicemailGreeting setSkillVoicemailGreeting;
         
         public setSkillVoicemailGreetingRequest() {
@@ -31520,7 +31736,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class setSkillVoicemailGreetingResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.setSkillVoicemailGreetingResponse setSkillVoicemailGreetingResponse;
         
         public setSkillVoicemailGreetingResponse1() {
@@ -31536,7 +31752,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class setUserVoicemailGreeting : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string userNameField;
@@ -31582,7 +31798,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class setUserVoicemailGreetingResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -31601,7 +31817,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class setUserVoicemailGreetingRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.setUserVoicemailGreeting setUserVoicemailGreeting;
         
         public setUserVoicemailGreetingRequest() {
@@ -31618,7 +31834,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class setUserVoicemailGreetingResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.setUserVoicemailGreetingResponse setUserVoicemailGreetingResponse;
         
         public setUserVoicemailGreetingResponse1() {
@@ -31634,7 +31850,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class startCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -31666,7 +31882,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class startCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -31685,7 +31901,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class startCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.startCampaign startCampaign;
         
         public startCampaignRequest() {
@@ -31702,7 +31918,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class startCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.startCampaignResponse startCampaignResponse;
         
         public startCampaignResponse1() {
@@ -31718,7 +31934,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class stopCampaign : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -31750,7 +31966,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class stopCampaignResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -31769,7 +31985,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class stopCampaignRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.stopCampaign stopCampaign;
         
         public stopCampaignRequest() {
@@ -31786,7 +32002,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class stopCampaignResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.stopCampaignResponse stopCampaignResponse;
         
         public stopCampaignResponse1() {
@@ -31802,7 +32018,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class updateContacts : object, System.ComponentModel.INotifyPropertyChanged {
         
         private crmUpdateSettings crmUpdateSettingsField;
@@ -31850,7 +32066,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class updateContactsResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier returnField;
@@ -31883,7 +32099,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class updateContactsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.updateContacts updateContacts;
         
         public updateContactsRequest() {
@@ -31900,7 +32116,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class updateContactsResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.updateContactsResponse updateContactsResponse;
         
         public updateContactsResponse1() {
@@ -31916,7 +32132,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class updateContactsCsv : object, System.ComponentModel.INotifyPropertyChanged {
         
         private crmUpdateSettings crmUpdateSettingsField;
@@ -31962,7 +32178,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class updateContactsCsvResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier returnField;
@@ -31995,7 +32211,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class updateContactsCsvRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.updateContactsCsv updateContactsCsv;
         
         public updateContactsCsvRequest() {
@@ -32012,7 +32228,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class updateContactsCsvResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.updateContactsCsvResponse updateContactsCsvResponse;
         
         public updateContactsCsvResponse1() {
@@ -32028,7 +32244,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class updateContactsFtp : object, System.ComponentModel.INotifyPropertyChanged {
         
         private crmUpdateSettings updateSettingsField;
@@ -32074,7 +32290,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class updateContactsFtpResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -32093,7 +32309,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class updateContactsFtpRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.updateContactsFtp updateContactsFtp;
         
         public updateContactsFtpRequest() {
@@ -32110,7 +32326,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class updateContactsFtpResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.updateContactsFtpResponse updateContactsFtpResponse;
         
         public updateContactsFtpResponse1() {
@@ -32126,7 +32342,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class updateCrmRecord : object, System.ComponentModel.INotifyPropertyChanged {
         
         private crmUpdateSettings crmUpdateSettingsField;
@@ -32173,7 +32389,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class updateCrmRecordResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private crmImportResult returnField;
@@ -32206,7 +32422,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class updateCrmRecordRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.updateCrmRecord updateCrmRecord;
         
         public updateCrmRecordRequest() {
@@ -32223,7 +32439,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class updateCrmRecordResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.updateCrmRecordResponse updateCrmRecordResponse;
         
         public updateCrmRecordResponse1() {
@@ -32239,7 +32455,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class updateDispositions : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -32301,7 +32517,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class updateDispositionsResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier returnField;
@@ -32334,7 +32550,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class updateDispositionsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.updateDispositions updateDispositions;
         
         public updateDispositionsRequest() {
@@ -32351,7 +32567,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class updateDispositionsResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.updateDispositionsResponse updateDispositionsResponse;
         
         public updateDispositionsResponse1() {
@@ -32367,7 +32583,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class updateDispositionsCsv : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -32427,7 +32643,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class updateDispositionsCsvResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         private importIdentifier returnField;
@@ -32460,7 +32676,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class updateDispositionsCsvRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.updateDispositionsCsv updateDispositionsCsv;
         
         public updateDispositionsCsvRequest() {
@@ -32477,7 +32693,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class updateDispositionsCsvResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.updateDispositionsCsvResponse updateDispositionsCsvResponse;
         
         public updateDispositionsCsvResponse1() {
@@ -32493,7 +32709,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class updateDispositionsFtp : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string campaignNameField;
@@ -32553,7 +32769,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class updateDispositionsFtpResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -32572,7 +32788,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class updateDispositionsFtpRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.updateDispositionsFtp updateDispositionsFtp;
         
         public updateDispositionsFtpRequest() {
@@ -32589,7 +32805,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class updateDispositionsFtpResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.updateDispositionsFtpResponse updateDispositionsFtpResponse;
         
         public updateDispositionsFtpResponse1() {
@@ -32605,7 +32821,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class userSkillAdd : object, System.ComponentModel.INotifyPropertyChanged {
         
         private userSkill userSkillField;
@@ -32637,7 +32853,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class userSkillAddResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -32656,7 +32872,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class userSkillAddRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.userSkillAdd userSkillAdd;
         
         public userSkillAddRequest() {
@@ -32673,7 +32889,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class userSkillAddResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.userSkillAddResponse userSkillAddResponse;
         
         public userSkillAddResponse1() {
@@ -32689,7 +32905,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class userSkillModify : object, System.ComponentModel.INotifyPropertyChanged {
         
         private userSkill userSkillField;
@@ -32721,7 +32937,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class userSkillModifyResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -32740,7 +32956,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class userSkillModifyRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.userSkillModify userSkillModify;
         
         public userSkillModifyRequest() {
@@ -32757,7 +32973,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class userSkillModifyResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.userSkillModifyResponse userSkillModifyResponse;
         
         public userSkillModifyResponse1() {
@@ -32773,7 +32989,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class userSkillRemove : object, System.ComponentModel.INotifyPropertyChanged {
         
         private userSkill userSkillField;
@@ -32805,7 +33021,7 @@ namespace CallingListSample.Five9Admin {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/v2/")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.admin.ws.five9.com/")]
     public partial class userSkillRemoveResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -32824,7 +33040,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class userSkillRemoveRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.userSkillRemove userSkillRemove;
         
         public userSkillRemoveRequest() {
@@ -32841,7 +33057,7 @@ namespace CallingListSample.Five9Admin {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class userSkillRemoveResponse1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/v2/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://service.admin.ws.five9.com/", Order=0)]
         public CallingListSample.Five9Admin.userSkillRemoveResponse userSkillRemoveResponse;
         
         public userSkillRemoveResponse1() {
@@ -32853,1985 +33069,1985 @@ namespace CallingListSample.Five9Admin {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface WsAdminV2Channel : CallingListSample.Five9Admin.WsAdminV2, System.ServiceModel.IClientChannel {
+    public interface WsAdminChannel : CallingListSample.Five9Admin.WsAdmin, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class WsAdminV2Client : System.ServiceModel.ClientBase<CallingListSample.Five9Admin.WsAdminV2>, CallingListSample.Five9Admin.WsAdminV2 {
+    public partial class WsAdminClient : System.ServiceModel.ClientBase<CallingListSample.Five9Admin.WsAdmin>, CallingListSample.Five9Admin.WsAdmin {
         
-        public WsAdminV2Client() {
+        public WsAdminClient() {
         }
         
-        public WsAdminV2Client(string endpointConfigurationName) : 
+        public WsAdminClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public WsAdminV2Client(string endpointConfigurationName, string remoteAddress) : 
+        public WsAdminClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public WsAdminV2Client(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public WsAdminClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public WsAdminV2Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public WsAdminClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.addDNISToCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.addDNISToCampaign(CallingListSample.Five9Admin.addDNISToCampaignRequest request) {
+        CallingListSample.Five9Admin.addDNISToCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.addDNISToCampaign(CallingListSample.Five9Admin.addDNISToCampaignRequest request) {
             return base.Channel.addDNISToCampaign(request);
         }
         
         public CallingListSample.Five9Admin.addDNISToCampaignResponse addDNISToCampaign(CallingListSample.Five9Admin.addDNISToCampaign addDNISToCampaign1) {
             CallingListSample.Five9Admin.addDNISToCampaignRequest inValue = new CallingListSample.Five9Admin.addDNISToCampaignRequest();
             inValue.addDNISToCampaign = addDNISToCampaign1;
-            CallingListSample.Five9Admin.addDNISToCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).addDNISToCampaign(inValue);
+            CallingListSample.Five9Admin.addDNISToCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).addDNISToCampaign(inValue);
             return retVal.addDNISToCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.addDispositionsToCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.addDispositionsToCampaign(CallingListSample.Five9Admin.addDispositionsToCampaignRequest request) {
+        CallingListSample.Five9Admin.addDispositionsToCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.addDispositionsToCampaign(CallingListSample.Five9Admin.addDispositionsToCampaignRequest request) {
             return base.Channel.addDispositionsToCampaign(request);
         }
         
         public CallingListSample.Five9Admin.addDispositionsToCampaignResponse addDispositionsToCampaign(CallingListSample.Five9Admin.addDispositionsToCampaign addDispositionsToCampaign1) {
             CallingListSample.Five9Admin.addDispositionsToCampaignRequest inValue = new CallingListSample.Five9Admin.addDispositionsToCampaignRequest();
             inValue.addDispositionsToCampaign = addDispositionsToCampaign1;
-            CallingListSample.Five9Admin.addDispositionsToCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).addDispositionsToCampaign(inValue);
+            CallingListSample.Five9Admin.addDispositionsToCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).addDispositionsToCampaign(inValue);
             return retVal.addDispositionsToCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.addListsToCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.addListsToCampaign(CallingListSample.Five9Admin.addListsToCampaignRequest request) {
+        CallingListSample.Five9Admin.addListsToCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.addListsToCampaign(CallingListSample.Five9Admin.addListsToCampaignRequest request) {
             return base.Channel.addListsToCampaign(request);
         }
         
         public CallingListSample.Five9Admin.addListsToCampaignResponse addListsToCampaign(CallingListSample.Five9Admin.addListsToCampaign addListsToCampaign1) {
             CallingListSample.Five9Admin.addListsToCampaignRequest inValue = new CallingListSample.Five9Admin.addListsToCampaignRequest();
             inValue.addListsToCampaign = addListsToCampaign1;
-            CallingListSample.Five9Admin.addListsToCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).addListsToCampaign(inValue);
+            CallingListSample.Five9Admin.addListsToCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).addListsToCampaign(inValue);
             return retVal.addListsToCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.addNumbersToDncResponse1 CallingListSample.Five9Admin.WsAdminV2.addNumbersToDnc(CallingListSample.Five9Admin.addNumbersToDncRequest request) {
+        CallingListSample.Five9Admin.addNumbersToDncResponse1 CallingListSample.Five9Admin.WsAdmin.addNumbersToDnc(CallingListSample.Five9Admin.addNumbersToDncRequest request) {
             return base.Channel.addNumbersToDnc(request);
         }
         
         public CallingListSample.Five9Admin.addNumbersToDncResponse addNumbersToDnc(string[] addNumbersToDnc1) {
             CallingListSample.Five9Admin.addNumbersToDncRequest inValue = new CallingListSample.Five9Admin.addNumbersToDncRequest();
             inValue.addNumbersToDnc = addNumbersToDnc1;
-            CallingListSample.Five9Admin.addNumbersToDncResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).addNumbersToDnc(inValue);
+            CallingListSample.Five9Admin.addNumbersToDncResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).addNumbersToDnc(inValue);
             return retVal.addNumbersToDncResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.addPromptTTSResponse1 CallingListSample.Five9Admin.WsAdminV2.addPromptTTS(CallingListSample.Five9Admin.addPromptTTSRequest request) {
+        CallingListSample.Five9Admin.addPromptTTSResponse1 CallingListSample.Five9Admin.WsAdmin.addPromptTTS(CallingListSample.Five9Admin.addPromptTTSRequest request) {
             return base.Channel.addPromptTTS(request);
         }
         
         public CallingListSample.Five9Admin.addPromptTTSResponse addPromptTTS(CallingListSample.Five9Admin.addPromptTTS addPromptTTS1) {
             CallingListSample.Five9Admin.addPromptTTSRequest inValue = new CallingListSample.Five9Admin.addPromptTTSRequest();
             inValue.addPromptTTS = addPromptTTS1;
-            CallingListSample.Five9Admin.addPromptTTSResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).addPromptTTS(inValue);
+            CallingListSample.Five9Admin.addPromptTTSResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).addPromptTTS(inValue);
             return retVal.addPromptTTSResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.addPromptWavResponse1 CallingListSample.Five9Admin.WsAdminV2.addPromptWav(CallingListSample.Five9Admin.addPromptWavRequest request) {
+        CallingListSample.Five9Admin.addPromptWavResponse1 CallingListSample.Five9Admin.WsAdmin.addPromptWav(CallingListSample.Five9Admin.addPromptWavRequest request) {
             return base.Channel.addPromptWav(request);
         }
         
         public CallingListSample.Five9Admin.addPromptWavResponse addPromptWav(CallingListSample.Five9Admin.addPromptWav addPromptWav1) {
             CallingListSample.Five9Admin.addPromptWavRequest inValue = new CallingListSample.Five9Admin.addPromptWavRequest();
             inValue.addPromptWav = addPromptWav1;
-            CallingListSample.Five9Admin.addPromptWavResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).addPromptWav(inValue);
+            CallingListSample.Five9Admin.addPromptWavResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).addPromptWav(inValue);
             return retVal.addPromptWavResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.addPromptWavInlineResponse1 CallingListSample.Five9Admin.WsAdminV2.addPromptWavInline(CallingListSample.Five9Admin.addPromptWavInlineRequest request) {
+        CallingListSample.Five9Admin.addPromptWavInlineResponse1 CallingListSample.Five9Admin.WsAdmin.addPromptWavInline(CallingListSample.Five9Admin.addPromptWavInlineRequest request) {
             return base.Channel.addPromptWavInline(request);
         }
         
         public CallingListSample.Five9Admin.addPromptWavInlineResponse addPromptWavInline(CallingListSample.Five9Admin.addPromptWavInline addPromptWavInline1) {
             CallingListSample.Five9Admin.addPromptWavInlineRequest inValue = new CallingListSample.Five9Admin.addPromptWavInlineRequest();
             inValue.addPromptWavInline = addPromptWavInline1;
-            CallingListSample.Five9Admin.addPromptWavInlineResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).addPromptWavInline(inValue);
+            CallingListSample.Five9Admin.addPromptWavInlineResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).addPromptWavInline(inValue);
             return retVal.addPromptWavInlineResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.addRecordToListResponse1 CallingListSample.Five9Admin.WsAdminV2.addRecordToList(CallingListSample.Five9Admin.addRecordToListRequest request) {
+        CallingListSample.Five9Admin.addRecordToListResponse1 CallingListSample.Five9Admin.WsAdmin.addRecordToList(CallingListSample.Five9Admin.addRecordToListRequest request) {
             return base.Channel.addRecordToList(request);
         }
         
         public CallingListSample.Five9Admin.addRecordToListResponse addRecordToList(CallingListSample.Five9Admin.addRecordToList addRecordToList1) {
             CallingListSample.Five9Admin.addRecordToListRequest inValue = new CallingListSample.Five9Admin.addRecordToListRequest();
             inValue.addRecordToList = addRecordToList1;
-            CallingListSample.Five9Admin.addRecordToListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).addRecordToList(inValue);
+            CallingListSample.Five9Admin.addRecordToListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).addRecordToList(inValue);
             return retVal.addRecordToListResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.addRecordToListSimpleResponse1 CallingListSample.Five9Admin.WsAdminV2.addRecordToListSimple(CallingListSample.Five9Admin.addRecordToListSimpleRequest request) {
+        CallingListSample.Five9Admin.addRecordToListSimpleResponse1 CallingListSample.Five9Admin.WsAdmin.addRecordToListSimple(CallingListSample.Five9Admin.addRecordToListSimpleRequest request) {
             return base.Channel.addRecordToListSimple(request);
         }
         
         public CallingListSample.Five9Admin.addRecordToListSimpleResponse addRecordToListSimple(CallingListSample.Five9Admin.addRecordToListSimple addRecordToListSimple1) {
             CallingListSample.Five9Admin.addRecordToListSimpleRequest inValue = new CallingListSample.Five9Admin.addRecordToListSimpleRequest();
             inValue.addRecordToListSimple = addRecordToListSimple1;
-            CallingListSample.Five9Admin.addRecordToListSimpleResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).addRecordToListSimple(inValue);
+            CallingListSample.Five9Admin.addRecordToListSimpleResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).addRecordToListSimple(inValue);
             return retVal.addRecordToListSimpleResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.addSkillsToCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.addSkillsToCampaign(CallingListSample.Five9Admin.addSkillsToCampaignRequest request) {
+        CallingListSample.Five9Admin.addSkillsToCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.addSkillsToCampaign(CallingListSample.Five9Admin.addSkillsToCampaignRequest request) {
             return base.Channel.addSkillsToCampaign(request);
         }
         
         public CallingListSample.Five9Admin.addSkillsToCampaignResponse addSkillsToCampaign(CallingListSample.Five9Admin.addSkillsToCampaign addSkillsToCampaign1) {
             CallingListSample.Five9Admin.addSkillsToCampaignRequest inValue = new CallingListSample.Five9Admin.addSkillsToCampaignRequest();
             inValue.addSkillsToCampaign = addSkillsToCampaign1;
-            CallingListSample.Five9Admin.addSkillsToCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).addSkillsToCampaign(inValue);
+            CallingListSample.Five9Admin.addSkillsToCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).addSkillsToCampaign(inValue);
             return retVal.addSkillsToCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.addToListResponse1 CallingListSample.Five9Admin.WsAdminV2.addToList(CallingListSample.Five9Admin.addToListRequest request) {
+        CallingListSample.Five9Admin.addToListResponse1 CallingListSample.Five9Admin.WsAdmin.addToList(CallingListSample.Five9Admin.addToListRequest request) {
             return base.Channel.addToList(request);
         }
         
         public CallingListSample.Five9Admin.addToListResponse addToList(CallingListSample.Five9Admin.addToList addToList1) {
             CallingListSample.Five9Admin.addToListRequest inValue = new CallingListSample.Five9Admin.addToListRequest();
             inValue.addToList = addToList1;
-            CallingListSample.Five9Admin.addToListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).addToList(inValue);
+            CallingListSample.Five9Admin.addToListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).addToList(inValue);
             return retVal.addToListResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.addToListCsvResponse1 CallingListSample.Five9Admin.WsAdminV2.addToListCsv(CallingListSample.Five9Admin.addToListCsvRequest request) {
+        CallingListSample.Five9Admin.addToListCsvResponse1 CallingListSample.Five9Admin.WsAdmin.addToListCsv(CallingListSample.Five9Admin.addToListCsvRequest request) {
             return base.Channel.addToListCsv(request);
         }
         
         public CallingListSample.Five9Admin.addToListCsvResponse addToListCsv(CallingListSample.Five9Admin.addToListCsv addToListCsv1) {
             CallingListSample.Five9Admin.addToListCsvRequest inValue = new CallingListSample.Five9Admin.addToListCsvRequest();
             inValue.addToListCsv = addToListCsv1;
-            CallingListSample.Five9Admin.addToListCsvResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).addToListCsv(inValue);
+            CallingListSample.Five9Admin.addToListCsvResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).addToListCsv(inValue);
             return retVal.addToListCsvResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.addToListFtpResponse1 CallingListSample.Five9Admin.WsAdminV2.addToListFtp(CallingListSample.Five9Admin.addToListFtpRequest request) {
+        CallingListSample.Five9Admin.addToListFtpResponse1 CallingListSample.Five9Admin.WsAdmin.addToListFtp(CallingListSample.Five9Admin.addToListFtpRequest request) {
             return base.Channel.addToListFtp(request);
         }
         
         public CallingListSample.Five9Admin.addToListFtpResponse addToListFtp(CallingListSample.Five9Admin.addToListFtp addToListFtp1) {
             CallingListSample.Five9Admin.addToListFtpRequest inValue = new CallingListSample.Five9Admin.addToListFtpRequest();
             inValue.addToListFtp = addToListFtp1;
-            CallingListSample.Five9Admin.addToListFtpResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).addToListFtp(inValue);
+            CallingListSample.Five9Admin.addToListFtpResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).addToListFtp(inValue);
             return retVal.addToListFtpResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.asyncAddRecordsToListResponse1 CallingListSample.Five9Admin.WsAdminV2.asyncAddRecordsToList(CallingListSample.Five9Admin.asyncAddRecordsToListRequest request) {
+        CallingListSample.Five9Admin.asyncAddRecordsToListResponse1 CallingListSample.Five9Admin.WsAdmin.asyncAddRecordsToList(CallingListSample.Five9Admin.asyncAddRecordsToListRequest request) {
             return base.Channel.asyncAddRecordsToList(request);
         }
         
         public CallingListSample.Five9Admin.asyncAddRecordsToListResponse asyncAddRecordsToList(CallingListSample.Five9Admin.asyncAddRecordsToList asyncAddRecordsToList1) {
             CallingListSample.Five9Admin.asyncAddRecordsToListRequest inValue = new CallingListSample.Five9Admin.asyncAddRecordsToListRequest();
             inValue.asyncAddRecordsToList = asyncAddRecordsToList1;
-            CallingListSample.Five9Admin.asyncAddRecordsToListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).asyncAddRecordsToList(inValue);
+            CallingListSample.Five9Admin.asyncAddRecordsToListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).asyncAddRecordsToList(inValue);
             return retVal.asyncAddRecordsToListResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.asyncDeleteRecordsFromListResponse1 CallingListSample.Five9Admin.WsAdminV2.asyncDeleteRecordsFromList(CallingListSample.Five9Admin.asyncDeleteRecordsFromListRequest request) {
+        CallingListSample.Five9Admin.asyncDeleteRecordsFromListResponse1 CallingListSample.Five9Admin.WsAdmin.asyncDeleteRecordsFromList(CallingListSample.Five9Admin.asyncDeleteRecordsFromListRequest request) {
             return base.Channel.asyncDeleteRecordsFromList(request);
         }
         
         public CallingListSample.Five9Admin.asyncDeleteRecordsFromListResponse asyncDeleteRecordsFromList(CallingListSample.Five9Admin.asyncDeleteRecordsFromList asyncDeleteRecordsFromList1) {
             CallingListSample.Five9Admin.asyncDeleteRecordsFromListRequest inValue = new CallingListSample.Five9Admin.asyncDeleteRecordsFromListRequest();
             inValue.asyncDeleteRecordsFromList = asyncDeleteRecordsFromList1;
-            CallingListSample.Five9Admin.asyncDeleteRecordsFromListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).asyncDeleteRecordsFromList(inValue);
+            CallingListSample.Five9Admin.asyncDeleteRecordsFromListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).asyncDeleteRecordsFromList(inValue);
             return retVal.asyncDeleteRecordsFromListResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.asyncUpdateCrmRecordsResponse1 CallingListSample.Five9Admin.WsAdminV2.asyncUpdateCrmRecords(CallingListSample.Five9Admin.asyncUpdateCrmRecordsRequest request) {
+        CallingListSample.Five9Admin.asyncUpdateCrmRecordsResponse1 CallingListSample.Five9Admin.WsAdmin.asyncUpdateCrmRecords(CallingListSample.Five9Admin.asyncUpdateCrmRecordsRequest request) {
             return base.Channel.asyncUpdateCrmRecords(request);
         }
         
         public CallingListSample.Five9Admin.asyncUpdateCrmRecordsResponse asyncUpdateCrmRecords(CallingListSample.Five9Admin.asyncUpdateCrmRecords asyncUpdateCrmRecords1) {
             CallingListSample.Five9Admin.asyncUpdateCrmRecordsRequest inValue = new CallingListSample.Five9Admin.asyncUpdateCrmRecordsRequest();
             inValue.asyncUpdateCrmRecords = asyncUpdateCrmRecords1;
-            CallingListSample.Five9Admin.asyncUpdateCrmRecordsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).asyncUpdateCrmRecords(inValue);
+            CallingListSample.Five9Admin.asyncUpdateCrmRecordsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).asyncUpdateCrmRecords(inValue);
             return retVal.asyncUpdateCrmRecordsResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.checkDncForNumbersResponse CallingListSample.Five9Admin.WsAdminV2.checkDncForNumbers(CallingListSample.Five9Admin.checkDncForNumbersRequest request) {
+        CallingListSample.Five9Admin.checkDncForNumbersResponse CallingListSample.Five9Admin.WsAdmin.checkDncForNumbers(CallingListSample.Five9Admin.checkDncForNumbersRequest request) {
             return base.Channel.checkDncForNumbers(request);
         }
         
         public string[] checkDncForNumbers(string[] checkDncForNumbers1) {
             CallingListSample.Five9Admin.checkDncForNumbersRequest inValue = new CallingListSample.Five9Admin.checkDncForNumbersRequest();
             inValue.checkDncForNumbers = checkDncForNumbers1;
-            CallingListSample.Five9Admin.checkDncForNumbersResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).checkDncForNumbers(inValue);
+            CallingListSample.Five9Admin.checkDncForNumbersResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).checkDncForNumbers(inValue);
             return retVal.checkDncForNumbersResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.closeSessionResponse1 CallingListSample.Five9Admin.WsAdminV2.closeSession(CallingListSample.Five9Admin.closeSessionRequest request) {
+        CallingListSample.Five9Admin.closeSessionResponse1 CallingListSample.Five9Admin.WsAdmin.closeSession(CallingListSample.Five9Admin.closeSessionRequest request) {
             return base.Channel.closeSession(request);
         }
         
         public CallingListSample.Five9Admin.closeSessionResponse closeSession(CallingListSample.Five9Admin.closeSession closeSession1) {
             CallingListSample.Five9Admin.closeSessionRequest inValue = new CallingListSample.Five9Admin.closeSessionRequest();
             inValue.closeSession = closeSession1;
-            CallingListSample.Five9Admin.closeSessionResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).closeSession(inValue);
+            CallingListSample.Five9Admin.closeSessionResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).closeSession(inValue);
             return retVal.closeSessionResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.createAgentGroupResponse1 CallingListSample.Five9Admin.WsAdminV2.createAgentGroup(CallingListSample.Five9Admin.createAgentGroupRequest request) {
+        CallingListSample.Five9Admin.createAgentGroupResponse1 CallingListSample.Five9Admin.WsAdmin.createAgentGroup(CallingListSample.Five9Admin.createAgentGroupRequest request) {
             return base.Channel.createAgentGroup(request);
         }
         
         public CallingListSample.Five9Admin.createAgentGroupResponse createAgentGroup(CallingListSample.Five9Admin.createAgentGroup createAgentGroup1) {
             CallingListSample.Five9Admin.createAgentGroupRequest inValue = new CallingListSample.Five9Admin.createAgentGroupRequest();
             inValue.createAgentGroup = createAgentGroup1;
-            CallingListSample.Five9Admin.createAgentGroupResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).createAgentGroup(inValue);
+            CallingListSample.Five9Admin.createAgentGroupResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).createAgentGroup(inValue);
             return retVal.createAgentGroupResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.createAutodialCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.createAutodialCampaign(CallingListSample.Five9Admin.createAutodialCampaignRequest request) {
+        CallingListSample.Five9Admin.createAutodialCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.createAutodialCampaign(CallingListSample.Five9Admin.createAutodialCampaignRequest request) {
             return base.Channel.createAutodialCampaign(request);
         }
         
         public CallingListSample.Five9Admin.createAutodialCampaignResponse createAutodialCampaign(CallingListSample.Five9Admin.createAutodialCampaign createAutodialCampaign1) {
             CallingListSample.Five9Admin.createAutodialCampaignRequest inValue = new CallingListSample.Five9Admin.createAutodialCampaignRequest();
             inValue.createAutodialCampaign = createAutodialCampaign1;
-            CallingListSample.Five9Admin.createAutodialCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).createAutodialCampaign(inValue);
+            CallingListSample.Five9Admin.createAutodialCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).createAutodialCampaign(inValue);
             return retVal.createAutodialCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.createCallVariableResponse1 CallingListSample.Five9Admin.WsAdminV2.createCallVariable(CallingListSample.Five9Admin.createCallVariableRequest request) {
+        CallingListSample.Five9Admin.createCallVariableResponse1 CallingListSample.Five9Admin.WsAdmin.createCallVariable(CallingListSample.Five9Admin.createCallVariableRequest request) {
             return base.Channel.createCallVariable(request);
         }
         
         public CallingListSample.Five9Admin.createCallVariableResponse createCallVariable(CallingListSample.Five9Admin.createCallVariable createCallVariable1) {
             CallingListSample.Five9Admin.createCallVariableRequest inValue = new CallingListSample.Five9Admin.createCallVariableRequest();
             inValue.createCallVariable = createCallVariable1;
-            CallingListSample.Five9Admin.createCallVariableResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).createCallVariable(inValue);
+            CallingListSample.Five9Admin.createCallVariableResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).createCallVariable(inValue);
             return retVal.createCallVariableResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.createCallVariablesGroupResponse1 CallingListSample.Five9Admin.WsAdminV2.createCallVariablesGroup(CallingListSample.Five9Admin.createCallVariablesGroupRequest request) {
+        CallingListSample.Five9Admin.createCallVariablesGroupResponse1 CallingListSample.Five9Admin.WsAdmin.createCallVariablesGroup(CallingListSample.Five9Admin.createCallVariablesGroupRequest request) {
             return base.Channel.createCallVariablesGroup(request);
         }
         
         public CallingListSample.Five9Admin.createCallVariablesGroupResponse createCallVariablesGroup(CallingListSample.Five9Admin.createCallVariablesGroup createCallVariablesGroup1) {
             CallingListSample.Five9Admin.createCallVariablesGroupRequest inValue = new CallingListSample.Five9Admin.createCallVariablesGroupRequest();
             inValue.createCallVariablesGroup = createCallVariablesGroup1;
-            CallingListSample.Five9Admin.createCallVariablesGroupResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).createCallVariablesGroup(inValue);
+            CallingListSample.Five9Admin.createCallVariablesGroupResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).createCallVariablesGroup(inValue);
             return retVal.createCallVariablesGroupResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.createCampaignProfileResponse1 CallingListSample.Five9Admin.WsAdminV2.createCampaignProfile(CallingListSample.Five9Admin.createCampaignProfileRequest request) {
+        CallingListSample.Five9Admin.createCampaignProfileResponse1 CallingListSample.Five9Admin.WsAdmin.createCampaignProfile(CallingListSample.Five9Admin.createCampaignProfileRequest request) {
             return base.Channel.createCampaignProfile(request);
         }
         
         public CallingListSample.Five9Admin.createCampaignProfileResponse createCampaignProfile(CallingListSample.Five9Admin.createCampaignProfile createCampaignProfile1) {
             CallingListSample.Five9Admin.createCampaignProfileRequest inValue = new CallingListSample.Five9Admin.createCampaignProfileRequest();
             inValue.createCampaignProfile = createCampaignProfile1;
-            CallingListSample.Five9Admin.createCampaignProfileResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).createCampaignProfile(inValue);
+            CallingListSample.Five9Admin.createCampaignProfileResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).createCampaignProfile(inValue);
             return retVal.createCampaignProfileResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.createContactFieldResponse1 CallingListSample.Five9Admin.WsAdminV2.createContactField(CallingListSample.Five9Admin.createContactFieldRequest request) {
+        CallingListSample.Five9Admin.createContactFieldResponse1 CallingListSample.Five9Admin.WsAdmin.createContactField(CallingListSample.Five9Admin.createContactFieldRequest request) {
             return base.Channel.createContactField(request);
         }
         
         public CallingListSample.Five9Admin.createContactFieldResponse createContactField(CallingListSample.Five9Admin.createContactField createContactField1) {
             CallingListSample.Five9Admin.createContactFieldRequest inValue = new CallingListSample.Five9Admin.createContactFieldRequest();
             inValue.createContactField = createContactField1;
-            CallingListSample.Five9Admin.createContactFieldResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).createContactField(inValue);
+            CallingListSample.Five9Admin.createContactFieldResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).createContactField(inValue);
             return retVal.createContactFieldResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.createDispositionResponse1 CallingListSample.Five9Admin.WsAdminV2.createDisposition(CallingListSample.Five9Admin.createDispositionRequest request) {
+        CallingListSample.Five9Admin.createDispositionResponse1 CallingListSample.Five9Admin.WsAdmin.createDisposition(CallingListSample.Five9Admin.createDispositionRequest request) {
             return base.Channel.createDisposition(request);
         }
         
         public CallingListSample.Five9Admin.createDispositionResponse createDisposition(CallingListSample.Five9Admin.createDisposition createDisposition1) {
             CallingListSample.Five9Admin.createDispositionRequest inValue = new CallingListSample.Five9Admin.createDispositionRequest();
             inValue.createDisposition = createDisposition1;
-            CallingListSample.Five9Admin.createDispositionResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).createDisposition(inValue);
+            CallingListSample.Five9Admin.createDispositionResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).createDisposition(inValue);
             return retVal.createDispositionResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.createIVRScriptResponse1 CallingListSample.Five9Admin.WsAdminV2.createIVRScript(CallingListSample.Five9Admin.createIVRScriptRequest request) {
+        CallingListSample.Five9Admin.createIVRScriptResponse1 CallingListSample.Five9Admin.WsAdmin.createIVRScript(CallingListSample.Five9Admin.createIVRScriptRequest request) {
             return base.Channel.createIVRScript(request);
         }
         
         public CallingListSample.Five9Admin.createIVRScriptResponse createIVRScript(CallingListSample.Five9Admin.createIVRScript createIVRScript1) {
             CallingListSample.Five9Admin.createIVRScriptRequest inValue = new CallingListSample.Five9Admin.createIVRScriptRequest();
             inValue.createIVRScript = createIVRScript1;
-            CallingListSample.Five9Admin.createIVRScriptResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).createIVRScript(inValue);
+            CallingListSample.Five9Admin.createIVRScriptResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).createIVRScript(inValue);
             return retVal.createIVRScriptResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.createInboundCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.createInboundCampaign(CallingListSample.Five9Admin.createInboundCampaignRequest request) {
+        CallingListSample.Five9Admin.createInboundCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.createInboundCampaign(CallingListSample.Five9Admin.createInboundCampaignRequest request) {
             return base.Channel.createInboundCampaign(request);
         }
         
         public CallingListSample.Five9Admin.createInboundCampaignResponse createInboundCampaign(CallingListSample.Five9Admin.createInboundCampaign createInboundCampaign1) {
             CallingListSample.Five9Admin.createInboundCampaignRequest inValue = new CallingListSample.Five9Admin.createInboundCampaignRequest();
             inValue.createInboundCampaign = createInboundCampaign1;
-            CallingListSample.Five9Admin.createInboundCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).createInboundCampaign(inValue);
+            CallingListSample.Five9Admin.createInboundCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).createInboundCampaign(inValue);
             return retVal.createInboundCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.createListResponse1 CallingListSample.Five9Admin.WsAdminV2.createList(CallingListSample.Five9Admin.createListRequest request) {
+        CallingListSample.Five9Admin.createListResponse1 CallingListSample.Five9Admin.WsAdmin.createList(CallingListSample.Five9Admin.createListRequest request) {
             return base.Channel.createList(request);
         }
         
         public CallingListSample.Five9Admin.createListResponse createList(CallingListSample.Five9Admin.createList createList1) {
             CallingListSample.Five9Admin.createListRequest inValue = new CallingListSample.Five9Admin.createListRequest();
             inValue.createList = createList1;
-            CallingListSample.Five9Admin.createListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).createList(inValue);
+            CallingListSample.Five9Admin.createListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).createList(inValue);
             return retVal.createListResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.createOutboundCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.createOutboundCampaign(CallingListSample.Five9Admin.createOutboundCampaignRequest request) {
+        CallingListSample.Five9Admin.createOutboundCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.createOutboundCampaign(CallingListSample.Five9Admin.createOutboundCampaignRequest request) {
             return base.Channel.createOutboundCampaign(request);
         }
         
         public CallingListSample.Five9Admin.createOutboundCampaignResponse createOutboundCampaign(CallingListSample.Five9Admin.createOutboundCampaign createOutboundCampaign1) {
             CallingListSample.Five9Admin.createOutboundCampaignRequest inValue = new CallingListSample.Five9Admin.createOutboundCampaignRequest();
             inValue.createOutboundCampaign = createOutboundCampaign1;
-            CallingListSample.Five9Admin.createOutboundCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).createOutboundCampaign(inValue);
+            CallingListSample.Five9Admin.createOutboundCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).createOutboundCampaign(inValue);
             return retVal.createOutboundCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.createReasonCodeResponse1 CallingListSample.Five9Admin.WsAdminV2.createReasonCode(CallingListSample.Five9Admin.createReasonCodeRequest request) {
+        CallingListSample.Five9Admin.createReasonCodeResponse1 CallingListSample.Five9Admin.WsAdmin.createReasonCode(CallingListSample.Five9Admin.createReasonCodeRequest request) {
             return base.Channel.createReasonCode(request);
         }
         
         public CallingListSample.Five9Admin.createReasonCodeResponse createReasonCode(CallingListSample.Five9Admin.createReasonCode createReasonCode1) {
             CallingListSample.Five9Admin.createReasonCodeRequest inValue = new CallingListSample.Five9Admin.createReasonCodeRequest();
             inValue.createReasonCode = createReasonCode1;
-            CallingListSample.Five9Admin.createReasonCodeResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).createReasonCode(inValue);
+            CallingListSample.Five9Admin.createReasonCodeResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).createReasonCode(inValue);
             return retVal.createReasonCodeResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.createSkillResponse1 CallingListSample.Five9Admin.WsAdminV2.createSkill(CallingListSample.Five9Admin.createSkillRequest request) {
+        CallingListSample.Five9Admin.createSkillResponse1 CallingListSample.Five9Admin.WsAdmin.createSkill(CallingListSample.Five9Admin.createSkillRequest request) {
             return base.Channel.createSkill(request);
         }
         
         public CallingListSample.Five9Admin.createSkillResponse createSkill(CallingListSample.Five9Admin.createSkill createSkill1) {
             CallingListSample.Five9Admin.createSkillRequest inValue = new CallingListSample.Five9Admin.createSkillRequest();
             inValue.createSkill = createSkill1;
-            CallingListSample.Five9Admin.createSkillResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).createSkill(inValue);
+            CallingListSample.Five9Admin.createSkillResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).createSkill(inValue);
             return retVal.createSkillResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.createUserResponse1 CallingListSample.Five9Admin.WsAdminV2.createUser(CallingListSample.Five9Admin.createUserRequest request) {
+        CallingListSample.Five9Admin.createUserResponse1 CallingListSample.Five9Admin.WsAdmin.createUser(CallingListSample.Five9Admin.createUserRequest request) {
             return base.Channel.createUser(request);
         }
         
         public CallingListSample.Five9Admin.createUserResponse createUser(CallingListSample.Five9Admin.createUser createUser1) {
             CallingListSample.Five9Admin.createUserRequest inValue = new CallingListSample.Five9Admin.createUserRequest();
             inValue.createUser = createUser1;
-            CallingListSample.Five9Admin.createUserResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).createUser(inValue);
+            CallingListSample.Five9Admin.createUserResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).createUser(inValue);
             return retVal.createUserResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.createUserProfileResponse1 CallingListSample.Five9Admin.WsAdminV2.createUserProfile(CallingListSample.Five9Admin.createUserProfileRequest request) {
+        CallingListSample.Five9Admin.createUserProfileResponse1 CallingListSample.Five9Admin.WsAdmin.createUserProfile(CallingListSample.Five9Admin.createUserProfileRequest request) {
             return base.Channel.createUserProfile(request);
         }
         
         public CallingListSample.Five9Admin.createUserProfileResponse createUserProfile(CallingListSample.Five9Admin.createUserProfile createUserProfile1) {
             CallingListSample.Five9Admin.createUserProfileRequest inValue = new CallingListSample.Five9Admin.createUserProfileRequest();
             inValue.createUserProfile = createUserProfile1;
-            CallingListSample.Five9Admin.createUserProfileResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).createUserProfile(inValue);
+            CallingListSample.Five9Admin.createUserProfileResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).createUserProfile(inValue);
             return retVal.createUserProfileResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.createWebConnectorResponse1 CallingListSample.Five9Admin.WsAdminV2.createWebConnector(CallingListSample.Five9Admin.createWebConnectorRequest request) {
+        CallingListSample.Five9Admin.createWebConnectorResponse1 CallingListSample.Five9Admin.WsAdmin.createWebConnector(CallingListSample.Five9Admin.createWebConnectorRequest request) {
             return base.Channel.createWebConnector(request);
         }
         
         public CallingListSample.Five9Admin.createWebConnectorResponse createWebConnector(CallingListSample.Five9Admin.createWebConnector createWebConnector1) {
             CallingListSample.Five9Admin.createWebConnectorRequest inValue = new CallingListSample.Five9Admin.createWebConnectorRequest();
             inValue.createWebConnector = createWebConnector1;
-            CallingListSample.Five9Admin.createWebConnectorResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).createWebConnector(inValue);
+            CallingListSample.Five9Admin.createWebConnectorResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).createWebConnector(inValue);
             return retVal.createWebConnectorResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteAgentGroupResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteAgentGroup(CallingListSample.Five9Admin.deleteAgentGroupRequest request) {
+        CallingListSample.Five9Admin.deleteAgentGroupResponse1 CallingListSample.Five9Admin.WsAdmin.deleteAgentGroup(CallingListSample.Five9Admin.deleteAgentGroupRequest request) {
             return base.Channel.deleteAgentGroup(request);
         }
         
         public CallingListSample.Five9Admin.deleteAgentGroupResponse deleteAgentGroup(CallingListSample.Five9Admin.deleteAgentGroup deleteAgentGroup1) {
             CallingListSample.Five9Admin.deleteAgentGroupRequest inValue = new CallingListSample.Five9Admin.deleteAgentGroupRequest();
             inValue.deleteAgentGroup = deleteAgentGroup1;
-            CallingListSample.Five9Admin.deleteAgentGroupResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteAgentGroup(inValue);
+            CallingListSample.Five9Admin.deleteAgentGroupResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteAgentGroup(inValue);
             return retVal.deleteAgentGroupResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteAllFromListResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteAllFromList(CallingListSample.Five9Admin.deleteAllFromListRequest request) {
+        CallingListSample.Five9Admin.deleteAllFromListResponse1 CallingListSample.Five9Admin.WsAdmin.deleteAllFromList(CallingListSample.Five9Admin.deleteAllFromListRequest request) {
             return base.Channel.deleteAllFromList(request);
         }
         
         public CallingListSample.Five9Admin.deleteAllFromListResponse deleteAllFromList(CallingListSample.Five9Admin.deleteAllFromList deleteAllFromList1) {
             CallingListSample.Five9Admin.deleteAllFromListRequest inValue = new CallingListSample.Five9Admin.deleteAllFromListRequest();
             inValue.deleteAllFromList = deleteAllFromList1;
-            CallingListSample.Five9Admin.deleteAllFromListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteAllFromList(inValue);
+            CallingListSample.Five9Admin.deleteAllFromListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteAllFromList(inValue);
             return retVal.deleteAllFromListResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteCallVariableResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteCallVariable(CallingListSample.Five9Admin.deleteCallVariableRequest request) {
+        CallingListSample.Five9Admin.deleteCallVariableResponse1 CallingListSample.Five9Admin.WsAdmin.deleteCallVariable(CallingListSample.Five9Admin.deleteCallVariableRequest request) {
             return base.Channel.deleteCallVariable(request);
         }
         
         public CallingListSample.Five9Admin.deleteCallVariableResponse deleteCallVariable(CallingListSample.Five9Admin.deleteCallVariable deleteCallVariable1) {
             CallingListSample.Five9Admin.deleteCallVariableRequest inValue = new CallingListSample.Five9Admin.deleteCallVariableRequest();
             inValue.deleteCallVariable = deleteCallVariable1;
-            CallingListSample.Five9Admin.deleteCallVariableResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteCallVariable(inValue);
+            CallingListSample.Five9Admin.deleteCallVariableResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteCallVariable(inValue);
             return retVal.deleteCallVariableResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteCallVariablesGroupResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteCallVariablesGroup(CallingListSample.Five9Admin.deleteCallVariablesGroupRequest request) {
+        CallingListSample.Five9Admin.deleteCallVariablesGroupResponse1 CallingListSample.Five9Admin.WsAdmin.deleteCallVariablesGroup(CallingListSample.Five9Admin.deleteCallVariablesGroupRequest request) {
             return base.Channel.deleteCallVariablesGroup(request);
         }
         
         public CallingListSample.Five9Admin.deleteCallVariablesGroupResponse deleteCallVariablesGroup(CallingListSample.Five9Admin.deleteCallVariablesGroup deleteCallVariablesGroup1) {
             CallingListSample.Five9Admin.deleteCallVariablesGroupRequest inValue = new CallingListSample.Five9Admin.deleteCallVariablesGroupRequest();
             inValue.deleteCallVariablesGroup = deleteCallVariablesGroup1;
-            CallingListSample.Five9Admin.deleteCallVariablesGroupResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteCallVariablesGroup(inValue);
+            CallingListSample.Five9Admin.deleteCallVariablesGroupResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteCallVariablesGroup(inValue);
             return retVal.deleteCallVariablesGroupResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteCampaign(CallingListSample.Five9Admin.deleteCampaignRequest request) {
+        CallingListSample.Five9Admin.deleteCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.deleteCampaign(CallingListSample.Five9Admin.deleteCampaignRequest request) {
             return base.Channel.deleteCampaign(request);
         }
         
         public CallingListSample.Five9Admin.deleteCampaignResponse deleteCampaign(CallingListSample.Five9Admin.deleteCampaign deleteCampaign1) {
             CallingListSample.Five9Admin.deleteCampaignRequest inValue = new CallingListSample.Five9Admin.deleteCampaignRequest();
             inValue.deleteCampaign = deleteCampaign1;
-            CallingListSample.Five9Admin.deleteCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteCampaign(inValue);
+            CallingListSample.Five9Admin.deleteCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteCampaign(inValue);
             return retVal.deleteCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteCampaignProfileResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteCampaignProfile(CallingListSample.Five9Admin.deleteCampaignProfileRequest request) {
+        CallingListSample.Five9Admin.deleteCampaignProfileResponse1 CallingListSample.Five9Admin.WsAdmin.deleteCampaignProfile(CallingListSample.Five9Admin.deleteCampaignProfileRequest request) {
             return base.Channel.deleteCampaignProfile(request);
         }
         
         public CallingListSample.Five9Admin.deleteCampaignProfileResponse deleteCampaignProfile(CallingListSample.Five9Admin.deleteCampaignProfile deleteCampaignProfile1) {
             CallingListSample.Five9Admin.deleteCampaignProfileRequest inValue = new CallingListSample.Five9Admin.deleteCampaignProfileRequest();
             inValue.deleteCampaignProfile = deleteCampaignProfile1;
-            CallingListSample.Five9Admin.deleteCampaignProfileResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteCampaignProfile(inValue);
+            CallingListSample.Five9Admin.deleteCampaignProfileResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteCampaignProfile(inValue);
             return retVal.deleteCampaignProfileResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteContactFieldResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteContactField(CallingListSample.Five9Admin.deleteContactFieldRequest request) {
+        CallingListSample.Five9Admin.deleteContactFieldResponse1 CallingListSample.Five9Admin.WsAdmin.deleteContactField(CallingListSample.Five9Admin.deleteContactFieldRequest request) {
             return base.Channel.deleteContactField(request);
         }
         
         public CallingListSample.Five9Admin.deleteContactFieldResponse deleteContactField(CallingListSample.Five9Admin.deleteContactField deleteContactField1) {
             CallingListSample.Five9Admin.deleteContactFieldRequest inValue = new CallingListSample.Five9Admin.deleteContactFieldRequest();
             inValue.deleteContactField = deleteContactField1;
-            CallingListSample.Five9Admin.deleteContactFieldResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteContactField(inValue);
+            CallingListSample.Five9Admin.deleteContactFieldResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteContactField(inValue);
             return retVal.deleteContactFieldResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteFromContactsResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteFromContacts(CallingListSample.Five9Admin.deleteFromContactsRequest request) {
+        CallingListSample.Five9Admin.deleteFromContactsResponse1 CallingListSample.Five9Admin.WsAdmin.deleteFromContacts(CallingListSample.Five9Admin.deleteFromContactsRequest request) {
             return base.Channel.deleteFromContacts(request);
         }
         
         public CallingListSample.Five9Admin.deleteFromContactsResponse deleteFromContacts(CallingListSample.Five9Admin.deleteFromContacts deleteFromContacts1) {
             CallingListSample.Five9Admin.deleteFromContactsRequest inValue = new CallingListSample.Five9Admin.deleteFromContactsRequest();
             inValue.deleteFromContacts = deleteFromContacts1;
-            CallingListSample.Five9Admin.deleteFromContactsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteFromContacts(inValue);
+            CallingListSample.Five9Admin.deleteFromContactsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteFromContacts(inValue);
             return retVal.deleteFromContactsResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteFromContactsCsvResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteFromContactsCsv(CallingListSample.Five9Admin.deleteFromContactsCsvRequest request) {
+        CallingListSample.Five9Admin.deleteFromContactsCsvResponse1 CallingListSample.Five9Admin.WsAdmin.deleteFromContactsCsv(CallingListSample.Five9Admin.deleteFromContactsCsvRequest request) {
             return base.Channel.deleteFromContactsCsv(request);
         }
         
         public CallingListSample.Five9Admin.deleteFromContactsCsvResponse deleteFromContactsCsv(CallingListSample.Five9Admin.deleteFromContactsCsv deleteFromContactsCsv1) {
             CallingListSample.Five9Admin.deleteFromContactsCsvRequest inValue = new CallingListSample.Five9Admin.deleteFromContactsCsvRequest();
             inValue.deleteFromContactsCsv = deleteFromContactsCsv1;
-            CallingListSample.Five9Admin.deleteFromContactsCsvResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteFromContactsCsv(inValue);
+            CallingListSample.Five9Admin.deleteFromContactsCsvResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteFromContactsCsv(inValue);
             return retVal.deleteFromContactsCsvResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteFromContactsFtpResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteFromContactsFtp(CallingListSample.Five9Admin.deleteFromContactsFtpRequest request) {
+        CallingListSample.Five9Admin.deleteFromContactsFtpResponse1 CallingListSample.Five9Admin.WsAdmin.deleteFromContactsFtp(CallingListSample.Five9Admin.deleteFromContactsFtpRequest request) {
             return base.Channel.deleteFromContactsFtp(request);
         }
         
         public CallingListSample.Five9Admin.deleteFromContactsFtpResponse deleteFromContactsFtp(CallingListSample.Five9Admin.deleteFromContactsFtp deleteFromContactsFtp1) {
             CallingListSample.Five9Admin.deleteFromContactsFtpRequest inValue = new CallingListSample.Five9Admin.deleteFromContactsFtpRequest();
             inValue.deleteFromContactsFtp = deleteFromContactsFtp1;
-            CallingListSample.Five9Admin.deleteFromContactsFtpResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteFromContactsFtp(inValue);
+            CallingListSample.Five9Admin.deleteFromContactsFtpResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteFromContactsFtp(inValue);
             return retVal.deleteFromContactsFtpResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteFromListResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteFromList(CallingListSample.Five9Admin.deleteFromListRequest request) {
+        CallingListSample.Five9Admin.deleteFromListResponse1 CallingListSample.Five9Admin.WsAdmin.deleteFromList(CallingListSample.Five9Admin.deleteFromListRequest request) {
             return base.Channel.deleteFromList(request);
         }
         
         public CallingListSample.Five9Admin.deleteFromListResponse deleteFromList(CallingListSample.Five9Admin.deleteFromList deleteFromList1) {
             CallingListSample.Five9Admin.deleteFromListRequest inValue = new CallingListSample.Five9Admin.deleteFromListRequest();
             inValue.deleteFromList = deleteFromList1;
-            CallingListSample.Five9Admin.deleteFromListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteFromList(inValue);
+            CallingListSample.Five9Admin.deleteFromListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteFromList(inValue);
             return retVal.deleteFromListResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteFromListCsvResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteFromListCsv(CallingListSample.Five9Admin.deleteFromListCsvRequest request) {
+        CallingListSample.Five9Admin.deleteFromListCsvResponse1 CallingListSample.Five9Admin.WsAdmin.deleteFromListCsv(CallingListSample.Five9Admin.deleteFromListCsvRequest request) {
             return base.Channel.deleteFromListCsv(request);
         }
         
         public CallingListSample.Five9Admin.deleteFromListCsvResponse deleteFromListCsv(CallingListSample.Five9Admin.deleteFromListCsv deleteFromListCsv1) {
             CallingListSample.Five9Admin.deleteFromListCsvRequest inValue = new CallingListSample.Five9Admin.deleteFromListCsvRequest();
             inValue.deleteFromListCsv = deleteFromListCsv1;
-            CallingListSample.Five9Admin.deleteFromListCsvResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteFromListCsv(inValue);
+            CallingListSample.Five9Admin.deleteFromListCsvResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteFromListCsv(inValue);
             return retVal.deleteFromListCsvResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteFromListFtpResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteFromListFtp(CallingListSample.Five9Admin.deleteFromListFtpRequest request) {
+        CallingListSample.Five9Admin.deleteFromListFtpResponse1 CallingListSample.Five9Admin.WsAdmin.deleteFromListFtp(CallingListSample.Five9Admin.deleteFromListFtpRequest request) {
             return base.Channel.deleteFromListFtp(request);
         }
         
         public CallingListSample.Five9Admin.deleteFromListFtpResponse deleteFromListFtp(CallingListSample.Five9Admin.deleteFromListFtp deleteFromListFtp1) {
             CallingListSample.Five9Admin.deleteFromListFtpRequest inValue = new CallingListSample.Five9Admin.deleteFromListFtpRequest();
             inValue.deleteFromListFtp = deleteFromListFtp1;
-            CallingListSample.Five9Admin.deleteFromListFtpResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteFromListFtp(inValue);
+            CallingListSample.Five9Admin.deleteFromListFtpResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteFromListFtp(inValue);
             return retVal.deleteFromListFtpResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteIVRScriptResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteIVRScript(CallingListSample.Five9Admin.deleteIVRScriptRequest request) {
+        CallingListSample.Five9Admin.deleteIVRScriptResponse1 CallingListSample.Five9Admin.WsAdmin.deleteIVRScript(CallingListSample.Five9Admin.deleteIVRScriptRequest request) {
             return base.Channel.deleteIVRScript(request);
         }
         
         public CallingListSample.Five9Admin.deleteIVRScriptResponse deleteIVRScript(CallingListSample.Five9Admin.deleteIVRScript deleteIVRScript1) {
             CallingListSample.Five9Admin.deleteIVRScriptRequest inValue = new CallingListSample.Five9Admin.deleteIVRScriptRequest();
             inValue.deleteIVRScript = deleteIVRScript1;
-            CallingListSample.Five9Admin.deleteIVRScriptResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteIVRScript(inValue);
+            CallingListSample.Five9Admin.deleteIVRScriptResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteIVRScript(inValue);
             return retVal.deleteIVRScriptResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteListResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteList(CallingListSample.Five9Admin.deleteListRequest request) {
+        CallingListSample.Five9Admin.deleteListResponse1 CallingListSample.Five9Admin.WsAdmin.deleteList(CallingListSample.Five9Admin.deleteListRequest request) {
             return base.Channel.deleteList(request);
         }
         
         public CallingListSample.Five9Admin.deleteListResponse deleteList(CallingListSample.Five9Admin.deleteList deleteList1) {
             CallingListSample.Five9Admin.deleteListRequest inValue = new CallingListSample.Five9Admin.deleteListRequest();
             inValue.deleteList = deleteList1;
-            CallingListSample.Five9Admin.deleteListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteList(inValue);
+            CallingListSample.Five9Admin.deleteListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteList(inValue);
             return retVal.deleteListResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deletePromptResponse1 CallingListSample.Five9Admin.WsAdminV2.deletePrompt(CallingListSample.Five9Admin.deletePromptRequest request) {
+        CallingListSample.Five9Admin.deletePromptResponse1 CallingListSample.Five9Admin.WsAdmin.deletePrompt(CallingListSample.Five9Admin.deletePromptRequest request) {
             return base.Channel.deletePrompt(request);
         }
         
         public CallingListSample.Five9Admin.deletePromptResponse deletePrompt(CallingListSample.Five9Admin.deletePrompt deletePrompt1) {
             CallingListSample.Five9Admin.deletePromptRequest inValue = new CallingListSample.Five9Admin.deletePromptRequest();
             inValue.deletePrompt = deletePrompt1;
-            CallingListSample.Five9Admin.deletePromptResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deletePrompt(inValue);
+            CallingListSample.Five9Admin.deletePromptResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deletePrompt(inValue);
             return retVal.deletePromptResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteReasonCodeResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteReasonCode(CallingListSample.Five9Admin.deleteReasonCodeRequest request) {
+        CallingListSample.Five9Admin.deleteReasonCodeResponse1 CallingListSample.Five9Admin.WsAdmin.deleteReasonCode(CallingListSample.Five9Admin.deleteReasonCodeRequest request) {
             return base.Channel.deleteReasonCode(request);
         }
         
         public CallingListSample.Five9Admin.deleteReasonCodeResponse deleteReasonCode(CallingListSample.Five9Admin.deleteReasonCode deleteReasonCode1) {
             CallingListSample.Five9Admin.deleteReasonCodeRequest inValue = new CallingListSample.Five9Admin.deleteReasonCodeRequest();
             inValue.deleteReasonCode = deleteReasonCode1;
-            CallingListSample.Five9Admin.deleteReasonCodeResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteReasonCode(inValue);
+            CallingListSample.Five9Admin.deleteReasonCodeResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteReasonCode(inValue);
             return retVal.deleteReasonCodeResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteReasonCodeByTypeResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteReasonCodeByType(CallingListSample.Five9Admin.deleteReasonCodeByTypeRequest request) {
+        CallingListSample.Five9Admin.deleteReasonCodeByTypeResponse1 CallingListSample.Five9Admin.WsAdmin.deleteReasonCodeByType(CallingListSample.Five9Admin.deleteReasonCodeByTypeRequest request) {
             return base.Channel.deleteReasonCodeByType(request);
         }
         
         public CallingListSample.Five9Admin.deleteReasonCodeByTypeResponse deleteReasonCodeByType(CallingListSample.Five9Admin.deleteReasonCodeByType deleteReasonCodeByType1) {
             CallingListSample.Five9Admin.deleteReasonCodeByTypeRequest inValue = new CallingListSample.Five9Admin.deleteReasonCodeByTypeRequest();
             inValue.deleteReasonCodeByType = deleteReasonCodeByType1;
-            CallingListSample.Five9Admin.deleteReasonCodeByTypeResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteReasonCodeByType(inValue);
+            CallingListSample.Five9Admin.deleteReasonCodeByTypeResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteReasonCodeByType(inValue);
             return retVal.deleteReasonCodeByTypeResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteRecordFromListResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteRecordFromList(CallingListSample.Five9Admin.deleteRecordFromListRequest request) {
+        CallingListSample.Five9Admin.deleteRecordFromListResponse1 CallingListSample.Five9Admin.WsAdmin.deleteRecordFromList(CallingListSample.Five9Admin.deleteRecordFromListRequest request) {
             return base.Channel.deleteRecordFromList(request);
         }
         
         public CallingListSample.Five9Admin.deleteRecordFromListResponse deleteRecordFromList(CallingListSample.Five9Admin.deleteRecordFromList deleteRecordFromList1) {
             CallingListSample.Five9Admin.deleteRecordFromListRequest inValue = new CallingListSample.Five9Admin.deleteRecordFromListRequest();
             inValue.deleteRecordFromList = deleteRecordFromList1;
-            CallingListSample.Five9Admin.deleteRecordFromListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteRecordFromList(inValue);
+            CallingListSample.Five9Admin.deleteRecordFromListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteRecordFromList(inValue);
             return retVal.deleteRecordFromListResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteSkillResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteSkill(CallingListSample.Five9Admin.deleteSkillRequest request) {
+        CallingListSample.Five9Admin.deleteSkillResponse1 CallingListSample.Five9Admin.WsAdmin.deleteSkill(CallingListSample.Five9Admin.deleteSkillRequest request) {
             return base.Channel.deleteSkill(request);
         }
         
         public CallingListSample.Five9Admin.deleteSkillResponse deleteSkill(CallingListSample.Five9Admin.deleteSkill deleteSkill1) {
             CallingListSample.Five9Admin.deleteSkillRequest inValue = new CallingListSample.Five9Admin.deleteSkillRequest();
             inValue.deleteSkill = deleteSkill1;
-            CallingListSample.Five9Admin.deleteSkillResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteSkill(inValue);
+            CallingListSample.Five9Admin.deleteSkillResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteSkill(inValue);
             return retVal.deleteSkillResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteUserResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteUser(CallingListSample.Five9Admin.deleteUserRequest request) {
+        CallingListSample.Five9Admin.deleteUserResponse1 CallingListSample.Five9Admin.WsAdmin.deleteUser(CallingListSample.Five9Admin.deleteUserRequest request) {
             return base.Channel.deleteUser(request);
         }
         
         public CallingListSample.Five9Admin.deleteUserResponse deleteUser(CallingListSample.Five9Admin.deleteUser deleteUser1) {
             CallingListSample.Five9Admin.deleteUserRequest inValue = new CallingListSample.Five9Admin.deleteUserRequest();
             inValue.deleteUser = deleteUser1;
-            CallingListSample.Five9Admin.deleteUserResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteUser(inValue);
+            CallingListSample.Five9Admin.deleteUserResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteUser(inValue);
             return retVal.deleteUserResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteUserProfileResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteUserProfile(CallingListSample.Five9Admin.deleteUserProfileRequest request) {
+        CallingListSample.Five9Admin.deleteUserProfileResponse1 CallingListSample.Five9Admin.WsAdmin.deleteUserProfile(CallingListSample.Five9Admin.deleteUserProfileRequest request) {
             return base.Channel.deleteUserProfile(request);
         }
         
         public CallingListSample.Five9Admin.deleteUserProfileResponse deleteUserProfile(CallingListSample.Five9Admin.deleteUserProfile deleteUserProfile1) {
             CallingListSample.Five9Admin.deleteUserProfileRequest inValue = new CallingListSample.Five9Admin.deleteUserProfileRequest();
             inValue.deleteUserProfile = deleteUserProfile1;
-            CallingListSample.Five9Admin.deleteUserProfileResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteUserProfile(inValue);
+            CallingListSample.Five9Admin.deleteUserProfileResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteUserProfile(inValue);
             return retVal.deleteUserProfileResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.deleteWebConnectorResponse1 CallingListSample.Five9Admin.WsAdminV2.deleteWebConnector(CallingListSample.Five9Admin.deleteWebConnectorRequest request) {
+        CallingListSample.Five9Admin.deleteWebConnectorResponse1 CallingListSample.Five9Admin.WsAdmin.deleteWebConnector(CallingListSample.Five9Admin.deleteWebConnectorRequest request) {
             return base.Channel.deleteWebConnector(request);
         }
         
         public CallingListSample.Five9Admin.deleteWebConnectorResponse deleteWebConnector(CallingListSample.Five9Admin.deleteWebConnector deleteWebConnector1) {
             CallingListSample.Five9Admin.deleteWebConnectorRequest inValue = new CallingListSample.Five9Admin.deleteWebConnectorRequest();
             inValue.deleteWebConnector = deleteWebConnector1;
-            CallingListSample.Five9Admin.deleteWebConnectorResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).deleteWebConnector(inValue);
+            CallingListSample.Five9Admin.deleteWebConnectorResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).deleteWebConnector(inValue);
             return retVal.deleteWebConnectorResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.forceStopCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.forceStopCampaign(CallingListSample.Five9Admin.forceStopCampaignRequest request) {
+        CallingListSample.Five9Admin.forceStopCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.forceStopCampaign(CallingListSample.Five9Admin.forceStopCampaignRequest request) {
             return base.Channel.forceStopCampaign(request);
         }
         
         public CallingListSample.Five9Admin.forceStopCampaignResponse forceStopCampaign(CallingListSample.Five9Admin.forceStopCampaign forceStopCampaign1) {
             CallingListSample.Five9Admin.forceStopCampaignRequest inValue = new CallingListSample.Five9Admin.forceStopCampaignRequest();
             inValue.forceStopCampaign = forceStopCampaign1;
-            CallingListSample.Five9Admin.forceStopCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).forceStopCampaign(inValue);
+            CallingListSample.Five9Admin.forceStopCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).forceStopCampaign(inValue);
             return retVal.forceStopCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getAgentAuditReportResponse1 CallingListSample.Five9Admin.WsAdminV2.getAgentAuditReport(CallingListSample.Five9Admin.getAgentAuditReportRequest request) {
+        CallingListSample.Five9Admin.getAgentAuditReportResponse1 CallingListSample.Five9Admin.WsAdmin.getAgentAuditReport(CallingListSample.Five9Admin.getAgentAuditReportRequest request) {
             return base.Channel.getAgentAuditReport(request);
         }
         
         public CallingListSample.Five9Admin.getAgentAuditReportResponse getAgentAuditReport(CallingListSample.Five9Admin.getAgentAuditReport getAgentAuditReport1) {
             CallingListSample.Five9Admin.getAgentAuditReportRequest inValue = new CallingListSample.Five9Admin.getAgentAuditReportRequest();
             inValue.getAgentAuditReport = getAgentAuditReport1;
-            CallingListSample.Five9Admin.getAgentAuditReportResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getAgentAuditReport(inValue);
+            CallingListSample.Five9Admin.getAgentAuditReportResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getAgentAuditReport(inValue);
             return retVal.getAgentAuditReportResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getAgentAuditReportCsvResponse1 CallingListSample.Five9Admin.WsAdminV2.getAgentAuditReportCsv(CallingListSample.Five9Admin.getAgentAuditReportCsvRequest request) {
+        CallingListSample.Five9Admin.getAgentAuditReportCsvResponse1 CallingListSample.Five9Admin.WsAdmin.getAgentAuditReportCsv(CallingListSample.Five9Admin.getAgentAuditReportCsvRequest request) {
             return base.Channel.getAgentAuditReportCsv(request);
         }
         
         public CallingListSample.Five9Admin.getAgentAuditReportCsvResponse getAgentAuditReportCsv(CallingListSample.Five9Admin.getAgentAuditReportCsv getAgentAuditReportCsv1) {
             CallingListSample.Five9Admin.getAgentAuditReportCsvRequest inValue = new CallingListSample.Five9Admin.getAgentAuditReportCsvRequest();
             inValue.getAgentAuditReportCsv = getAgentAuditReportCsv1;
-            CallingListSample.Five9Admin.getAgentAuditReportCsvResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getAgentAuditReportCsv(inValue);
+            CallingListSample.Five9Admin.getAgentAuditReportCsvResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getAgentAuditReportCsv(inValue);
             return retVal.getAgentAuditReportCsvResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getAgentGroupResponse1 CallingListSample.Five9Admin.WsAdminV2.getAgentGroup(CallingListSample.Five9Admin.getAgentGroupRequest request) {
+        CallingListSample.Five9Admin.getAgentGroupResponse1 CallingListSample.Five9Admin.WsAdmin.getAgentGroup(CallingListSample.Five9Admin.getAgentGroupRequest request) {
             return base.Channel.getAgentGroup(request);
         }
         
         public CallingListSample.Five9Admin.getAgentGroupResponse getAgentGroup(CallingListSample.Five9Admin.getAgentGroup getAgentGroup1) {
             CallingListSample.Five9Admin.getAgentGroupRequest inValue = new CallingListSample.Five9Admin.getAgentGroupRequest();
             inValue.getAgentGroup = getAgentGroup1;
-            CallingListSample.Five9Admin.getAgentGroupResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getAgentGroup(inValue);
+            CallingListSample.Five9Admin.getAgentGroupResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getAgentGroup(inValue);
             return retVal.getAgentGroupResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getAgentGroupsResponse CallingListSample.Five9Admin.WsAdminV2.getAgentGroups(CallingListSample.Five9Admin.getAgentGroupsRequest request) {
+        CallingListSample.Five9Admin.getAgentGroupsResponse CallingListSample.Five9Admin.WsAdmin.getAgentGroups(CallingListSample.Five9Admin.getAgentGroupsRequest request) {
             return base.Channel.getAgentGroups(request);
         }
         
         public CallingListSample.Five9Admin.agentGroup[] getAgentGroups(CallingListSample.Five9Admin.getAgentGroups getAgentGroups1) {
             CallingListSample.Five9Admin.getAgentGroupsRequest inValue = new CallingListSample.Five9Admin.getAgentGroupsRequest();
             inValue.getAgentGroups = getAgentGroups1;
-            CallingListSample.Five9Admin.getAgentGroupsResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getAgentGroups(inValue);
+            CallingListSample.Five9Admin.getAgentGroupsResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getAgentGroups(inValue);
             return retVal.getAgentGroupsResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getAutodialCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.getAutodialCampaign(CallingListSample.Five9Admin.getAutodialCampaignRequest request) {
+        CallingListSample.Five9Admin.getAutodialCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.getAutodialCampaign(CallingListSample.Five9Admin.getAutodialCampaignRequest request) {
             return base.Channel.getAutodialCampaign(request);
         }
         
         public CallingListSample.Five9Admin.getAutodialCampaignResponse getAutodialCampaign(CallingListSample.Five9Admin.getAutodialCampaign getAutodialCampaign1) {
             CallingListSample.Five9Admin.getAutodialCampaignRequest inValue = new CallingListSample.Five9Admin.getAutodialCampaignRequest();
             inValue.getAutodialCampaign = getAutodialCampaign1;
-            CallingListSample.Five9Admin.getAutodialCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getAutodialCampaign(inValue);
+            CallingListSample.Five9Admin.getAutodialCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getAutodialCampaign(inValue);
             return retVal.getAutodialCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getCallCountersStateResponse CallingListSample.Five9Admin.WsAdminV2.getCallCountersState(CallingListSample.Five9Admin.getCallCountersStateRequest request) {
+        CallingListSample.Five9Admin.getCallCountersStateResponse CallingListSample.Five9Admin.WsAdmin.getCallCountersState(CallingListSample.Five9Admin.getCallCountersStateRequest request) {
             return base.Channel.getCallCountersState(request);
         }
         
         public CallingListSample.Five9Admin.limitTimeoutState[] getCallCountersState(CallingListSample.Five9Admin.getCallCountersState getCallCountersState1) {
             CallingListSample.Five9Admin.getCallCountersStateRequest inValue = new CallingListSample.Five9Admin.getCallCountersStateRequest();
             inValue.getCallCountersState = getCallCountersState1;
-            CallingListSample.Five9Admin.getCallCountersStateResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getCallCountersState(inValue);
+            CallingListSample.Five9Admin.getCallCountersStateResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getCallCountersState(inValue);
             return retVal.getCallCountersStateResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getCallLogReportResponse1 CallingListSample.Five9Admin.WsAdminV2.getCallLogReport(CallingListSample.Five9Admin.getCallLogReportRequest request) {
+        CallingListSample.Five9Admin.getCallLogReportResponse1 CallingListSample.Five9Admin.WsAdmin.getCallLogReport(CallingListSample.Five9Admin.getCallLogReportRequest request) {
             return base.Channel.getCallLogReport(request);
         }
         
         public CallingListSample.Five9Admin.getCallLogReportResponse getCallLogReport(CallingListSample.Five9Admin.getCallLogReport getCallLogReport1) {
             CallingListSample.Five9Admin.getCallLogReportRequest inValue = new CallingListSample.Five9Admin.getCallLogReportRequest();
             inValue.getCallLogReport = getCallLogReport1;
-            CallingListSample.Five9Admin.getCallLogReportResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getCallLogReport(inValue);
+            CallingListSample.Five9Admin.getCallLogReportResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getCallLogReport(inValue);
             return retVal.getCallLogReportResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getCallLogReportCsvResponse1 CallingListSample.Five9Admin.WsAdminV2.getCallLogReportCsv(CallingListSample.Five9Admin.getCallLogReportCsvRequest request) {
+        CallingListSample.Five9Admin.getCallLogReportCsvResponse1 CallingListSample.Five9Admin.WsAdmin.getCallLogReportCsv(CallingListSample.Five9Admin.getCallLogReportCsvRequest request) {
             return base.Channel.getCallLogReportCsv(request);
         }
         
         public CallingListSample.Five9Admin.getCallLogReportCsvResponse getCallLogReportCsv(CallingListSample.Five9Admin.getCallLogReportCsv getCallLogReportCsv1) {
             CallingListSample.Five9Admin.getCallLogReportCsvRequest inValue = new CallingListSample.Five9Admin.getCallLogReportCsvRequest();
             inValue.getCallLogReportCsv = getCallLogReportCsv1;
-            CallingListSample.Five9Admin.getCallLogReportCsvResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getCallLogReportCsv(inValue);
+            CallingListSample.Five9Admin.getCallLogReportCsvResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getCallLogReportCsv(inValue);
             return retVal.getCallLogReportCsvResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getCallVariableGroupsResponse CallingListSample.Five9Admin.WsAdminV2.getCallVariableGroups(CallingListSample.Five9Admin.getCallVariableGroupsRequest request) {
+        CallingListSample.Five9Admin.getCallVariableGroupsResponse CallingListSample.Five9Admin.WsAdmin.getCallVariableGroups(CallingListSample.Five9Admin.getCallVariableGroupsRequest request) {
             return base.Channel.getCallVariableGroups(request);
         }
         
         public CallingListSample.Five9Admin.callVariablesGroup[] getCallVariableGroups(CallingListSample.Five9Admin.getCallVariableGroups getCallVariableGroups1) {
             CallingListSample.Five9Admin.getCallVariableGroupsRequest inValue = new CallingListSample.Five9Admin.getCallVariableGroupsRequest();
             inValue.getCallVariableGroups = getCallVariableGroups1;
-            CallingListSample.Five9Admin.getCallVariableGroupsResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getCallVariableGroups(inValue);
+            CallingListSample.Five9Admin.getCallVariableGroupsResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getCallVariableGroups(inValue);
             return retVal.getCallVariableGroupsResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getCallVariablesResponse CallingListSample.Five9Admin.WsAdminV2.getCallVariables(CallingListSample.Five9Admin.getCallVariablesRequest request) {
+        CallingListSample.Five9Admin.getCallVariablesResponse CallingListSample.Five9Admin.WsAdmin.getCallVariables(CallingListSample.Five9Admin.getCallVariablesRequest request) {
             return base.Channel.getCallVariables(request);
         }
         
         public CallingListSample.Five9Admin.callVariable[] getCallVariables(CallingListSample.Five9Admin.getCallVariables getCallVariables1) {
             CallingListSample.Five9Admin.getCallVariablesRequest inValue = new CallingListSample.Five9Admin.getCallVariablesRequest();
             inValue.getCallVariables = getCallVariables1;
-            CallingListSample.Five9Admin.getCallVariablesResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getCallVariables(inValue);
+            CallingListSample.Five9Admin.getCallVariablesResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getCallVariables(inValue);
             return retVal.getCallVariablesResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getCampaignDNISListResponse CallingListSample.Five9Admin.WsAdminV2.getCampaignDNISList(CallingListSample.Five9Admin.getCampaignDNISListRequest request) {
+        CallingListSample.Five9Admin.getCampaignDNISListResponse CallingListSample.Five9Admin.WsAdmin.getCampaignDNISList(CallingListSample.Five9Admin.getCampaignDNISListRequest request) {
             return base.Channel.getCampaignDNISList(request);
         }
         
         public string[] getCampaignDNISList(CallingListSample.Five9Admin.getCampaignDNISList getCampaignDNISList1) {
             CallingListSample.Five9Admin.getCampaignDNISListRequest inValue = new CallingListSample.Five9Admin.getCampaignDNISListRequest();
             inValue.getCampaignDNISList = getCampaignDNISList1;
-            CallingListSample.Five9Admin.getCampaignDNISListResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getCampaignDNISList(inValue);
+            CallingListSample.Five9Admin.getCampaignDNISListResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getCampaignDNISList(inValue);
             return retVal.getCampaignDNISListResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getCampaignProfileDispositionsResponse CallingListSample.Five9Admin.WsAdminV2.getCampaignProfileDispositions(CallingListSample.Five9Admin.getCampaignProfileDispositionsRequest request) {
+        CallingListSample.Five9Admin.getCampaignProfileDispositionsResponse CallingListSample.Five9Admin.WsAdmin.getCampaignProfileDispositions(CallingListSample.Five9Admin.getCampaignProfileDispositionsRequest request) {
             return base.Channel.getCampaignProfileDispositions(request);
         }
         
         public CallingListSample.Five9Admin.dispositionCount[] getCampaignProfileDispositions(CallingListSample.Five9Admin.getCampaignProfileDispositions getCampaignProfileDispositions1) {
             CallingListSample.Five9Admin.getCampaignProfileDispositionsRequest inValue = new CallingListSample.Five9Admin.getCampaignProfileDispositionsRequest();
             inValue.getCampaignProfileDispositions = getCampaignProfileDispositions1;
-            CallingListSample.Five9Admin.getCampaignProfileDispositionsResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getCampaignProfileDispositions(inValue);
+            CallingListSample.Five9Admin.getCampaignProfileDispositionsResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getCampaignProfileDispositions(inValue);
             return retVal.getCampaignProfileDispositionsResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getCampaignProfileFilterResponse1 CallingListSample.Five9Admin.WsAdminV2.getCampaignProfileFilter(CallingListSample.Five9Admin.getCampaignProfileFilterRequest request) {
+        CallingListSample.Five9Admin.getCampaignProfileFilterResponse1 CallingListSample.Five9Admin.WsAdmin.getCampaignProfileFilter(CallingListSample.Five9Admin.getCampaignProfileFilterRequest request) {
             return base.Channel.getCampaignProfileFilter(request);
         }
         
         public CallingListSample.Five9Admin.getCampaignProfileFilterResponse getCampaignProfileFilter(CallingListSample.Five9Admin.getCampaignProfileFilter getCampaignProfileFilter1) {
             CallingListSample.Five9Admin.getCampaignProfileFilterRequest inValue = new CallingListSample.Five9Admin.getCampaignProfileFilterRequest();
             inValue.getCampaignProfileFilter = getCampaignProfileFilter1;
-            CallingListSample.Five9Admin.getCampaignProfileFilterResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getCampaignProfileFilter(inValue);
+            CallingListSample.Five9Admin.getCampaignProfileFilterResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getCampaignProfileFilter(inValue);
             return retVal.getCampaignProfileFilterResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getCampaignProfilesResponse CallingListSample.Five9Admin.WsAdminV2.getCampaignProfiles(CallingListSample.Five9Admin.getCampaignProfilesRequest request) {
+        CallingListSample.Five9Admin.getCampaignProfilesResponse CallingListSample.Five9Admin.WsAdmin.getCampaignProfiles(CallingListSample.Five9Admin.getCampaignProfilesRequest request) {
             return base.Channel.getCampaignProfiles(request);
         }
         
         public CallingListSample.Five9Admin.campaignProfileInfo[] getCampaignProfiles(CallingListSample.Five9Admin.getCampaignProfiles getCampaignProfiles1) {
             CallingListSample.Five9Admin.getCampaignProfilesRequest inValue = new CallingListSample.Five9Admin.getCampaignProfilesRequest();
             inValue.getCampaignProfiles = getCampaignProfiles1;
-            CallingListSample.Five9Admin.getCampaignProfilesResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getCampaignProfiles(inValue);
+            CallingListSample.Five9Admin.getCampaignProfilesResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getCampaignProfiles(inValue);
             return retVal.getCampaignProfilesResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getCampaignStateResponse1 CallingListSample.Five9Admin.WsAdminV2.getCampaignState(CallingListSample.Five9Admin.getCampaignStateRequest request) {
+        CallingListSample.Five9Admin.getCampaignStateResponse1 CallingListSample.Five9Admin.WsAdmin.getCampaignState(CallingListSample.Five9Admin.getCampaignStateRequest request) {
             return base.Channel.getCampaignState(request);
         }
         
         public CallingListSample.Five9Admin.getCampaignStateResponse getCampaignState(CallingListSample.Five9Admin.getCampaignState getCampaignState1) {
             CallingListSample.Five9Admin.getCampaignStateRequest inValue = new CallingListSample.Five9Admin.getCampaignStateRequest();
             inValue.getCampaignState = getCampaignState1;
-            CallingListSample.Five9Admin.getCampaignStateResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getCampaignState(inValue);
+            CallingListSample.Five9Admin.getCampaignStateResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getCampaignState(inValue);
             return retVal.getCampaignStateResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getCampaignsResponse CallingListSample.Five9Admin.WsAdminV2.getCampaigns(CallingListSample.Five9Admin.getCampaignsRequest request) {
+        CallingListSample.Five9Admin.getCampaignsResponse CallingListSample.Five9Admin.WsAdmin.getCampaigns(CallingListSample.Five9Admin.getCampaignsRequest request) {
             return base.Channel.getCampaigns(request);
         }
         
         public CallingListSample.Five9Admin.campaign[] getCampaigns(CallingListSample.Five9Admin.getCampaigns getCampaigns1) {
             CallingListSample.Five9Admin.getCampaignsRequest inValue = new CallingListSample.Five9Admin.getCampaignsRequest();
             inValue.getCampaigns = getCampaigns1;
-            CallingListSample.Five9Admin.getCampaignsResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getCampaigns(inValue);
+            CallingListSample.Five9Admin.getCampaignsResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getCampaigns(inValue);
             return retVal.getCampaignsResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getContactFieldsResponse CallingListSample.Five9Admin.WsAdminV2.getContactFields(CallingListSample.Five9Admin.getContactFieldsRequest request) {
+        CallingListSample.Five9Admin.getContactFieldsResponse CallingListSample.Five9Admin.WsAdmin.getContactFields(CallingListSample.Five9Admin.getContactFieldsRequest request) {
             return base.Channel.getContactFields(request);
         }
         
         public CallingListSample.Five9Admin.contactField[] getContactFields(CallingListSample.Five9Admin.getContactFields getContactFields1) {
             CallingListSample.Five9Admin.getContactFieldsRequest inValue = new CallingListSample.Five9Admin.getContactFieldsRequest();
             inValue.getContactFields = getContactFields1;
-            CallingListSample.Five9Admin.getContactFieldsResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getContactFields(inValue);
+            CallingListSample.Five9Admin.getContactFieldsResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getContactFields(inValue);
             return retVal.getContactFieldsResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getContactRecordsResponse1 CallingListSample.Five9Admin.WsAdminV2.getContactRecords(CallingListSample.Five9Admin.getContactRecordsRequest request) {
+        CallingListSample.Five9Admin.getContactRecordsResponse1 CallingListSample.Five9Admin.WsAdmin.getContactRecords(CallingListSample.Five9Admin.getContactRecordsRequest request) {
             return base.Channel.getContactRecords(request);
         }
         
         public CallingListSample.Five9Admin.getContactRecordsResponse getContactRecords(CallingListSample.Five9Admin.getContactRecords getContactRecords1) {
             CallingListSample.Five9Admin.getContactRecordsRequest inValue = new CallingListSample.Five9Admin.getContactRecordsRequest();
             inValue.getContactRecords = getContactRecords1;
-            CallingListSample.Five9Admin.getContactRecordsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getContactRecords(inValue);
+            CallingListSample.Five9Admin.getContactRecordsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getContactRecords(inValue);
             return retVal.getContactRecordsResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getCrmImportResultResponse1 CallingListSample.Five9Admin.WsAdminV2.getCrmImportResult(CallingListSample.Five9Admin.getCrmImportResultRequest request) {
+        CallingListSample.Five9Admin.getCrmImportResultResponse1 CallingListSample.Five9Admin.WsAdmin.getCrmImportResult(CallingListSample.Five9Admin.getCrmImportResultRequest request) {
             return base.Channel.getCrmImportResult(request);
         }
         
         public CallingListSample.Five9Admin.getCrmImportResultResponse getCrmImportResult(CallingListSample.Five9Admin.getCrmImportResult getCrmImportResult1) {
             CallingListSample.Five9Admin.getCrmImportResultRequest inValue = new CallingListSample.Five9Admin.getCrmImportResultRequest();
             inValue.getCrmImportResult = getCrmImportResult1;
-            CallingListSample.Five9Admin.getCrmImportResultResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getCrmImportResult(inValue);
+            CallingListSample.Five9Admin.getCrmImportResultResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getCrmImportResult(inValue);
             return retVal.getCrmImportResultResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getDNISListResponse CallingListSample.Five9Admin.WsAdminV2.getDNISList(CallingListSample.Five9Admin.getDNISListRequest request) {
+        CallingListSample.Five9Admin.getDNISListResponse CallingListSample.Five9Admin.WsAdmin.getDNISList(CallingListSample.Five9Admin.getDNISListRequest request) {
             return base.Channel.getDNISList(request);
         }
         
         public string[] getDNISList(CallingListSample.Five9Admin.getDNISList getDNISList1) {
             CallingListSample.Five9Admin.getDNISListRequest inValue = new CallingListSample.Five9Admin.getDNISListRequest();
             inValue.getDNISList = getDNISList1;
-            CallingListSample.Five9Admin.getDNISListResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getDNISList(inValue);
+            CallingListSample.Five9Admin.getDNISListResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getDNISList(inValue);
             return retVal.getDNISListResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getDialingRulesResponse CallingListSample.Five9Admin.WsAdminV2.getDialingRules(CallingListSample.Five9Admin.getDialingRulesRequest request) {
+        CallingListSample.Five9Admin.getDialingRulesResponse CallingListSample.Five9Admin.WsAdmin.getDialingRules(CallingListSample.Five9Admin.getDialingRulesRequest request) {
             return base.Channel.getDialingRules(request);
         }
         
         public CallingListSample.Five9Admin.dialingRule[] getDialingRules(CallingListSample.Five9Admin.getDialingRules getDialingRules1) {
             CallingListSample.Five9Admin.getDialingRulesRequest inValue = new CallingListSample.Five9Admin.getDialingRulesRequest();
             inValue.getDialingRules = getDialingRules1;
-            CallingListSample.Five9Admin.getDialingRulesResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getDialingRules(inValue);
+            CallingListSample.Five9Admin.getDialingRulesResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getDialingRules(inValue);
             return retVal.getDialingRulesResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getDispositionResponse1 CallingListSample.Five9Admin.WsAdminV2.getDisposition(CallingListSample.Five9Admin.getDispositionRequest request) {
+        CallingListSample.Five9Admin.getDispositionResponse1 CallingListSample.Five9Admin.WsAdmin.getDisposition(CallingListSample.Five9Admin.getDispositionRequest request) {
             return base.Channel.getDisposition(request);
         }
         
         public CallingListSample.Five9Admin.getDispositionResponse getDisposition(CallingListSample.Five9Admin.getDisposition getDisposition1) {
             CallingListSample.Five9Admin.getDispositionRequest inValue = new CallingListSample.Five9Admin.getDispositionRequest();
             inValue.getDisposition = getDisposition1;
-            CallingListSample.Five9Admin.getDispositionResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getDisposition(inValue);
+            CallingListSample.Five9Admin.getDispositionResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getDisposition(inValue);
             return retVal.getDispositionResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getDispositionsResponse CallingListSample.Five9Admin.WsAdminV2.getDispositions(CallingListSample.Five9Admin.getDispositionsRequest request) {
+        CallingListSample.Five9Admin.getDispositionsResponse CallingListSample.Five9Admin.WsAdmin.getDispositions(CallingListSample.Five9Admin.getDispositionsRequest request) {
             return base.Channel.getDispositions(request);
         }
         
         public CallingListSample.Five9Admin.disposition[] getDispositions(CallingListSample.Five9Admin.getDispositions getDispositions1) {
             CallingListSample.Five9Admin.getDispositionsRequest inValue = new CallingListSample.Five9Admin.getDispositionsRequest();
             inValue.getDispositions = getDispositions1;
-            CallingListSample.Five9Admin.getDispositionsResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getDispositions(inValue);
+            CallingListSample.Five9Admin.getDispositionsResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getDispositions(inValue);
             return retVal.getDispositionsResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getDispositionsImportResultResponse1 CallingListSample.Five9Admin.WsAdminV2.getDispositionsImportResult(CallingListSample.Five9Admin.getDispositionsImportResultRequest request) {
+        CallingListSample.Five9Admin.getDispositionsImportResultResponse1 CallingListSample.Five9Admin.WsAdmin.getDispositionsImportResult(CallingListSample.Five9Admin.getDispositionsImportResultRequest request) {
             return base.Channel.getDispositionsImportResult(request);
         }
         
         public CallingListSample.Five9Admin.getDispositionsImportResultResponse getDispositionsImportResult(CallingListSample.Five9Admin.getDispositionsImportResult getDispositionsImportResult1) {
             CallingListSample.Five9Admin.getDispositionsImportResultRequest inValue = new CallingListSample.Five9Admin.getDispositionsImportResultRequest();
             inValue.getDispositionsImportResult = getDispositionsImportResult1;
-            CallingListSample.Five9Admin.getDispositionsImportResultResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getDispositionsImportResult(inValue);
+            CallingListSample.Five9Admin.getDispositionsImportResultResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getDispositionsImportResult(inValue);
             return retVal.getDispositionsImportResultResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getIVRScriptsResponse CallingListSample.Five9Admin.WsAdminV2.getIVRScripts(CallingListSample.Five9Admin.getIVRScriptsRequest request) {
+        CallingListSample.Five9Admin.getIVRScriptsResponse CallingListSample.Five9Admin.WsAdmin.getIVRScripts(CallingListSample.Five9Admin.getIVRScriptsRequest request) {
             return base.Channel.getIVRScripts(request);
         }
         
         public CallingListSample.Five9Admin.ivrScriptDef[] getIVRScripts(CallingListSample.Five9Admin.getIVRScripts getIVRScripts1) {
             CallingListSample.Five9Admin.getIVRScriptsRequest inValue = new CallingListSample.Five9Admin.getIVRScriptsRequest();
             inValue.getIVRScripts = getIVRScripts1;
-            CallingListSample.Five9Admin.getIVRScriptsResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getIVRScripts(inValue);
+            CallingListSample.Five9Admin.getIVRScriptsResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getIVRScripts(inValue);
             return retVal.getIVRScriptsResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getInboundCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.getInboundCampaign(CallingListSample.Five9Admin.getInboundCampaignRequest request) {
+        CallingListSample.Five9Admin.getInboundCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.getInboundCampaign(CallingListSample.Five9Admin.getInboundCampaignRequest request) {
             return base.Channel.getInboundCampaign(request);
         }
         
         public CallingListSample.Five9Admin.getInboundCampaignResponse getInboundCampaign(CallingListSample.Five9Admin.getInboundCampaign getInboundCampaign1) {
             CallingListSample.Five9Admin.getInboundCampaignRequest inValue = new CallingListSample.Five9Admin.getInboundCampaignRequest();
             inValue.getInboundCampaign = getInboundCampaign1;
-            CallingListSample.Five9Admin.getInboundCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getInboundCampaign(inValue);
+            CallingListSample.Five9Admin.getInboundCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getInboundCampaign(inValue);
             return retVal.getInboundCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getListImportResultResponse1 CallingListSample.Five9Admin.WsAdminV2.getListImportResult(CallingListSample.Five9Admin.getListImportResultRequest request) {
+        CallingListSample.Five9Admin.getListImportResultResponse1 CallingListSample.Five9Admin.WsAdmin.getListImportResult(CallingListSample.Five9Admin.getListImportResultRequest request) {
             return base.Channel.getListImportResult(request);
         }
         
         public CallingListSample.Five9Admin.getListImportResultResponse getListImportResult(CallingListSample.Five9Admin.getListImportResult getListImportResult1) {
             CallingListSample.Five9Admin.getListImportResultRequest inValue = new CallingListSample.Five9Admin.getListImportResultRequest();
             inValue.getListImportResult = getListImportResult1;
-            CallingListSample.Five9Admin.getListImportResultResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getListImportResult(inValue);
+            CallingListSample.Five9Admin.getListImportResultResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getListImportResult(inValue);
             return retVal.getListImportResultResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getListsForCampaignResponse CallingListSample.Five9Admin.WsAdminV2.getListsForCampaign(CallingListSample.Five9Admin.getListsForCampaignRequest request) {
+        CallingListSample.Five9Admin.getListsForCampaignResponse CallingListSample.Five9Admin.WsAdmin.getListsForCampaign(CallingListSample.Five9Admin.getListsForCampaignRequest request) {
             return base.Channel.getListsForCampaign(request);
         }
         
         public CallingListSample.Five9Admin.listState[] getListsForCampaign(CallingListSample.Five9Admin.getListsForCampaign getListsForCampaign1) {
             CallingListSample.Five9Admin.getListsForCampaignRequest inValue = new CallingListSample.Five9Admin.getListsForCampaignRequest();
             inValue.getListsForCampaign = getListsForCampaign1;
-            CallingListSample.Five9Admin.getListsForCampaignResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getListsForCampaign(inValue);
+            CallingListSample.Five9Admin.getListsForCampaignResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getListsForCampaign(inValue);
             return retVal.getListsForCampaignResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getListsInfoResponse CallingListSample.Five9Admin.WsAdminV2.getListsInfo(CallingListSample.Five9Admin.getListsInfoRequest request) {
+        CallingListSample.Five9Admin.getListsInfoResponse CallingListSample.Five9Admin.WsAdmin.getListsInfo(CallingListSample.Five9Admin.getListsInfoRequest request) {
             return base.Channel.getListsInfo(request);
         }
         
         public CallingListSample.Five9Admin.listInfo[] getListsInfo(CallingListSample.Five9Admin.getListsInfo getListsInfo1) {
             CallingListSample.Five9Admin.getListsInfoRequest inValue = new CallingListSample.Five9Admin.getListsInfoRequest();
             inValue.getListsInfo = getListsInfo1;
-            CallingListSample.Five9Admin.getListsInfoResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getListsInfo(inValue);
+            CallingListSample.Five9Admin.getListsInfoResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getListsInfo(inValue);
             return retVal.getListsInfoResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getOutboundCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.getOutboundCampaign(CallingListSample.Five9Admin.getOutboundCampaignRequest request) {
+        CallingListSample.Five9Admin.getOutboundCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.getOutboundCampaign(CallingListSample.Five9Admin.getOutboundCampaignRequest request) {
             return base.Channel.getOutboundCampaign(request);
         }
         
         public CallingListSample.Five9Admin.getOutboundCampaignResponse getOutboundCampaign(CallingListSample.Five9Admin.getOutboundCampaign getOutboundCampaign1) {
             CallingListSample.Five9Admin.getOutboundCampaignRequest inValue = new CallingListSample.Five9Admin.getOutboundCampaignRequest();
             inValue.getOutboundCampaign = getOutboundCampaign1;
-            CallingListSample.Five9Admin.getOutboundCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getOutboundCampaign(inValue);
+            CallingListSample.Five9Admin.getOutboundCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getOutboundCampaign(inValue);
             return retVal.getOutboundCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getPromptResponse1 CallingListSample.Five9Admin.WsAdminV2.getPrompt(CallingListSample.Five9Admin.getPromptRequest request) {
+        CallingListSample.Five9Admin.getPromptResponse1 CallingListSample.Five9Admin.WsAdmin.getPrompt(CallingListSample.Five9Admin.getPromptRequest request) {
             return base.Channel.getPrompt(request);
         }
         
         public CallingListSample.Five9Admin.getPromptResponse getPrompt(CallingListSample.Five9Admin.getPrompt getPrompt1) {
             CallingListSample.Five9Admin.getPromptRequest inValue = new CallingListSample.Five9Admin.getPromptRequest();
             inValue.getPrompt = getPrompt1;
-            CallingListSample.Five9Admin.getPromptResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getPrompt(inValue);
+            CallingListSample.Five9Admin.getPromptResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getPrompt(inValue);
             return retVal.getPromptResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getReasonCodeResponse1 CallingListSample.Five9Admin.WsAdminV2.getReasonCode(CallingListSample.Five9Admin.getReasonCodeRequest request) {
+        CallingListSample.Five9Admin.getReasonCodeResponse1 CallingListSample.Five9Admin.WsAdmin.getReasonCode(CallingListSample.Five9Admin.getReasonCodeRequest request) {
             return base.Channel.getReasonCode(request);
         }
         
         public CallingListSample.Five9Admin.getReasonCodeResponse getReasonCode(CallingListSample.Five9Admin.getReasonCode getReasonCode1) {
             CallingListSample.Five9Admin.getReasonCodeRequest inValue = new CallingListSample.Five9Admin.getReasonCodeRequest();
             inValue.getReasonCode = getReasonCode1;
-            CallingListSample.Five9Admin.getReasonCodeResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getReasonCode(inValue);
+            CallingListSample.Five9Admin.getReasonCodeResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getReasonCode(inValue);
             return retVal.getReasonCodeResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getReasonCodeByTypeResponse1 CallingListSample.Five9Admin.WsAdminV2.getReasonCodeByType(CallingListSample.Five9Admin.getReasonCodeByTypeRequest request) {
+        CallingListSample.Five9Admin.getReasonCodeByTypeResponse1 CallingListSample.Five9Admin.WsAdmin.getReasonCodeByType(CallingListSample.Five9Admin.getReasonCodeByTypeRequest request) {
             return base.Channel.getReasonCodeByType(request);
         }
         
         public CallingListSample.Five9Admin.getReasonCodeByTypeResponse getReasonCodeByType(CallingListSample.Five9Admin.getReasonCodeByType getReasonCodeByType1) {
             CallingListSample.Five9Admin.getReasonCodeByTypeRequest inValue = new CallingListSample.Five9Admin.getReasonCodeByTypeRequest();
             inValue.getReasonCodeByType = getReasonCodeByType1;
-            CallingListSample.Five9Admin.getReasonCodeByTypeResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getReasonCodeByType(inValue);
+            CallingListSample.Five9Admin.getReasonCodeByTypeResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getReasonCodeByType(inValue);
             return retVal.getReasonCodeByTypeResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getReportResultResponse1 CallingListSample.Five9Admin.WsAdminV2.getReportResult(CallingListSample.Five9Admin.getReportResultRequest request) {
+        CallingListSample.Five9Admin.getReportResultResponse1 CallingListSample.Five9Admin.WsAdmin.getReportResult(CallingListSample.Five9Admin.getReportResultRequest request) {
             return base.Channel.getReportResult(request);
         }
         
         public CallingListSample.Five9Admin.getReportResultResponse getReportResult(CallingListSample.Five9Admin.getReportResult getReportResult1) {
             CallingListSample.Five9Admin.getReportResultRequest inValue = new CallingListSample.Five9Admin.getReportResultRequest();
             inValue.getReportResult = getReportResult1;
-            CallingListSample.Five9Admin.getReportResultResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getReportResult(inValue);
+            CallingListSample.Five9Admin.getReportResultResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getReportResult(inValue);
             return retVal.getReportResultResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getReportResultCsvResponse1 CallingListSample.Five9Admin.WsAdminV2.getReportResultCsv(CallingListSample.Five9Admin.getReportResultCsvRequest request) {
+        CallingListSample.Five9Admin.getReportResultCsvResponse1 CallingListSample.Five9Admin.WsAdmin.getReportResultCsv(CallingListSample.Five9Admin.getReportResultCsvRequest request) {
             return base.Channel.getReportResultCsv(request);
         }
         
         public CallingListSample.Five9Admin.getReportResultCsvResponse getReportResultCsv(CallingListSample.Five9Admin.getReportResultCsv getReportResultCsv1) {
             CallingListSample.Five9Admin.getReportResultCsvRequest inValue = new CallingListSample.Five9Admin.getReportResultCsvRequest();
             inValue.getReportResultCsv = getReportResultCsv1;
-            CallingListSample.Five9Admin.getReportResultCsvResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getReportResultCsv(inValue);
+            CallingListSample.Five9Admin.getReportResultCsvResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getReportResultCsv(inValue);
             return retVal.getReportResultCsvResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getSkillResponse1 CallingListSample.Five9Admin.WsAdminV2.getSkill(CallingListSample.Five9Admin.getSkillRequest request) {
+        CallingListSample.Five9Admin.getSkillResponse1 CallingListSample.Five9Admin.WsAdmin.getSkill(CallingListSample.Five9Admin.getSkillRequest request) {
             return base.Channel.getSkill(request);
         }
         
         public CallingListSample.Five9Admin.getSkillResponse getSkill(CallingListSample.Five9Admin.getSkill getSkill1) {
             CallingListSample.Five9Admin.getSkillRequest inValue = new CallingListSample.Five9Admin.getSkillRequest();
             inValue.getSkill = getSkill1;
-            CallingListSample.Five9Admin.getSkillResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getSkill(inValue);
+            CallingListSample.Five9Admin.getSkillResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getSkill(inValue);
             return retVal.getSkillResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getSkillInfoResponse1 CallingListSample.Five9Admin.WsAdminV2.getSkillInfo(CallingListSample.Five9Admin.getSkillInfoRequest request) {
+        CallingListSample.Five9Admin.getSkillInfoResponse1 CallingListSample.Five9Admin.WsAdmin.getSkillInfo(CallingListSample.Five9Admin.getSkillInfoRequest request) {
             return base.Channel.getSkillInfo(request);
         }
         
         public CallingListSample.Five9Admin.getSkillInfoResponse getSkillInfo(CallingListSample.Five9Admin.getSkillInfo getSkillInfo1) {
             CallingListSample.Five9Admin.getSkillInfoRequest inValue = new CallingListSample.Five9Admin.getSkillInfoRequest();
             inValue.getSkillInfo = getSkillInfo1;
-            CallingListSample.Five9Admin.getSkillInfoResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getSkillInfo(inValue);
+            CallingListSample.Five9Admin.getSkillInfoResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getSkillInfo(inValue);
             return retVal.getSkillInfoResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getSkillVoicemailGreetingResponse1 CallingListSample.Five9Admin.WsAdminV2.getSkillVoicemailGreeting(CallingListSample.Five9Admin.getSkillVoicemailGreetingRequest request) {
+        CallingListSample.Five9Admin.getSkillVoicemailGreetingResponse1 CallingListSample.Five9Admin.WsAdmin.getSkillVoicemailGreeting(CallingListSample.Five9Admin.getSkillVoicemailGreetingRequest request) {
             return base.Channel.getSkillVoicemailGreeting(request);
         }
         
         public CallingListSample.Five9Admin.getSkillVoicemailGreetingResponse getSkillVoicemailGreeting(CallingListSample.Five9Admin.getSkillVoicemailGreeting getSkillVoicemailGreeting1) {
             CallingListSample.Five9Admin.getSkillVoicemailGreetingRequest inValue = new CallingListSample.Five9Admin.getSkillVoicemailGreetingRequest();
             inValue.getSkillVoicemailGreeting = getSkillVoicemailGreeting1;
-            CallingListSample.Five9Admin.getSkillVoicemailGreetingResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getSkillVoicemailGreeting(inValue);
+            CallingListSample.Five9Admin.getSkillVoicemailGreetingResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getSkillVoicemailGreeting(inValue);
             return retVal.getSkillVoicemailGreetingResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getSkillsResponse CallingListSample.Five9Admin.WsAdminV2.getSkills(CallingListSample.Five9Admin.getSkillsRequest request) {
+        CallingListSample.Five9Admin.getSkillsResponse CallingListSample.Five9Admin.WsAdmin.getSkills(CallingListSample.Five9Admin.getSkillsRequest request) {
             return base.Channel.getSkills(request);
         }
         
         public CallingListSample.Five9Admin.skill[] getSkills(CallingListSample.Five9Admin.getSkills getSkills1) {
             CallingListSample.Five9Admin.getSkillsRequest inValue = new CallingListSample.Five9Admin.getSkillsRequest();
             inValue.getSkills = getSkills1;
-            CallingListSample.Five9Admin.getSkillsResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getSkills(inValue);
+            CallingListSample.Five9Admin.getSkillsResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getSkills(inValue);
             return retVal.getSkillsResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getSkillsInfoResponse CallingListSample.Five9Admin.WsAdminV2.getSkillsInfo(CallingListSample.Five9Admin.getSkillsInfoRequest request) {
+        CallingListSample.Five9Admin.getSkillsInfoResponse CallingListSample.Five9Admin.WsAdmin.getSkillsInfo(CallingListSample.Five9Admin.getSkillsInfoRequest request) {
             return base.Channel.getSkillsInfo(request);
         }
         
         public CallingListSample.Five9Admin.skillInfo[] getSkillsInfo(CallingListSample.Five9Admin.getSkillsInfo getSkillsInfo1) {
             CallingListSample.Five9Admin.getSkillsInfoRequest inValue = new CallingListSample.Five9Admin.getSkillsInfoRequest();
             inValue.getSkillsInfo = getSkillsInfo1;
-            CallingListSample.Five9Admin.getSkillsInfoResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getSkillsInfo(inValue);
+            CallingListSample.Five9Admin.getSkillsInfoResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getSkillsInfo(inValue);
             return retVal.getSkillsInfoResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getUserGeneralInfoResponse1 CallingListSample.Five9Admin.WsAdminV2.getUserGeneralInfo(CallingListSample.Five9Admin.getUserGeneralInfoRequest request) {
+        CallingListSample.Five9Admin.getUserGeneralInfoResponse1 CallingListSample.Five9Admin.WsAdmin.getUserGeneralInfo(CallingListSample.Five9Admin.getUserGeneralInfoRequest request) {
             return base.Channel.getUserGeneralInfo(request);
         }
         
         public CallingListSample.Five9Admin.getUserGeneralInfoResponse getUserGeneralInfo(CallingListSample.Five9Admin.getUserGeneralInfo getUserGeneralInfo1) {
             CallingListSample.Five9Admin.getUserGeneralInfoRequest inValue = new CallingListSample.Five9Admin.getUserGeneralInfoRequest();
             inValue.getUserGeneralInfo = getUserGeneralInfo1;
-            CallingListSample.Five9Admin.getUserGeneralInfoResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getUserGeneralInfo(inValue);
+            CallingListSample.Five9Admin.getUserGeneralInfoResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getUserGeneralInfo(inValue);
             return retVal.getUserGeneralInfoResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getUserInfoResponse1 CallingListSample.Five9Admin.WsAdminV2.getUserInfo(CallingListSample.Five9Admin.getUserInfoRequest request) {
+        CallingListSample.Five9Admin.getUserInfoResponse1 CallingListSample.Five9Admin.WsAdmin.getUserInfo(CallingListSample.Five9Admin.getUserInfoRequest request) {
             return base.Channel.getUserInfo(request);
         }
         
         public CallingListSample.Five9Admin.getUserInfoResponse getUserInfo(CallingListSample.Five9Admin.getUserInfo getUserInfo1) {
             CallingListSample.Five9Admin.getUserInfoRequest inValue = new CallingListSample.Five9Admin.getUserInfoRequest();
             inValue.getUserInfo = getUserInfo1;
-            CallingListSample.Five9Admin.getUserInfoResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getUserInfo(inValue);
+            CallingListSample.Five9Admin.getUserInfoResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getUserInfo(inValue);
             return retVal.getUserInfoResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getUserProfileResponse1 CallingListSample.Five9Admin.WsAdminV2.getUserProfile(CallingListSample.Five9Admin.getUserProfileRequest request) {
+        CallingListSample.Five9Admin.getUserProfileResponse1 CallingListSample.Five9Admin.WsAdmin.getUserProfile(CallingListSample.Five9Admin.getUserProfileRequest request) {
             return base.Channel.getUserProfile(request);
         }
         
         public CallingListSample.Five9Admin.getUserProfileResponse getUserProfile(CallingListSample.Five9Admin.getUserProfile getUserProfile1) {
             CallingListSample.Five9Admin.getUserProfileRequest inValue = new CallingListSample.Five9Admin.getUserProfileRequest();
             inValue.getUserProfile = getUserProfile1;
-            CallingListSample.Five9Admin.getUserProfileResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getUserProfile(inValue);
+            CallingListSample.Five9Admin.getUserProfileResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getUserProfile(inValue);
             return retVal.getUserProfileResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getUserProfilesResponse CallingListSample.Five9Admin.WsAdminV2.getUserProfiles(CallingListSample.Five9Admin.getUserProfilesRequest request) {
+        CallingListSample.Five9Admin.getUserProfilesResponse CallingListSample.Five9Admin.WsAdmin.getUserProfiles(CallingListSample.Five9Admin.getUserProfilesRequest request) {
             return base.Channel.getUserProfiles(request);
         }
         
         public CallingListSample.Five9Admin.userProfile[] getUserProfiles(CallingListSample.Five9Admin.getUserProfiles getUserProfiles1) {
             CallingListSample.Five9Admin.getUserProfilesRequest inValue = new CallingListSample.Five9Admin.getUserProfilesRequest();
             inValue.getUserProfiles = getUserProfiles1;
-            CallingListSample.Five9Admin.getUserProfilesResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getUserProfiles(inValue);
+            CallingListSample.Five9Admin.getUserProfilesResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getUserProfiles(inValue);
             return retVal.getUserProfilesResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getUserVoicemailGreetingResponse1 CallingListSample.Five9Admin.WsAdminV2.getUserVoicemailGreeting(CallingListSample.Five9Admin.getUserVoicemailGreetingRequest request) {
+        CallingListSample.Five9Admin.getUserVoicemailGreetingResponse1 CallingListSample.Five9Admin.WsAdmin.getUserVoicemailGreeting(CallingListSample.Five9Admin.getUserVoicemailGreetingRequest request) {
             return base.Channel.getUserVoicemailGreeting(request);
         }
         
         public CallingListSample.Five9Admin.getUserVoicemailGreetingResponse getUserVoicemailGreeting(CallingListSample.Five9Admin.getUserVoicemailGreeting getUserVoicemailGreeting1) {
             CallingListSample.Five9Admin.getUserVoicemailGreetingRequest inValue = new CallingListSample.Five9Admin.getUserVoicemailGreetingRequest();
             inValue.getUserVoicemailGreeting = getUserVoicemailGreeting1;
-            CallingListSample.Five9Admin.getUserVoicemailGreetingResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getUserVoicemailGreeting(inValue);
+            CallingListSample.Five9Admin.getUserVoicemailGreetingResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getUserVoicemailGreeting(inValue);
             return retVal.getUserVoicemailGreetingResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getUsersGeneralInfoResponse CallingListSample.Five9Admin.WsAdminV2.getUsersGeneralInfo(CallingListSample.Five9Admin.getUsersGeneralInfoRequest request) {
+        CallingListSample.Five9Admin.getUsersGeneralInfoResponse CallingListSample.Five9Admin.WsAdmin.getUsersGeneralInfo(CallingListSample.Five9Admin.getUsersGeneralInfoRequest request) {
             return base.Channel.getUsersGeneralInfo(request);
         }
         
         public CallingListSample.Five9Admin.userGeneralInfo[] getUsersGeneralInfo(CallingListSample.Five9Admin.getUsersGeneralInfo getUsersGeneralInfo1) {
             CallingListSample.Five9Admin.getUsersGeneralInfoRequest inValue = new CallingListSample.Five9Admin.getUsersGeneralInfoRequest();
             inValue.getUsersGeneralInfo = getUsersGeneralInfo1;
-            CallingListSample.Five9Admin.getUsersGeneralInfoResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getUsersGeneralInfo(inValue);
+            CallingListSample.Five9Admin.getUsersGeneralInfoResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getUsersGeneralInfo(inValue);
             return retVal.getUsersGeneralInfoResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getUsersInfoResponse CallingListSample.Five9Admin.WsAdminV2.getUsersInfo(CallingListSample.Five9Admin.getUsersInfoRequest request) {
+        CallingListSample.Five9Admin.getUsersInfoResponse CallingListSample.Five9Admin.WsAdmin.getUsersInfo(CallingListSample.Five9Admin.getUsersInfoRequest request) {
             return base.Channel.getUsersInfo(request);
         }
         
         public CallingListSample.Five9Admin.userInfo[] getUsersInfo(CallingListSample.Five9Admin.getUsersInfo getUsersInfo1) {
             CallingListSample.Five9Admin.getUsersInfoRequest inValue = new CallingListSample.Five9Admin.getUsersInfoRequest();
             inValue.getUsersInfo = getUsersInfo1;
-            CallingListSample.Five9Admin.getUsersInfoResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getUsersInfo(inValue);
+            CallingListSample.Five9Admin.getUsersInfoResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getUsersInfo(inValue);
             return retVal.getUsersInfoResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getVCCConfigurationResponse1 CallingListSample.Five9Admin.WsAdminV2.getVCCConfiguration(CallingListSample.Five9Admin.getVCCConfigurationRequest request) {
+        CallingListSample.Five9Admin.getVCCConfigurationResponse1 CallingListSample.Five9Admin.WsAdmin.getVCCConfiguration(CallingListSample.Five9Admin.getVCCConfigurationRequest request) {
             return base.Channel.getVCCConfiguration(request);
         }
         
         public CallingListSample.Five9Admin.getVCCConfigurationResponse getVCCConfiguration(CallingListSample.Five9Admin.getVCCConfiguration getVCCConfiguration1) {
             CallingListSample.Five9Admin.getVCCConfigurationRequest inValue = new CallingListSample.Five9Admin.getVCCConfigurationRequest();
             inValue.getVCCConfiguration = getVCCConfiguration1;
-            CallingListSample.Five9Admin.getVCCConfigurationResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getVCCConfiguration(inValue);
+            CallingListSample.Five9Admin.getVCCConfigurationResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getVCCConfiguration(inValue);
             return retVal.getVCCConfigurationResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.getWebConnectorsResponse CallingListSample.Five9Admin.WsAdminV2.getWebConnectors(CallingListSample.Five9Admin.getWebConnectorsRequest request) {
+        CallingListSample.Five9Admin.getWebConnectorsResponse CallingListSample.Five9Admin.WsAdmin.getWebConnectors(CallingListSample.Five9Admin.getWebConnectorsRequest request) {
             return base.Channel.getWebConnectors(request);
         }
         
         public CallingListSample.Five9Admin.webConnector[] getWebConnectors(CallingListSample.Five9Admin.getWebConnectors getWebConnectors1) {
             CallingListSample.Five9Admin.getWebConnectorsRequest inValue = new CallingListSample.Five9Admin.getWebConnectorsRequest();
             inValue.getWebConnectors = getWebConnectors1;
-            CallingListSample.Five9Admin.getWebConnectorsResponse retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).getWebConnectors(inValue);
+            CallingListSample.Five9Admin.getWebConnectorsResponse retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).getWebConnectors(inValue);
             return retVal.getWebConnectorsResponse1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.isImportRunningResponse1 CallingListSample.Five9Admin.WsAdminV2.isImportRunning(CallingListSample.Five9Admin.isImportRunningRequest request) {
+        CallingListSample.Five9Admin.isImportRunningResponse1 CallingListSample.Five9Admin.WsAdmin.isImportRunning(CallingListSample.Five9Admin.isImportRunningRequest request) {
             return base.Channel.isImportRunning(request);
         }
         
         public CallingListSample.Five9Admin.isImportRunningResponse isImportRunning(CallingListSample.Five9Admin.isImportRunning isImportRunning1) {
             CallingListSample.Five9Admin.isImportRunningRequest inValue = new CallingListSample.Five9Admin.isImportRunningRequest();
             inValue.isImportRunning = isImportRunning1;
-            CallingListSample.Five9Admin.isImportRunningResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).isImportRunning(inValue);
+            CallingListSample.Five9Admin.isImportRunningResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).isImportRunning(inValue);
             return retVal.isImportRunningResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.isReportRunningResponse1 CallingListSample.Five9Admin.WsAdminV2.isReportRunning(CallingListSample.Five9Admin.isReportRunningRequest request) {
+        CallingListSample.Five9Admin.isReportRunningResponse1 CallingListSample.Five9Admin.WsAdmin.isReportRunning(CallingListSample.Five9Admin.isReportRunningRequest request) {
             return base.Channel.isReportRunning(request);
         }
         
         public CallingListSample.Five9Admin.isReportRunningResponse isReportRunning(CallingListSample.Five9Admin.isReportRunning isReportRunning1) {
             CallingListSample.Five9Admin.isReportRunningRequest inValue = new CallingListSample.Five9Admin.isReportRunningRequest();
             inValue.isReportRunning = isReportRunning1;
-            CallingListSample.Five9Admin.isReportRunningResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).isReportRunning(inValue);
+            CallingListSample.Five9Admin.isReportRunningResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).isReportRunning(inValue);
             return retVal.isReportRunningResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyAgentGroupResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyAgentGroup(CallingListSample.Five9Admin.modifyAgentGroupRequest request) {
+        CallingListSample.Five9Admin.modifyAgentGroupResponse1 CallingListSample.Five9Admin.WsAdmin.modifyAgentGroup(CallingListSample.Five9Admin.modifyAgentGroupRequest request) {
             return base.Channel.modifyAgentGroup(request);
         }
         
         public CallingListSample.Five9Admin.modifyAgentGroupResponse modifyAgentGroup(CallingListSample.Five9Admin.modifyAgentGroup modifyAgentGroup1) {
             CallingListSample.Five9Admin.modifyAgentGroupRequest inValue = new CallingListSample.Five9Admin.modifyAgentGroupRequest();
             inValue.modifyAgentGroup = modifyAgentGroup1;
-            CallingListSample.Five9Admin.modifyAgentGroupResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyAgentGroup(inValue);
+            CallingListSample.Five9Admin.modifyAgentGroupResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyAgentGroup(inValue);
             return retVal.modifyAgentGroupResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyAutodialCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyAutodialCampaign(CallingListSample.Five9Admin.modifyAutodialCampaignRequest request) {
+        CallingListSample.Five9Admin.modifyAutodialCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.modifyAutodialCampaign(CallingListSample.Five9Admin.modifyAutodialCampaignRequest request) {
             return base.Channel.modifyAutodialCampaign(request);
         }
         
         public CallingListSample.Five9Admin.modifyAutodialCampaignResponse modifyAutodialCampaign(CallingListSample.Five9Admin.modifyAutodialCampaign modifyAutodialCampaign1) {
             CallingListSample.Five9Admin.modifyAutodialCampaignRequest inValue = new CallingListSample.Five9Admin.modifyAutodialCampaignRequest();
             inValue.modifyAutodialCampaign = modifyAutodialCampaign1;
-            CallingListSample.Five9Admin.modifyAutodialCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyAutodialCampaign(inValue);
+            CallingListSample.Five9Admin.modifyAutodialCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyAutodialCampaign(inValue);
             return retVal.modifyAutodialCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyCallVariableResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyCallVariable(CallingListSample.Five9Admin.modifyCallVariableRequest request) {
+        CallingListSample.Five9Admin.modifyCallVariableResponse1 CallingListSample.Five9Admin.WsAdmin.modifyCallVariable(CallingListSample.Five9Admin.modifyCallVariableRequest request) {
             return base.Channel.modifyCallVariable(request);
         }
         
         public CallingListSample.Five9Admin.modifyCallVariableResponse modifyCallVariable(CallingListSample.Five9Admin.modifyCallVariable modifyCallVariable1) {
             CallingListSample.Five9Admin.modifyCallVariableRequest inValue = new CallingListSample.Five9Admin.modifyCallVariableRequest();
             inValue.modifyCallVariable = modifyCallVariable1;
-            CallingListSample.Five9Admin.modifyCallVariableResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyCallVariable(inValue);
+            CallingListSample.Five9Admin.modifyCallVariableResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyCallVariable(inValue);
             return retVal.modifyCallVariableResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyCallVariablesGroupResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyCallVariablesGroup(CallingListSample.Five9Admin.modifyCallVariablesGroupRequest request) {
+        CallingListSample.Five9Admin.modifyCallVariablesGroupResponse1 CallingListSample.Five9Admin.WsAdmin.modifyCallVariablesGroup(CallingListSample.Five9Admin.modifyCallVariablesGroupRequest request) {
             return base.Channel.modifyCallVariablesGroup(request);
         }
         
         public CallingListSample.Five9Admin.modifyCallVariablesGroupResponse modifyCallVariablesGroup(CallingListSample.Five9Admin.modifyCallVariablesGroup modifyCallVariablesGroup1) {
             CallingListSample.Five9Admin.modifyCallVariablesGroupRequest inValue = new CallingListSample.Five9Admin.modifyCallVariablesGroupRequest();
             inValue.modifyCallVariablesGroup = modifyCallVariablesGroup1;
-            CallingListSample.Five9Admin.modifyCallVariablesGroupResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyCallVariablesGroup(inValue);
+            CallingListSample.Five9Admin.modifyCallVariablesGroupResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyCallVariablesGroup(inValue);
             return retVal.modifyCallVariablesGroupResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyCampaignListsResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyCampaignLists(CallingListSample.Five9Admin.modifyCampaignListsRequest request) {
+        CallingListSample.Five9Admin.modifyCampaignListsResponse1 CallingListSample.Five9Admin.WsAdmin.modifyCampaignLists(CallingListSample.Five9Admin.modifyCampaignListsRequest request) {
             return base.Channel.modifyCampaignLists(request);
         }
         
         public CallingListSample.Five9Admin.modifyCampaignListsResponse modifyCampaignLists(CallingListSample.Five9Admin.modifyCampaignLists modifyCampaignLists1) {
             CallingListSample.Five9Admin.modifyCampaignListsRequest inValue = new CallingListSample.Five9Admin.modifyCampaignListsRequest();
             inValue.modifyCampaignLists = modifyCampaignLists1;
-            CallingListSample.Five9Admin.modifyCampaignListsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyCampaignLists(inValue);
+            CallingListSample.Five9Admin.modifyCampaignListsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyCampaignLists(inValue);
             return retVal.modifyCampaignListsResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyCampaignProfileResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyCampaignProfile(CallingListSample.Five9Admin.modifyCampaignProfileRequest request) {
+        CallingListSample.Five9Admin.modifyCampaignProfileResponse1 CallingListSample.Five9Admin.WsAdmin.modifyCampaignProfile(CallingListSample.Five9Admin.modifyCampaignProfileRequest request) {
             return base.Channel.modifyCampaignProfile(request);
         }
         
         public CallingListSample.Five9Admin.modifyCampaignProfileResponse modifyCampaignProfile(CallingListSample.Five9Admin.modifyCampaignProfile modifyCampaignProfile1) {
             CallingListSample.Five9Admin.modifyCampaignProfileRequest inValue = new CallingListSample.Five9Admin.modifyCampaignProfileRequest();
             inValue.modifyCampaignProfile = modifyCampaignProfile1;
-            CallingListSample.Five9Admin.modifyCampaignProfileResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyCampaignProfile(inValue);
+            CallingListSample.Five9Admin.modifyCampaignProfileResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyCampaignProfile(inValue);
             return retVal.modifyCampaignProfileResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyCampaignProfileCrmCriteriaResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyCampaignProfileCrmCriteria(CallingListSample.Five9Admin.modifyCampaignProfileCrmCriteriaRequest request) {
+        CallingListSample.Five9Admin.modifyCampaignProfileCrmCriteriaResponse1 CallingListSample.Five9Admin.WsAdmin.modifyCampaignProfileCrmCriteria(CallingListSample.Five9Admin.modifyCampaignProfileCrmCriteriaRequest request) {
             return base.Channel.modifyCampaignProfileCrmCriteria(request);
         }
         
         public CallingListSample.Five9Admin.modifyCampaignProfileCrmCriteriaResponse modifyCampaignProfileCrmCriteria(CallingListSample.Five9Admin.modifyCampaignProfileCrmCriteria modifyCampaignProfileCrmCriteria1) {
             CallingListSample.Five9Admin.modifyCampaignProfileCrmCriteriaRequest inValue = new CallingListSample.Five9Admin.modifyCampaignProfileCrmCriteriaRequest();
             inValue.modifyCampaignProfileCrmCriteria = modifyCampaignProfileCrmCriteria1;
-            CallingListSample.Five9Admin.modifyCampaignProfileCrmCriteriaResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyCampaignProfileCrmCriteria(inValue);
+            CallingListSample.Five9Admin.modifyCampaignProfileCrmCriteriaResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyCampaignProfileCrmCriteria(inValue);
             return retVal.modifyCampaignProfileCrmCriteriaResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyCampaignProfileDispositionsResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyCampaignProfileDispositions(CallingListSample.Five9Admin.modifyCampaignProfileDispositionsRequest request) {
+        CallingListSample.Five9Admin.modifyCampaignProfileDispositionsResponse1 CallingListSample.Five9Admin.WsAdmin.modifyCampaignProfileDispositions(CallingListSample.Five9Admin.modifyCampaignProfileDispositionsRequest request) {
             return base.Channel.modifyCampaignProfileDispositions(request);
         }
         
         public CallingListSample.Five9Admin.modifyCampaignProfileDispositionsResponse modifyCampaignProfileDispositions(CallingListSample.Five9Admin.modifyCampaignProfileDispositions modifyCampaignProfileDispositions1) {
             CallingListSample.Five9Admin.modifyCampaignProfileDispositionsRequest inValue = new CallingListSample.Five9Admin.modifyCampaignProfileDispositionsRequest();
             inValue.modifyCampaignProfileDispositions = modifyCampaignProfileDispositions1;
-            CallingListSample.Five9Admin.modifyCampaignProfileDispositionsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyCampaignProfileDispositions(inValue);
+            CallingListSample.Five9Admin.modifyCampaignProfileDispositionsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyCampaignProfileDispositions(inValue);
             return retVal.modifyCampaignProfileDispositionsResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyCampaignProfileFilterOrderResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyCampaignProfileFilterOrder(CallingListSample.Five9Admin.modifyCampaignProfileFilterOrderRequest request) {
+        CallingListSample.Five9Admin.modifyCampaignProfileFilterOrderResponse1 CallingListSample.Five9Admin.WsAdmin.modifyCampaignProfileFilterOrder(CallingListSample.Five9Admin.modifyCampaignProfileFilterOrderRequest request) {
             return base.Channel.modifyCampaignProfileFilterOrder(request);
         }
         
         public CallingListSample.Five9Admin.modifyCampaignProfileFilterOrderResponse modifyCampaignProfileFilterOrder(CallingListSample.Five9Admin.modifyCampaignProfileFilterOrder modifyCampaignProfileFilterOrder1) {
             CallingListSample.Five9Admin.modifyCampaignProfileFilterOrderRequest inValue = new CallingListSample.Five9Admin.modifyCampaignProfileFilterOrderRequest();
             inValue.modifyCampaignProfileFilterOrder = modifyCampaignProfileFilterOrder1;
-            CallingListSample.Five9Admin.modifyCampaignProfileFilterOrderResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyCampaignProfileFilterOrder(inValue);
+            CallingListSample.Five9Admin.modifyCampaignProfileFilterOrderResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyCampaignProfileFilterOrder(inValue);
             return retVal.modifyCampaignProfileFilterOrderResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyContactFieldResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyContactField(CallingListSample.Five9Admin.modifyContactFieldRequest request) {
+        CallingListSample.Five9Admin.modifyContactFieldResponse1 CallingListSample.Five9Admin.WsAdmin.modifyContactField(CallingListSample.Five9Admin.modifyContactFieldRequest request) {
             return base.Channel.modifyContactField(request);
         }
         
         public CallingListSample.Five9Admin.modifyContactFieldResponse modifyContactField(CallingListSample.Five9Admin.modifyContactField modifyContactField1) {
             CallingListSample.Five9Admin.modifyContactFieldRequest inValue = new CallingListSample.Five9Admin.modifyContactFieldRequest();
             inValue.modifyContactField = modifyContactField1;
-            CallingListSample.Five9Admin.modifyContactFieldResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyContactField(inValue);
+            CallingListSample.Five9Admin.modifyContactFieldResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyContactField(inValue);
             return retVal.modifyContactFieldResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyDispositionResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyDisposition(CallingListSample.Five9Admin.modifyDispositionRequest request) {
+        CallingListSample.Five9Admin.modifyDispositionResponse1 CallingListSample.Five9Admin.WsAdmin.modifyDisposition(CallingListSample.Five9Admin.modifyDispositionRequest request) {
             return base.Channel.modifyDisposition(request);
         }
         
         public CallingListSample.Five9Admin.modifyDispositionResponse modifyDisposition(CallingListSample.Five9Admin.modifyDisposition modifyDisposition1) {
             CallingListSample.Five9Admin.modifyDispositionRequest inValue = new CallingListSample.Five9Admin.modifyDispositionRequest();
             inValue.modifyDisposition = modifyDisposition1;
-            CallingListSample.Five9Admin.modifyDispositionResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyDisposition(inValue);
+            CallingListSample.Five9Admin.modifyDispositionResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyDisposition(inValue);
             return retVal.modifyDispositionResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyIVRScriptResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyIVRScript(CallingListSample.Five9Admin.modifyIVRScriptRequest request) {
+        CallingListSample.Five9Admin.modifyIVRScriptResponse1 CallingListSample.Five9Admin.WsAdmin.modifyIVRScript(CallingListSample.Five9Admin.modifyIVRScriptRequest request) {
             return base.Channel.modifyIVRScript(request);
         }
         
         public CallingListSample.Five9Admin.modifyIVRScriptResponse modifyIVRScript(CallingListSample.Five9Admin.modifyIVRScript modifyIVRScript1) {
             CallingListSample.Five9Admin.modifyIVRScriptRequest inValue = new CallingListSample.Five9Admin.modifyIVRScriptRequest();
             inValue.modifyIVRScript = modifyIVRScript1;
-            CallingListSample.Five9Admin.modifyIVRScriptResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyIVRScript(inValue);
+            CallingListSample.Five9Admin.modifyIVRScriptResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyIVRScript(inValue);
             return retVal.modifyIVRScriptResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyInboundCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyInboundCampaign(CallingListSample.Five9Admin.modifyInboundCampaignRequest request) {
+        CallingListSample.Five9Admin.modifyInboundCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.modifyInboundCampaign(CallingListSample.Five9Admin.modifyInboundCampaignRequest request) {
             return base.Channel.modifyInboundCampaign(request);
         }
         
         public CallingListSample.Five9Admin.modifyInboundCampaignResponse modifyInboundCampaign(CallingListSample.Five9Admin.modifyInboundCampaign modifyInboundCampaign1) {
             CallingListSample.Five9Admin.modifyInboundCampaignRequest inValue = new CallingListSample.Five9Admin.modifyInboundCampaignRequest();
             inValue.modifyInboundCampaign = modifyInboundCampaign1;
-            CallingListSample.Five9Admin.modifyInboundCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyInboundCampaign(inValue);
+            CallingListSample.Five9Admin.modifyInboundCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyInboundCampaign(inValue);
             return retVal.modifyInboundCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyOutboundCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyOutboundCampaign(CallingListSample.Five9Admin.modifyOutboundCampaignRequest request) {
+        CallingListSample.Five9Admin.modifyOutboundCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.modifyOutboundCampaign(CallingListSample.Five9Admin.modifyOutboundCampaignRequest request) {
             return base.Channel.modifyOutboundCampaign(request);
         }
         
         public CallingListSample.Five9Admin.modifyOutboundCampaignResponse modifyOutboundCampaign(CallingListSample.Five9Admin.modifyOutboundCampaign modifyOutboundCampaign1) {
             CallingListSample.Five9Admin.modifyOutboundCampaignRequest inValue = new CallingListSample.Five9Admin.modifyOutboundCampaignRequest();
             inValue.modifyOutboundCampaign = modifyOutboundCampaign1;
-            CallingListSample.Five9Admin.modifyOutboundCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyOutboundCampaign(inValue);
+            CallingListSample.Five9Admin.modifyOutboundCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyOutboundCampaign(inValue);
             return retVal.modifyOutboundCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyPromptTTSResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyPromptTTS(CallingListSample.Five9Admin.modifyPromptTTSRequest request) {
+        CallingListSample.Five9Admin.modifyPromptTTSResponse1 CallingListSample.Five9Admin.WsAdmin.modifyPromptTTS(CallingListSample.Five9Admin.modifyPromptTTSRequest request) {
             return base.Channel.modifyPromptTTS(request);
         }
         
         public CallingListSample.Five9Admin.modifyPromptTTSResponse modifyPromptTTS(CallingListSample.Five9Admin.modifyPromptTTS modifyPromptTTS1) {
             CallingListSample.Five9Admin.modifyPromptTTSRequest inValue = new CallingListSample.Five9Admin.modifyPromptTTSRequest();
             inValue.modifyPromptTTS = modifyPromptTTS1;
-            CallingListSample.Five9Admin.modifyPromptTTSResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyPromptTTS(inValue);
+            CallingListSample.Five9Admin.modifyPromptTTSResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyPromptTTS(inValue);
             return retVal.modifyPromptTTSResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyPromptWavResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyPromptWav(CallingListSample.Five9Admin.modifyPromptWavRequest request) {
+        CallingListSample.Five9Admin.modifyPromptWavResponse1 CallingListSample.Five9Admin.WsAdmin.modifyPromptWav(CallingListSample.Five9Admin.modifyPromptWavRequest request) {
             return base.Channel.modifyPromptWav(request);
         }
         
         public CallingListSample.Five9Admin.modifyPromptWavResponse modifyPromptWav(CallingListSample.Five9Admin.modifyPromptWav modifyPromptWav1) {
             CallingListSample.Five9Admin.modifyPromptWavRequest inValue = new CallingListSample.Five9Admin.modifyPromptWavRequest();
             inValue.modifyPromptWav = modifyPromptWav1;
-            CallingListSample.Five9Admin.modifyPromptWavResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyPromptWav(inValue);
+            CallingListSample.Five9Admin.modifyPromptWavResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyPromptWav(inValue);
             return retVal.modifyPromptWavResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyPromptWavInlineResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyPromptWavInline(CallingListSample.Five9Admin.modifyPromptWavInlineRequest request) {
+        CallingListSample.Five9Admin.modifyPromptWavInlineResponse1 CallingListSample.Five9Admin.WsAdmin.modifyPromptWavInline(CallingListSample.Five9Admin.modifyPromptWavInlineRequest request) {
             return base.Channel.modifyPromptWavInline(request);
         }
         
         public CallingListSample.Five9Admin.modifyPromptWavInlineResponse modifyPromptWavInline(CallingListSample.Five9Admin.modifyPromptWavInline modifyPromptWavInline1) {
             CallingListSample.Five9Admin.modifyPromptWavInlineRequest inValue = new CallingListSample.Five9Admin.modifyPromptWavInlineRequest();
             inValue.modifyPromptWavInline = modifyPromptWavInline1;
-            CallingListSample.Five9Admin.modifyPromptWavInlineResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyPromptWavInline(inValue);
+            CallingListSample.Five9Admin.modifyPromptWavInlineResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyPromptWavInline(inValue);
             return retVal.modifyPromptWavInlineResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyReasonCodeResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyReasonCode(CallingListSample.Five9Admin.modifyReasonCodeRequest request) {
+        CallingListSample.Five9Admin.modifyReasonCodeResponse1 CallingListSample.Five9Admin.WsAdmin.modifyReasonCode(CallingListSample.Five9Admin.modifyReasonCodeRequest request) {
             return base.Channel.modifyReasonCode(request);
         }
         
         public CallingListSample.Five9Admin.modifyReasonCodeResponse modifyReasonCode(CallingListSample.Five9Admin.modifyReasonCode modifyReasonCode1) {
             CallingListSample.Five9Admin.modifyReasonCodeRequest inValue = new CallingListSample.Five9Admin.modifyReasonCodeRequest();
             inValue.modifyReasonCode = modifyReasonCode1;
-            CallingListSample.Five9Admin.modifyReasonCodeResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyReasonCode(inValue);
+            CallingListSample.Five9Admin.modifyReasonCodeResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyReasonCode(inValue);
             return retVal.modifyReasonCodeResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifySkillResponse1 CallingListSample.Five9Admin.WsAdminV2.modifySkill(CallingListSample.Five9Admin.modifySkillRequest request) {
+        CallingListSample.Five9Admin.modifySkillResponse1 CallingListSample.Five9Admin.WsAdmin.modifySkill(CallingListSample.Five9Admin.modifySkillRequest request) {
             return base.Channel.modifySkill(request);
         }
         
         public CallingListSample.Five9Admin.modifySkillResponse modifySkill(CallingListSample.Five9Admin.modifySkill modifySkill1) {
             CallingListSample.Five9Admin.modifySkillRequest inValue = new CallingListSample.Five9Admin.modifySkillRequest();
             inValue.modifySkill = modifySkill1;
-            CallingListSample.Five9Admin.modifySkillResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifySkill(inValue);
+            CallingListSample.Five9Admin.modifySkillResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifySkill(inValue);
             return retVal.modifySkillResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyUserResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyUser(CallingListSample.Five9Admin.modifyUserRequest request) {
+        CallingListSample.Five9Admin.modifyUserResponse1 CallingListSample.Five9Admin.WsAdmin.modifyUser(CallingListSample.Five9Admin.modifyUserRequest request) {
             return base.Channel.modifyUser(request);
         }
         
         public CallingListSample.Five9Admin.modifyUserResponse modifyUser(CallingListSample.Five9Admin.modifyUser modifyUser1) {
             CallingListSample.Five9Admin.modifyUserRequest inValue = new CallingListSample.Five9Admin.modifyUserRequest();
             inValue.modifyUser = modifyUser1;
-            CallingListSample.Five9Admin.modifyUserResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyUser(inValue);
+            CallingListSample.Five9Admin.modifyUserResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyUser(inValue);
             return retVal.modifyUserResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyUserCannedReportsResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyUserCannedReports(CallingListSample.Five9Admin.modifyUserCannedReportsRequest request) {
+        CallingListSample.Five9Admin.modifyUserCannedReportsResponse1 CallingListSample.Five9Admin.WsAdmin.modifyUserCannedReports(CallingListSample.Five9Admin.modifyUserCannedReportsRequest request) {
             return base.Channel.modifyUserCannedReports(request);
         }
         
         public CallingListSample.Five9Admin.modifyUserCannedReportsResponse modifyUserCannedReports(CallingListSample.Five9Admin.modifyUserCannedReports modifyUserCannedReports1) {
             CallingListSample.Five9Admin.modifyUserCannedReportsRequest inValue = new CallingListSample.Five9Admin.modifyUserCannedReportsRequest();
             inValue.modifyUserCannedReports = modifyUserCannedReports1;
-            CallingListSample.Five9Admin.modifyUserCannedReportsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyUserCannedReports(inValue);
+            CallingListSample.Five9Admin.modifyUserCannedReportsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyUserCannedReports(inValue);
             return retVal.modifyUserCannedReportsResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyUserProfileResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyUserProfile(CallingListSample.Five9Admin.modifyUserProfileRequest request) {
+        CallingListSample.Five9Admin.modifyUserProfileResponse1 CallingListSample.Five9Admin.WsAdmin.modifyUserProfile(CallingListSample.Five9Admin.modifyUserProfileRequest request) {
             return base.Channel.modifyUserProfile(request);
         }
         
         public CallingListSample.Five9Admin.modifyUserProfileResponse modifyUserProfile(CallingListSample.Five9Admin.modifyUserProfile modifyUserProfile1) {
             CallingListSample.Five9Admin.modifyUserProfileRequest inValue = new CallingListSample.Five9Admin.modifyUserProfileRequest();
             inValue.modifyUserProfile = modifyUserProfile1;
-            CallingListSample.Five9Admin.modifyUserProfileResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyUserProfile(inValue);
+            CallingListSample.Five9Admin.modifyUserProfileResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyUserProfile(inValue);
             return retVal.modifyUserProfileResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyUserProfileSkillsResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyUserProfileSkills(CallingListSample.Five9Admin.modifyUserProfileSkillsRequest request) {
+        CallingListSample.Five9Admin.modifyUserProfileSkillsResponse1 CallingListSample.Five9Admin.WsAdmin.modifyUserProfileSkills(CallingListSample.Five9Admin.modifyUserProfileSkillsRequest request) {
             return base.Channel.modifyUserProfileSkills(request);
         }
         
         public CallingListSample.Five9Admin.modifyUserProfileSkillsResponse modifyUserProfileSkills(CallingListSample.Five9Admin.modifyUserProfileSkills modifyUserProfileSkills1) {
             CallingListSample.Five9Admin.modifyUserProfileSkillsRequest inValue = new CallingListSample.Five9Admin.modifyUserProfileSkillsRequest();
             inValue.modifyUserProfileSkills = modifyUserProfileSkills1;
-            CallingListSample.Five9Admin.modifyUserProfileSkillsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyUserProfileSkills(inValue);
+            CallingListSample.Five9Admin.modifyUserProfileSkillsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyUserProfileSkills(inValue);
             return retVal.modifyUserProfileSkillsResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyUserProfileUserListResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyUserProfileUserList(CallingListSample.Five9Admin.modifyUserProfileUserListRequest request) {
+        CallingListSample.Five9Admin.modifyUserProfileUserListResponse1 CallingListSample.Five9Admin.WsAdmin.modifyUserProfileUserList(CallingListSample.Five9Admin.modifyUserProfileUserListRequest request) {
             return base.Channel.modifyUserProfileUserList(request);
         }
         
         public CallingListSample.Five9Admin.modifyUserProfileUserListResponse modifyUserProfileUserList(CallingListSample.Five9Admin.modifyUserProfileUserList modifyUserProfileUserList1) {
             CallingListSample.Five9Admin.modifyUserProfileUserListRequest inValue = new CallingListSample.Five9Admin.modifyUserProfileUserListRequest();
             inValue.modifyUserProfileUserList = modifyUserProfileUserList1;
-            CallingListSample.Five9Admin.modifyUserProfileUserListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyUserProfileUserList(inValue);
+            CallingListSample.Five9Admin.modifyUserProfileUserListResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyUserProfileUserList(inValue);
             return retVal.modifyUserProfileUserListResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyVCCConfigurationResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyVCCConfiguration(CallingListSample.Five9Admin.modifyVCCConfigurationRequest request) {
+        CallingListSample.Five9Admin.modifyVCCConfigurationResponse1 CallingListSample.Five9Admin.WsAdmin.modifyVCCConfiguration(CallingListSample.Five9Admin.modifyVCCConfigurationRequest request) {
             return base.Channel.modifyVCCConfiguration(request);
         }
         
         public CallingListSample.Five9Admin.modifyVCCConfigurationResponse modifyVCCConfiguration(CallingListSample.Five9Admin.modifyVCCConfiguration modifyVCCConfiguration1) {
             CallingListSample.Five9Admin.modifyVCCConfigurationRequest inValue = new CallingListSample.Five9Admin.modifyVCCConfigurationRequest();
             inValue.modifyVCCConfiguration = modifyVCCConfiguration1;
-            CallingListSample.Five9Admin.modifyVCCConfigurationResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyVCCConfiguration(inValue);
+            CallingListSample.Five9Admin.modifyVCCConfigurationResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyVCCConfiguration(inValue);
             return retVal.modifyVCCConfigurationResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.modifyWebConnectorResponse1 CallingListSample.Five9Admin.WsAdminV2.modifyWebConnector(CallingListSample.Five9Admin.modifyWebConnectorRequest request) {
+        CallingListSample.Five9Admin.modifyWebConnectorResponse1 CallingListSample.Five9Admin.WsAdmin.modifyWebConnector(CallingListSample.Five9Admin.modifyWebConnectorRequest request) {
             return base.Channel.modifyWebConnector(request);
         }
         
         public CallingListSample.Five9Admin.modifyWebConnectorResponse modifyWebConnector(CallingListSample.Five9Admin.modifyWebConnector modifyWebConnector1) {
             CallingListSample.Five9Admin.modifyWebConnectorRequest inValue = new CallingListSample.Five9Admin.modifyWebConnectorRequest();
             inValue.modifyWebConnector = modifyWebConnector1;
-            CallingListSample.Five9Admin.modifyWebConnectorResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).modifyWebConnector(inValue);
+            CallingListSample.Five9Admin.modifyWebConnectorResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).modifyWebConnector(inValue);
             return retVal.modifyWebConnectorResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.removeDNISFromCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.removeDNISFromCampaign(CallingListSample.Five9Admin.removeDNISFromCampaignRequest request) {
+        CallingListSample.Five9Admin.removeDNISFromCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.removeDNISFromCampaign(CallingListSample.Five9Admin.removeDNISFromCampaignRequest request) {
             return base.Channel.removeDNISFromCampaign(request);
         }
         
         public CallingListSample.Five9Admin.removeDNISFromCampaignResponse removeDNISFromCampaign(CallingListSample.Five9Admin.removeDNISFromCampaign removeDNISFromCampaign1) {
             CallingListSample.Five9Admin.removeDNISFromCampaignRequest inValue = new CallingListSample.Five9Admin.removeDNISFromCampaignRequest();
             inValue.removeDNISFromCampaign = removeDNISFromCampaign1;
-            CallingListSample.Five9Admin.removeDNISFromCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).removeDNISFromCampaign(inValue);
+            CallingListSample.Five9Admin.removeDNISFromCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).removeDNISFromCampaign(inValue);
             return retVal.removeDNISFromCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.removeDispositionResponse1 CallingListSample.Five9Admin.WsAdminV2.removeDisposition(CallingListSample.Five9Admin.removeDispositionRequest request) {
+        CallingListSample.Five9Admin.removeDispositionResponse1 CallingListSample.Five9Admin.WsAdmin.removeDisposition(CallingListSample.Five9Admin.removeDispositionRequest request) {
             return base.Channel.removeDisposition(request);
         }
         
         public CallingListSample.Five9Admin.removeDispositionResponse removeDisposition(CallingListSample.Five9Admin.removeDisposition removeDisposition1) {
             CallingListSample.Five9Admin.removeDispositionRequest inValue = new CallingListSample.Five9Admin.removeDispositionRequest();
             inValue.removeDisposition = removeDisposition1;
-            CallingListSample.Five9Admin.removeDispositionResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).removeDisposition(inValue);
+            CallingListSample.Five9Admin.removeDispositionResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).removeDisposition(inValue);
             return retVal.removeDispositionResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.removeDispositionsFromCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.removeDispositionsFromCampaign(CallingListSample.Five9Admin.removeDispositionsFromCampaignRequest request) {
+        CallingListSample.Five9Admin.removeDispositionsFromCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.removeDispositionsFromCampaign(CallingListSample.Five9Admin.removeDispositionsFromCampaignRequest request) {
             return base.Channel.removeDispositionsFromCampaign(request);
         }
         
         public CallingListSample.Five9Admin.removeDispositionsFromCampaignResponse removeDispositionsFromCampaign(CallingListSample.Five9Admin.removeDispositionsFromCampaign removeDispositionsFromCampaign1) {
             CallingListSample.Five9Admin.removeDispositionsFromCampaignRequest inValue = new CallingListSample.Five9Admin.removeDispositionsFromCampaignRequest();
             inValue.removeDispositionsFromCampaign = removeDispositionsFromCampaign1;
-            CallingListSample.Five9Admin.removeDispositionsFromCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).removeDispositionsFromCampaign(inValue);
+            CallingListSample.Five9Admin.removeDispositionsFromCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).removeDispositionsFromCampaign(inValue);
             return retVal.removeDispositionsFromCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.removeListsFromCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.removeListsFromCampaign(CallingListSample.Five9Admin.removeListsFromCampaignRequest request) {
+        CallingListSample.Five9Admin.removeListsFromCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.removeListsFromCampaign(CallingListSample.Five9Admin.removeListsFromCampaignRequest request) {
             return base.Channel.removeListsFromCampaign(request);
         }
         
         public CallingListSample.Five9Admin.removeListsFromCampaignResponse removeListsFromCampaign(CallingListSample.Five9Admin.removeListsFromCampaign removeListsFromCampaign1) {
             CallingListSample.Five9Admin.removeListsFromCampaignRequest inValue = new CallingListSample.Five9Admin.removeListsFromCampaignRequest();
             inValue.removeListsFromCampaign = removeListsFromCampaign1;
-            CallingListSample.Five9Admin.removeListsFromCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).removeListsFromCampaign(inValue);
+            CallingListSample.Five9Admin.removeListsFromCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).removeListsFromCampaign(inValue);
             return retVal.removeListsFromCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.removeNumbersFromDncResponse1 CallingListSample.Five9Admin.WsAdminV2.removeNumbersFromDnc(CallingListSample.Five9Admin.removeNumbersFromDncRequest request) {
+        CallingListSample.Five9Admin.removeNumbersFromDncResponse1 CallingListSample.Five9Admin.WsAdmin.removeNumbersFromDnc(CallingListSample.Five9Admin.removeNumbersFromDncRequest request) {
             return base.Channel.removeNumbersFromDnc(request);
         }
         
         public CallingListSample.Five9Admin.removeNumbersFromDncResponse removeNumbersFromDnc(string[] removeNumbersFromDnc1) {
             CallingListSample.Five9Admin.removeNumbersFromDncRequest inValue = new CallingListSample.Five9Admin.removeNumbersFromDncRequest();
             inValue.removeNumbersFromDnc = removeNumbersFromDnc1;
-            CallingListSample.Five9Admin.removeNumbersFromDncResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).removeNumbersFromDnc(inValue);
+            CallingListSample.Five9Admin.removeNumbersFromDncResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).removeNumbersFromDnc(inValue);
             return retVal.removeNumbersFromDncResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.removeSkillsFromCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.removeSkillsFromCampaign(CallingListSample.Five9Admin.removeSkillsFromCampaignRequest request) {
+        CallingListSample.Five9Admin.removeSkillsFromCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.removeSkillsFromCampaign(CallingListSample.Five9Admin.removeSkillsFromCampaignRequest request) {
             return base.Channel.removeSkillsFromCampaign(request);
         }
         
         public CallingListSample.Five9Admin.removeSkillsFromCampaignResponse removeSkillsFromCampaign(CallingListSample.Five9Admin.removeSkillsFromCampaign removeSkillsFromCampaign1) {
             CallingListSample.Five9Admin.removeSkillsFromCampaignRequest inValue = new CallingListSample.Five9Admin.removeSkillsFromCampaignRequest();
             inValue.removeSkillsFromCampaign = removeSkillsFromCampaign1;
-            CallingListSample.Five9Admin.removeSkillsFromCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).removeSkillsFromCampaign(inValue);
+            CallingListSample.Five9Admin.removeSkillsFromCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).removeSkillsFromCampaign(inValue);
             return retVal.removeSkillsFromCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.renameCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.renameCampaign(CallingListSample.Five9Admin.renameCampaignRequest request) {
+        CallingListSample.Five9Admin.renameCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.renameCampaign(CallingListSample.Five9Admin.renameCampaignRequest request) {
             return base.Channel.renameCampaign(request);
         }
         
         public CallingListSample.Five9Admin.renameCampaignResponse renameCampaign(CallingListSample.Five9Admin.renameCampaign renameCampaign1) {
             CallingListSample.Five9Admin.renameCampaignRequest inValue = new CallingListSample.Five9Admin.renameCampaignRequest();
             inValue.renameCampaign = renameCampaign1;
-            CallingListSample.Five9Admin.renameCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).renameCampaign(inValue);
+            CallingListSample.Five9Admin.renameCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).renameCampaign(inValue);
             return retVal.renameCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.renameDispositionResponse1 CallingListSample.Five9Admin.WsAdminV2.renameDisposition(CallingListSample.Five9Admin.renameDispositionRequest request) {
+        CallingListSample.Five9Admin.renameDispositionResponse1 CallingListSample.Five9Admin.WsAdmin.renameDisposition(CallingListSample.Five9Admin.renameDispositionRequest request) {
             return base.Channel.renameDisposition(request);
         }
         
         public CallingListSample.Five9Admin.renameDispositionResponse renameDisposition(CallingListSample.Five9Admin.renameDisposition renameDisposition1) {
             CallingListSample.Five9Admin.renameDispositionRequest inValue = new CallingListSample.Five9Admin.renameDispositionRequest();
             inValue.renameDisposition = renameDisposition1;
-            CallingListSample.Five9Admin.renameDispositionResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).renameDisposition(inValue);
+            CallingListSample.Five9Admin.renameDispositionResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).renameDisposition(inValue);
             return retVal.renameDispositionResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.resetCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.resetCampaign(CallingListSample.Five9Admin.resetCampaignRequest request) {
+        CallingListSample.Five9Admin.resetCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.resetCampaign(CallingListSample.Five9Admin.resetCampaignRequest request) {
             return base.Channel.resetCampaign(request);
         }
         
         public CallingListSample.Five9Admin.resetCampaignResponse resetCampaign(CallingListSample.Five9Admin.resetCampaign resetCampaign1) {
             CallingListSample.Five9Admin.resetCampaignRequest inValue = new CallingListSample.Five9Admin.resetCampaignRequest();
             inValue.resetCampaign = resetCampaign1;
-            CallingListSample.Five9Admin.resetCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).resetCampaign(inValue);
+            CallingListSample.Five9Admin.resetCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).resetCampaign(inValue);
             return retVal.resetCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.resetCampaignDispositionsResponse1 CallingListSample.Five9Admin.WsAdminV2.resetCampaignDispositions(CallingListSample.Five9Admin.resetCampaignDispositionsRequest request) {
+        CallingListSample.Five9Admin.resetCampaignDispositionsResponse1 CallingListSample.Five9Admin.WsAdmin.resetCampaignDispositions(CallingListSample.Five9Admin.resetCampaignDispositionsRequest request) {
             return base.Channel.resetCampaignDispositions(request);
         }
         
         public CallingListSample.Five9Admin.resetCampaignDispositionsResponse resetCampaignDispositions(CallingListSample.Five9Admin.resetCampaignDispositions resetCampaignDispositions1) {
             CallingListSample.Five9Admin.resetCampaignDispositionsRequest inValue = new CallingListSample.Five9Admin.resetCampaignDispositionsRequest();
             inValue.resetCampaignDispositions = resetCampaignDispositions1;
-            CallingListSample.Five9Admin.resetCampaignDispositionsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).resetCampaignDispositions(inValue);
+            CallingListSample.Five9Admin.resetCampaignDispositionsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).resetCampaignDispositions(inValue);
             return retVal.resetCampaignDispositionsResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.resetListPositionResponse1 CallingListSample.Five9Admin.WsAdminV2.resetListPosition(CallingListSample.Five9Admin.resetListPositionRequest request) {
+        CallingListSample.Five9Admin.resetListPositionResponse1 CallingListSample.Five9Admin.WsAdmin.resetListPosition(CallingListSample.Five9Admin.resetListPositionRequest request) {
             return base.Channel.resetListPosition(request);
         }
         
         public CallingListSample.Five9Admin.resetListPositionResponse resetListPosition(CallingListSample.Five9Admin.resetListPosition resetListPosition1) {
             CallingListSample.Five9Admin.resetListPositionRequest inValue = new CallingListSample.Five9Admin.resetListPositionRequest();
             inValue.resetListPosition = resetListPosition1;
-            CallingListSample.Five9Admin.resetListPositionResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).resetListPosition(inValue);
+            CallingListSample.Five9Admin.resetListPositionResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).resetListPosition(inValue);
             return retVal.resetListPositionResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.runReportResponse1 CallingListSample.Five9Admin.WsAdminV2.runReport(CallingListSample.Five9Admin.runReportRequest request) {
+        CallingListSample.Five9Admin.runReportResponse1 CallingListSample.Five9Admin.WsAdmin.runReport(CallingListSample.Five9Admin.runReportRequest request) {
             return base.Channel.runReport(request);
         }
         
         public CallingListSample.Five9Admin.runReportResponse runReport(CallingListSample.Five9Admin.runReport runReport1) {
             CallingListSample.Five9Admin.runReportRequest inValue = new CallingListSample.Five9Admin.runReportRequest();
             inValue.runReport = runReport1;
-            CallingListSample.Five9Admin.runReportResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).runReport(inValue);
+            CallingListSample.Five9Admin.runReportResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).runReport(inValue);
             return retVal.runReportResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.setDefaultIVRScheduleResponse1 CallingListSample.Five9Admin.WsAdminV2.setDefaultIVRSchedule(CallingListSample.Five9Admin.setDefaultIVRScheduleRequest request) {
+        CallingListSample.Five9Admin.setDefaultIVRScheduleResponse1 CallingListSample.Five9Admin.WsAdmin.setDefaultIVRSchedule(CallingListSample.Five9Admin.setDefaultIVRScheduleRequest request) {
             return base.Channel.setDefaultIVRSchedule(request);
         }
         
         public CallingListSample.Five9Admin.setDefaultIVRScheduleResponse setDefaultIVRSchedule(CallingListSample.Five9Admin.setDefaultIVRSchedule setDefaultIVRSchedule1) {
             CallingListSample.Five9Admin.setDefaultIVRScheduleRequest inValue = new CallingListSample.Five9Admin.setDefaultIVRScheduleRequest();
             inValue.setDefaultIVRSchedule = setDefaultIVRSchedule1;
-            CallingListSample.Five9Admin.setDefaultIVRScheduleResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).setDefaultIVRSchedule(inValue);
+            CallingListSample.Five9Admin.setDefaultIVRScheduleResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).setDefaultIVRSchedule(inValue);
             return retVal.setDefaultIVRScheduleResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.setDialingRulesResponse1 CallingListSample.Five9Admin.WsAdminV2.setDialingRules(CallingListSample.Five9Admin.setDialingRulesRequest request) {
+        CallingListSample.Five9Admin.setDialingRulesResponse1 CallingListSample.Five9Admin.WsAdmin.setDialingRules(CallingListSample.Five9Admin.setDialingRulesRequest request) {
             return base.Channel.setDialingRules(request);
         }
         
         public CallingListSample.Five9Admin.setDialingRulesResponse setDialingRules(CallingListSample.Five9Admin.setDialingRules setDialingRules1) {
             CallingListSample.Five9Admin.setDialingRulesRequest inValue = new CallingListSample.Five9Admin.setDialingRulesRequest();
             inValue.setDialingRules = setDialingRules1;
-            CallingListSample.Five9Admin.setDialingRulesResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).setDialingRules(inValue);
+            CallingListSample.Five9Admin.setDialingRulesResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).setDialingRules(inValue);
             return retVal.setDialingRulesResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.setSkillVoicemailGreetingResponse1 CallingListSample.Five9Admin.WsAdminV2.setSkillVoicemailGreeting(CallingListSample.Five9Admin.setSkillVoicemailGreetingRequest request) {
+        CallingListSample.Five9Admin.setSkillVoicemailGreetingResponse1 CallingListSample.Five9Admin.WsAdmin.setSkillVoicemailGreeting(CallingListSample.Five9Admin.setSkillVoicemailGreetingRequest request) {
             return base.Channel.setSkillVoicemailGreeting(request);
         }
         
         public CallingListSample.Five9Admin.setSkillVoicemailGreetingResponse setSkillVoicemailGreeting(CallingListSample.Five9Admin.setSkillVoicemailGreeting setSkillVoicemailGreeting1) {
             CallingListSample.Five9Admin.setSkillVoicemailGreetingRequest inValue = new CallingListSample.Five9Admin.setSkillVoicemailGreetingRequest();
             inValue.setSkillVoicemailGreeting = setSkillVoicemailGreeting1;
-            CallingListSample.Five9Admin.setSkillVoicemailGreetingResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).setSkillVoicemailGreeting(inValue);
+            CallingListSample.Five9Admin.setSkillVoicemailGreetingResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).setSkillVoicemailGreeting(inValue);
             return retVal.setSkillVoicemailGreetingResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.setUserVoicemailGreetingResponse1 CallingListSample.Five9Admin.WsAdminV2.setUserVoicemailGreeting(CallingListSample.Five9Admin.setUserVoicemailGreetingRequest request) {
+        CallingListSample.Five9Admin.setUserVoicemailGreetingResponse1 CallingListSample.Five9Admin.WsAdmin.setUserVoicemailGreeting(CallingListSample.Five9Admin.setUserVoicemailGreetingRequest request) {
             return base.Channel.setUserVoicemailGreeting(request);
         }
         
         public CallingListSample.Five9Admin.setUserVoicemailGreetingResponse setUserVoicemailGreeting(CallingListSample.Five9Admin.setUserVoicemailGreeting setUserVoicemailGreeting1) {
             CallingListSample.Five9Admin.setUserVoicemailGreetingRequest inValue = new CallingListSample.Five9Admin.setUserVoicemailGreetingRequest();
             inValue.setUserVoicemailGreeting = setUserVoicemailGreeting1;
-            CallingListSample.Five9Admin.setUserVoicemailGreetingResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).setUserVoicemailGreeting(inValue);
+            CallingListSample.Five9Admin.setUserVoicemailGreetingResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).setUserVoicemailGreeting(inValue);
             return retVal.setUserVoicemailGreetingResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.startCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.startCampaign(CallingListSample.Five9Admin.startCampaignRequest request) {
+        CallingListSample.Five9Admin.startCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.startCampaign(CallingListSample.Five9Admin.startCampaignRequest request) {
             return base.Channel.startCampaign(request);
         }
         
         public CallingListSample.Five9Admin.startCampaignResponse startCampaign(CallingListSample.Five9Admin.startCampaign startCampaign1) {
             CallingListSample.Five9Admin.startCampaignRequest inValue = new CallingListSample.Five9Admin.startCampaignRequest();
             inValue.startCampaign = startCampaign1;
-            CallingListSample.Five9Admin.startCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).startCampaign(inValue);
+            CallingListSample.Five9Admin.startCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).startCampaign(inValue);
             return retVal.startCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.stopCampaignResponse1 CallingListSample.Five9Admin.WsAdminV2.stopCampaign(CallingListSample.Five9Admin.stopCampaignRequest request) {
+        CallingListSample.Five9Admin.stopCampaignResponse1 CallingListSample.Five9Admin.WsAdmin.stopCampaign(CallingListSample.Five9Admin.stopCampaignRequest request) {
             return base.Channel.stopCampaign(request);
         }
         
         public CallingListSample.Five9Admin.stopCampaignResponse stopCampaign(CallingListSample.Five9Admin.stopCampaign stopCampaign1) {
             CallingListSample.Five9Admin.stopCampaignRequest inValue = new CallingListSample.Five9Admin.stopCampaignRequest();
             inValue.stopCampaign = stopCampaign1;
-            CallingListSample.Five9Admin.stopCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).stopCampaign(inValue);
+            CallingListSample.Five9Admin.stopCampaignResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).stopCampaign(inValue);
             return retVal.stopCampaignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.updateContactsResponse1 CallingListSample.Five9Admin.WsAdminV2.updateContacts(CallingListSample.Five9Admin.updateContactsRequest request) {
+        CallingListSample.Five9Admin.updateContactsResponse1 CallingListSample.Five9Admin.WsAdmin.updateContacts(CallingListSample.Five9Admin.updateContactsRequest request) {
             return base.Channel.updateContacts(request);
         }
         
         public CallingListSample.Five9Admin.updateContactsResponse updateContacts(CallingListSample.Five9Admin.updateContacts updateContacts1) {
             CallingListSample.Five9Admin.updateContactsRequest inValue = new CallingListSample.Five9Admin.updateContactsRequest();
             inValue.updateContacts = updateContacts1;
-            CallingListSample.Five9Admin.updateContactsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).updateContacts(inValue);
+            CallingListSample.Five9Admin.updateContactsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).updateContacts(inValue);
             return retVal.updateContactsResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.updateContactsCsvResponse1 CallingListSample.Five9Admin.WsAdminV2.updateContactsCsv(CallingListSample.Five9Admin.updateContactsCsvRequest request) {
+        CallingListSample.Five9Admin.updateContactsCsvResponse1 CallingListSample.Five9Admin.WsAdmin.updateContactsCsv(CallingListSample.Five9Admin.updateContactsCsvRequest request) {
             return base.Channel.updateContactsCsv(request);
         }
         
         public CallingListSample.Five9Admin.updateContactsCsvResponse updateContactsCsv(CallingListSample.Five9Admin.updateContactsCsv updateContactsCsv1) {
             CallingListSample.Five9Admin.updateContactsCsvRequest inValue = new CallingListSample.Five9Admin.updateContactsCsvRequest();
             inValue.updateContactsCsv = updateContactsCsv1;
-            CallingListSample.Five9Admin.updateContactsCsvResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).updateContactsCsv(inValue);
+            CallingListSample.Five9Admin.updateContactsCsvResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).updateContactsCsv(inValue);
             return retVal.updateContactsCsvResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.updateContactsFtpResponse1 CallingListSample.Five9Admin.WsAdminV2.updateContactsFtp(CallingListSample.Five9Admin.updateContactsFtpRequest request) {
+        CallingListSample.Five9Admin.updateContactsFtpResponse1 CallingListSample.Five9Admin.WsAdmin.updateContactsFtp(CallingListSample.Five9Admin.updateContactsFtpRequest request) {
             return base.Channel.updateContactsFtp(request);
         }
         
         public CallingListSample.Five9Admin.updateContactsFtpResponse updateContactsFtp(CallingListSample.Five9Admin.updateContactsFtp updateContactsFtp1) {
             CallingListSample.Five9Admin.updateContactsFtpRequest inValue = new CallingListSample.Five9Admin.updateContactsFtpRequest();
             inValue.updateContactsFtp = updateContactsFtp1;
-            CallingListSample.Five9Admin.updateContactsFtpResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).updateContactsFtp(inValue);
+            CallingListSample.Five9Admin.updateContactsFtpResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).updateContactsFtp(inValue);
             return retVal.updateContactsFtpResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.updateCrmRecordResponse1 CallingListSample.Five9Admin.WsAdminV2.updateCrmRecord(CallingListSample.Five9Admin.updateCrmRecordRequest request) {
+        CallingListSample.Five9Admin.updateCrmRecordResponse1 CallingListSample.Five9Admin.WsAdmin.updateCrmRecord(CallingListSample.Five9Admin.updateCrmRecordRequest request) {
             return base.Channel.updateCrmRecord(request);
         }
         
         public CallingListSample.Five9Admin.updateCrmRecordResponse updateCrmRecord(CallingListSample.Five9Admin.updateCrmRecord updateCrmRecord1) {
             CallingListSample.Five9Admin.updateCrmRecordRequest inValue = new CallingListSample.Five9Admin.updateCrmRecordRequest();
             inValue.updateCrmRecord = updateCrmRecord1;
-            CallingListSample.Five9Admin.updateCrmRecordResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).updateCrmRecord(inValue);
+            CallingListSample.Five9Admin.updateCrmRecordResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).updateCrmRecord(inValue);
             return retVal.updateCrmRecordResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.updateDispositionsResponse1 CallingListSample.Five9Admin.WsAdminV2.updateDispositions(CallingListSample.Five9Admin.updateDispositionsRequest request) {
+        CallingListSample.Five9Admin.updateDispositionsResponse1 CallingListSample.Five9Admin.WsAdmin.updateDispositions(CallingListSample.Five9Admin.updateDispositionsRequest request) {
             return base.Channel.updateDispositions(request);
         }
         
         public CallingListSample.Five9Admin.updateDispositionsResponse updateDispositions(CallingListSample.Five9Admin.updateDispositions updateDispositions1) {
             CallingListSample.Five9Admin.updateDispositionsRequest inValue = new CallingListSample.Five9Admin.updateDispositionsRequest();
             inValue.updateDispositions = updateDispositions1;
-            CallingListSample.Five9Admin.updateDispositionsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).updateDispositions(inValue);
+            CallingListSample.Five9Admin.updateDispositionsResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).updateDispositions(inValue);
             return retVal.updateDispositionsResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.updateDispositionsCsvResponse1 CallingListSample.Five9Admin.WsAdminV2.updateDispositionsCsv(CallingListSample.Five9Admin.updateDispositionsCsvRequest request) {
+        CallingListSample.Five9Admin.updateDispositionsCsvResponse1 CallingListSample.Five9Admin.WsAdmin.updateDispositionsCsv(CallingListSample.Five9Admin.updateDispositionsCsvRequest request) {
             return base.Channel.updateDispositionsCsv(request);
         }
         
         public CallingListSample.Five9Admin.updateDispositionsCsvResponse updateDispositionsCsv(CallingListSample.Five9Admin.updateDispositionsCsv updateDispositionsCsv1) {
             CallingListSample.Five9Admin.updateDispositionsCsvRequest inValue = new CallingListSample.Five9Admin.updateDispositionsCsvRequest();
             inValue.updateDispositionsCsv = updateDispositionsCsv1;
-            CallingListSample.Five9Admin.updateDispositionsCsvResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).updateDispositionsCsv(inValue);
+            CallingListSample.Five9Admin.updateDispositionsCsvResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).updateDispositionsCsv(inValue);
             return retVal.updateDispositionsCsvResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.updateDispositionsFtpResponse1 CallingListSample.Five9Admin.WsAdminV2.updateDispositionsFtp(CallingListSample.Five9Admin.updateDispositionsFtpRequest request) {
+        CallingListSample.Five9Admin.updateDispositionsFtpResponse1 CallingListSample.Five9Admin.WsAdmin.updateDispositionsFtp(CallingListSample.Five9Admin.updateDispositionsFtpRequest request) {
             return base.Channel.updateDispositionsFtp(request);
         }
         
         public CallingListSample.Five9Admin.updateDispositionsFtpResponse updateDispositionsFtp(CallingListSample.Five9Admin.updateDispositionsFtp updateDispositionsFtp1) {
             CallingListSample.Five9Admin.updateDispositionsFtpRequest inValue = new CallingListSample.Five9Admin.updateDispositionsFtpRequest();
             inValue.updateDispositionsFtp = updateDispositionsFtp1;
-            CallingListSample.Five9Admin.updateDispositionsFtpResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).updateDispositionsFtp(inValue);
+            CallingListSample.Five9Admin.updateDispositionsFtpResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).updateDispositionsFtp(inValue);
             return retVal.updateDispositionsFtpResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.userSkillAddResponse1 CallingListSample.Five9Admin.WsAdminV2.userSkillAdd(CallingListSample.Five9Admin.userSkillAddRequest request) {
+        CallingListSample.Five9Admin.userSkillAddResponse1 CallingListSample.Five9Admin.WsAdmin.userSkillAdd(CallingListSample.Five9Admin.userSkillAddRequest request) {
             return base.Channel.userSkillAdd(request);
         }
         
         public CallingListSample.Five9Admin.userSkillAddResponse userSkillAdd(CallingListSample.Five9Admin.userSkillAdd userSkillAdd1) {
             CallingListSample.Five9Admin.userSkillAddRequest inValue = new CallingListSample.Five9Admin.userSkillAddRequest();
             inValue.userSkillAdd = userSkillAdd1;
-            CallingListSample.Five9Admin.userSkillAddResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).userSkillAdd(inValue);
+            CallingListSample.Five9Admin.userSkillAddResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).userSkillAdd(inValue);
             return retVal.userSkillAddResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.userSkillModifyResponse1 CallingListSample.Five9Admin.WsAdminV2.userSkillModify(CallingListSample.Five9Admin.userSkillModifyRequest request) {
+        CallingListSample.Five9Admin.userSkillModifyResponse1 CallingListSample.Five9Admin.WsAdmin.userSkillModify(CallingListSample.Five9Admin.userSkillModifyRequest request) {
             return base.Channel.userSkillModify(request);
         }
         
         public CallingListSample.Five9Admin.userSkillModifyResponse userSkillModify(CallingListSample.Five9Admin.userSkillModify userSkillModify1) {
             CallingListSample.Five9Admin.userSkillModifyRequest inValue = new CallingListSample.Five9Admin.userSkillModifyRequest();
             inValue.userSkillModify = userSkillModify1;
-            CallingListSample.Five9Admin.userSkillModifyResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).userSkillModify(inValue);
+            CallingListSample.Five9Admin.userSkillModifyResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).userSkillModify(inValue);
             return retVal.userSkillModifyResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CallingListSample.Five9Admin.userSkillRemoveResponse1 CallingListSample.Five9Admin.WsAdminV2.userSkillRemove(CallingListSample.Five9Admin.userSkillRemoveRequest request) {
+        CallingListSample.Five9Admin.userSkillRemoveResponse1 CallingListSample.Five9Admin.WsAdmin.userSkillRemove(CallingListSample.Five9Admin.userSkillRemoveRequest request) {
             return base.Channel.userSkillRemove(request);
         }
         
         public CallingListSample.Five9Admin.userSkillRemoveResponse userSkillRemove(CallingListSample.Five9Admin.userSkillRemove userSkillRemove1) {
             CallingListSample.Five9Admin.userSkillRemoveRequest inValue = new CallingListSample.Five9Admin.userSkillRemoveRequest();
             inValue.userSkillRemove = userSkillRemove1;
-            CallingListSample.Five9Admin.userSkillRemoveResponse1 retVal = ((CallingListSample.Five9Admin.WsAdminV2)(this)).userSkillRemove(inValue);
+            CallingListSample.Five9Admin.userSkillRemoveResponse1 retVal = ((CallingListSample.Five9Admin.WsAdmin)(this)).userSkillRemove(inValue);
             return retVal.userSkillRemoveResponse;
         }
     }

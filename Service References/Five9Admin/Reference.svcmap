@@ -18,11 +18,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://api.five9.com/wsadmin/v2/AdminWebService?wsdl&amp;user=jim.crespino@five9.com" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://api.five9.com/wsadmin/v3/AdminWebService?wsdl&amp;user=jim.crespino@five9.com" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WsAdminServiceV2.wsdl" MetadataType="Wsdl" ID="98a68413-8983-40fd-8c2b-70f6154c7cce" SourceId="1" SourceUrl="https://api.five9.com/wsadmin/v2/AdminWebService?wsdl&amp;user=jim.crespino@five9.com" />
     <MetadataFile FileName="swaref.xsd" MetadataType="Schema" ID="75cee32a-1b52-417e-a745-2a161eebd16f" SourceId="1" SourceUrl="http://ws-i.org/profiles/basic/1.1/swaref.xsd" />
+    <MetadataFile FileName="WsAdminService.wsdl" MetadataType="Wsdl" ID="392c66bc-37bb-4309-880f-3930ae939b28" SourceId="1" SourceUrl="https://api.five9.com/wsadmin/v3/AdminWebService?wsdl&amp;user=jim.crespino@five9.com" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -40,23 +40,26 @@ Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Button Grid.Row="0" Grid.Column="0" Content="addRecordToList" Height="23" Name="btnAddRecordToList" Click="btnAddRecordToList_Click" />
-                <Button Grid.Row="0" Grid.Column="1" Content="deleteRecordFromList" Height="23" Name="btnDeleteRecordFromList" Click="btnDeleteRecordFromList_Click" />
 
-                <Button Grid.Row="1" Grid.Column="0" Content="addToList" Height="23" Name="btnAddToList" Click="btnAddToList_Click" />
-                <Button Grid.Row="1" Grid.Column="1" Content="deleteFromList" Height="23" Name="btnDeleteFromList" Click="btnDeleteFromList_Click" />
+                <Button Grid.Row="0" Grid.Column="0" Content="addRecordToListSimple" Height="23" Name="btnAddRecordToListSimple" Click="btnAddRecordToListSimple_Click" />
 
-                <Button Grid.Row="2" Grid.Column="0" Content="addToListCsv" Height="23" Name="btnAddToListCSV" Click="btnAddToListCSV_Click" />
-                <Button Grid.Row="2" Grid.Column="1" Content="deleteFromListCsv" Height="23" Name="btnDeleteFromListCsv" Click="btnDeleteFromListCsv_Click" />
+                <Button Grid.Row="1" Grid.Column="0" Content="addRecordToList" Height="23" Name="btnAddRecordToList" Click="btnAddRecordToList_Click" />
+                <Button Grid.Row="1" Grid.Column="1" Content="deleteRecordFromList" Height="23" Name="btnDeleteRecordFromList" Click="btnDeleteRecordFromList_Click" />
 
-                <Button Grid.Row="3" Grid.Column="0" Content="addToListFtp" Height="23" Name="btnAddToListFTP" Click="btnAddToListFTP_Click" />
-                <Button Grid.Row="3" Grid.Column="1" Content="deleteFromListFtp" Height="23" Name="btnDeleteFromListFtp" Click="btnDeleteFromListFtp_Click" />
+                <Button Grid.Row="2" Grid.Column="0" Content="addToList" Height="23" Name="btnAddToList" Click="btnAddToList_Click" />
+                <Button Grid.Row="2" Grid.Column="1" Content="deleteFromList" Height="23" Name="btnDeleteFromList" Click="btnDeleteFromList_Click" />
 
-                <Button Grid.Row="4" Grid.Column="0" Content="asyncAddRecordsToList" Height="23" Name="btnAsyncAddRecordsToList" Click="btnAsyncAddRecordsToList_Click" />
-                <Button Grid.Row="4" Grid.Column="1" Content="asyncDeleteRecordsFromList" Height="23" Name="btnAsyncDeleteRecordsFromList" Click="btnAsyncDeleteRecordsFromList_Click" />
+                <Button Grid.Row="3" Grid.Column="0" Content="addToListCsv" Height="23" Name="btnAddToListCSV" Click="btnAddToListCSV_Click" />
+                <Button Grid.Row="3" Grid.Column="1" Content="deleteFromListCsv" Height="23" Name="btnDeleteFromListCsv" Click="btnDeleteFromListCsv_Click" />
 
+                <Button Grid.Row="4" Grid.Column="0" Content="addToListFtp" Height="23" Name="btnAddToListFTP" Click="btnAddToListFTP_Click" />
+                <Button Grid.Row="4" Grid.Column="1" Content="deleteFromListFtp" Height="23" Name="btnDeleteFromListFtp" Click="btnDeleteFromListFtp_Click" />
+
+                <Button Grid.Row="5" Grid.Column="0" Content="asyncAddRecordsToList" Height="23" Name="btnAsyncAddRecordsToList" Click="btnAsyncAddRecordsToList_Click" />
+                <Button Grid.Row="5" Grid.Column="1" Content="asyncDeleteRecordsFromList" Height="23" Name="btnAsyncDeleteRecordsFromList" Click="btnAsyncDeleteRecordsFromList_Click" />
             </Grid>
         </GroupBox>
     </Grid>

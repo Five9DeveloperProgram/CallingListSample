@@ -32,7 +32,7 @@ namespace CallingListSample
     /// </summary>
     public partial class MainWindow : Window
     {
-        private WsAdminV2Client _adminClient = null;
+        private WsAdminClient _adminClient = null;
         private string _csvData =
             "Number,FirstName,LastName\r\n" +
             "8885551111,John,Smith1\r\n" +
@@ -45,7 +45,7 @@ namespace CallingListSample
         {
             InitializeComponent();
 
-            _adminClient = new WsAdminV2Client();
+            _adminClient = new WsAdminClient();
         }
 
         private void btnConnect_Click(object sender, RoutedEventArgs e)
@@ -677,6 +677,59 @@ namespace CallingListSample
             {
                 MessageBox.Show(exc.Message);
                 return;
+            }
+        }
+
+        private void btnAddRecordToListSimple_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                addRecordToListSimple req = new addRecordToListSimple();
+                req.listName = cbxListName.Text;
+                req.listUpdateSimpleSettings = new listUpdateSimpleSettings();
+
+                req.listUpdateSimpleSettings.updateCRM = true;
+                req.listUpdateSimpleSettings.updateCRMSpecified = true;
+
+                // You can request the number be called ASAP or at a specific time.
+                // Just use the appropriate settings for your needs.
+                req.listUpdateSimpleSettings.callAsap = true;
+                req.listUpdateSimpleSettings.callAsapSpecified = true;
+                //req.listUpdateSimpleSettings.timeToCall = (long)((DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds * 1000);
+                //req.listUpdateSimpleSettings.timeToCallSpecified = true;
+
+                req.listUpdateSimpleSettings.fieldsMapping = new fieldEntry[3];
+
+                // NOTE!!!  The columnNumber-ing is different in this method than the others.
+                // in this method columnNumber-ing starts at a base of "0"!
+                req.listUpdateSimpleSettings.fieldsMapping[0] = new fieldEntry();
+                req.listUpdateSimpleSettings.fieldsMapping[0].columnNumber = 0;
+                req.listUpdateSimpleSettings.fieldsMapping[0].fieldName = "number1";
+                req.listUpdateSimpleSettings.fieldsMapping[0].key = true;
+
+                req.listUpdateSimpleSettings.fieldsMapping[1] = new fieldEntry();
+                req.listUpdateSimpleSettings.fieldsMapping[1].columnNumber = 1;
+                req.listUpdateSimpleSettings.fieldsMapping[1].fieldName = "first_name";
+                req.listUpdateSimpleSettings.fieldsMapping[1].key = false;
+
+                req.listUpdateSimpleSettings.fieldsMapping[2] = new fieldEntry();
+                req.listUpdateSimpleSettings.fieldsMapping[2].columnNumber = 2;
+                req.listUpdateSimpleSettings.fieldsMapping[2].fieldName = "last_name";
+                req.listUpdateSimpleSettings.fieldsMapping[2].key = false;
+
+                string[][] data = buildImportData();
+
+                req.record = data[0];
+
+                addRecordToListSimpleResponse resp = null;
+
+                resp = _adminClient.addRecordToListSimple(req);
+
+                MessageBox.Show("Record added successfully!", "List Import Result", MessageBoxButton.OK);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
             }
         }
 
